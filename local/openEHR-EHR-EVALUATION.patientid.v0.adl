@@ -1,0 +1,95 @@
+archetype (adl_version=1.4; uid=ac6ae242-24cf-49e7-92c7-b94f262e2a2a)
+	openEHR-EHR-EVALUATION.patientid.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-06-10">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"89ae1b6ea21118ecdf8219caeeefae47">
+		["build_uid"] = <"5e3d6378-5ee8-3fd9-9ff1-2dc96282a458">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- PatientID
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- First Name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Middle Name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Last Name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Other Names
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- NHS number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"PatientID">
+					description = <"PatientID">
+				>
+				["at0008"] = <
+					text = <"First Name">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Middle Name">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Last Name">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Other Names">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"NHS number">
+					description = <"">
+				>
+			>
+		>
+	>
