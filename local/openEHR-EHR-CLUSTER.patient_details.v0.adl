@@ -1,0 +1,128 @@
+archetype (adl_version=1.4; uid=1012a33f-8888-47dc-8ad2-2e6f94f3860e)
+	openEHR-EHR-CLUSTER.patient_details.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-06-10">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e27ea018bd286e51c11a4a19976bfea2">
+		["build_uid"] = <"79b25766-938e-3457-bfae-1e97624016ab">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Patient_details
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0004] occurrences matches {0..1} matches {    -- Patient_name
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0006] matches {    -- First name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Middle name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] matches {    -- Last name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Other names
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- NHS number
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Gender
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0020,    -- Male
+							at0021,    -- Female
+							at0022]    -- Other
+						}
+					}
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient_details">
+					description = <"Patient_details">
+				>
+				["at0004"] = <
+					text = <"Patient_name">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"First name">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Middle name">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Last name">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Other names">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"NHS number">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Gender">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Male">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Female">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Other">
+					description = <"">
+				>
+			>
+		>
+	>
