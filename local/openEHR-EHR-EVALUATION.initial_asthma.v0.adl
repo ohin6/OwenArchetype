@@ -1,0 +1,254 @@
+archetype (adl_version=1.4; uid=d68f46a9-f800-41bf-9c2a-1b5f0e927837)
+	openEHR-EHR-EVALUATION.initial_asthma.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-06-10">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"797c75f233a37295ba94e11f9bdfea42">
+		["build_uid"] = <"7bcfb3b2-1b1a-3dcb-85de-3cab9df52841">
+	>
+
+definition
+	EVALUATION[at0000] occurrences matches {1..*} matches {    -- Initial_asthma_Assessment
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0001] matches {    -- Breathlessness
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0002] occurrences matches {0..1} matches {    -- Experience Breathlessness
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0003,    -- Yes
+											at0004]    -- No
+										}
+									}
+								}
+							}
+							ELEMENT[at0032] occurrences matches {0..1} matches {    -- Severity
+								value matches {
+									1|[local::at0033],
+									2|[local::at0034],
+									3|[local::at0035]
+								}
+							}
+							ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comments
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0022] occurrences matches {0..1} matches {    -- Occurrences
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0018] occurrences matches {0..*} matches {    -- Seasonal Variation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0019,    -- Daily
+													at0020,    -- Monthly
+													at0021]    -- Unsure
+												}
+											}
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Variation at work
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0029,    -- Yes
+													at0030,    -- No
+													at0031]    -- Unsure
+												}
+											}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Average frequency per week
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|>=0|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Expiratory polyphonic wheeze
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					CLUSTER[at0025] occurrences matches {0..1} matches {    -- CLUSTER
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0013] occurrences matches {0..1} matches {    -- Family History
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0014,    -- Yes
+											at0015,    -- No
+											at0016]    -- Unsure
+										}
+									}
+								}
+							}
+							ELEMENT[at0026] occurrences matches {0..1} matches {    -- Comment
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE matches {*}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Initial_asthma_Assessment">
+					description = <"Initial_asthma">
+				>
+				["at0001"] = <
+					text = <"Breathlessness">
+					description = <"Does the patient experience breathlessness">
+				>
+				["at0002"] = <
+					text = <"Experience Breathlessness">
+					description = <"Has the patient experienced breathlessness?">
+				>
+				["at0003"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Comments">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Expiratory polyphonic wheeze">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Family History">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Unsure">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Seasonal Variation">
+					description = <"Is there any seasonal variation for breathlessness">
+				>
+				["at0019"] = <
+					text = <"Daily">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Monthly">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Unsure">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Occurrences">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"CLUSTER">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Variation at work">
+					description = <"Does the occurrences of breathlessness increase during work">
+				>
+				["at0029"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Unsure">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Severity">
+					description = <"How severe are the breathlessness episodes">
+				>
+				["at0033"] = <
+					text = <"Mild">
+					description = <"Mild symptoms, slight short of breath, doesn't severely impact daily tasks">
+				>
+				["at0034"] = <
+					text = <"Medium">
+					description = <"Difficult to breathe, which impacts physical activities">
+				>
+				["at0035"] = <
+					text = <"Severe">
+					description = <"Very difficult to breathe, requires emergency attention">
+				>
+				["at0037"] = <
+					text = <"Average frequency per week">
+					description = <"">
+				>
+			>
+		>
+	>
