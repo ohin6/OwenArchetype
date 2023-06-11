@@ -92,33 +92,6 @@ Skal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen O
 
 Skal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).">
 		>
-		["en"] = <
-			language = <[ISO_639-1::en]>
-			purpose = <"To record the results of a pulmonary function test performed using a spirometer or peak flow meter.">
-			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway","pef","pefr">
-			copyright = <"© openEHR Foundation">
-			use = <"Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.
-
-This archetype is intended to be used to record the results from:
-- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; 
-- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.
-- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. 
-
-If the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.
-
-If additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.
-
-The 'Any event' can be cloned and constrained to support the representation of:
-- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
-- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.">
-			misuse = <"Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
-
-Not to be used to record details about incentive spirometry. Use specific archetypes for these purposes.
-
-Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
-
-Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
-		>
 		["sl"] = <
 			language = <[ISO_639-1::sl]>
 			purpose = <"*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)">
@@ -146,6 +119,33 @@ Not to be used to record the results of blood gas tests. Use the OBSERVATION.lab
 
 Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)">
 		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results of a pulmonary function test performed using a spirometer or peak flow meter.">
+			keywords = <"respiratory","pulmonary","spirometry","peak flow","lung","bronchial","airway","pef","pefr">
+			copyright = <"© openEHR Foundation">
+			use = <"Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.
+
+This archetype is intended to be used to record the results from:
+- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; 
+- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.
+- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. 
+
+If the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.
+
+If additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.
+
+The 'Any event' can be cloned and constrained to support the representation of:
+- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;
+- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.">
+			misuse = <"Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.
+
+Not to be used to record details about incentive spirometry. Use specific archetypes for these purposes.
+
+Not to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.
+
+Not to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -162,7 +162,7 @@ Sheshadri A, Keus L, Blanco D, Lei X, Kellner C, Shannon VR, Balachandran DD, Ji
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"289e285677df1aa1986f196b57e1a1ca">
+		["MD5-CAM-1.0.1"] = <"f19645e7b1eccae55587a80767a04634">
 		["build_uid"] = <"74bae2f5-2f72-4b3d-8096-dfb0a34ce1af">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"2.0.0">
@@ -177,15 +177,50 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0211] occurrences matches {0..1} matches {    -- Date and Time of Test
+									ELEMENT[at0211] matches {    -- Date and Time of Test
 										value matches {
 											DV_DATE_TIME matches {*}
 										}
 									}
-									ELEMENT[at0210] occurrences matches {0..1} matches {    -- Peak Expiratory Flow Rate (PEFR)
+									ELEMENT[at0210] occurrences matches {0..1} matches {    -- pre FEV1
 										value matches {
 											DV_COUNT matches {
-												magnitude matches {|0..9999|}
+												magnitude matches {|0..15|}
+											}
+										}
+									}
+									ELEMENT[at0213] occurrences matches {0..1} matches {    -- pre FVC
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..15|}
+											}
+										}
+									}
+									ELEMENT[at0215] matches {    -- pre FEV1/FVC
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..9|}
+											}
+										}
+									}
+									ELEMENT[at0212] occurrences matches {0..1} matches {    -- post FEV1
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..15|}
+											}
+										}
+									}
+									ELEMENT[at0214] occurrences matches {0..1} matches {    -- post FVC
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..15|}
+											}
+										}
+									}
+									ELEMENT[at0216] matches {    -- Post FEV1/FVC
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..9|}
 											}
 										}
 									}
@@ -264,6 +299,20 @@ definition
 					allow_archetype CLUSTER[at0132] occurrences matches {0..*} matches {    -- Extension
 						include
 							archetype_id/value matches {/.*/}
+					}
+					CLUSTER[at0217] occurrences matches {0..1} matches {    -- Drug
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0218] occurrences matches {0..1} matches {    -- Name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0220] occurrences matches {0..1} matches {    -- Concentration
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -368,12 +417,51 @@ ontology
 					description = <"Details about environmental conditions undertaken at the time of spirometry recording.">
 				>
 				["at0210"] = <
-					text = <"Peak Expiratory Flow Rate (PEFR)">
-					description = <"output liters per minute (L/min)">
+					text = <"pre FEV1">
+					description = <"Forced Expiratory Volume pre administration of bronchodilator">
+					comment = <"output liters per (L)">
 				>
 				["at0211"] = <
 					text = <"Date and Time of Test">
 					description = <"">
+				>
+				["at0212"] = <
+					text = <"post FEV1">
+					description = <"Forced Expiratory Volume post administration of bronchodilator">
+					comment = <"output liters per (L)">
+				>
+				["at0213"] = <
+					text = <"pre FVC">
+					description = <"Forced vital capacity performed pre administration of bronchodilator">
+					comment = <"output liters per (L)">
+				>
+				["at0214"] = <
+					text = <"post FVC">
+					description = <"Forced vital capacity performed post administration of bronchodilator">
+					comment = <"output liters per (L)">
+				>
+				["at0215"] = <
+					text = <"pre FEV1/FVC">
+					description = <"lung function pre administration of bronchodilation">
+					comment = <"calculated from pre FEV1/preFVC">
+				>
+				["at0216"] = <
+					text = <"Post FEV1/FVC">
+					description = <"lung function pre administration of bronchodilation">
+					comment = <"calculated from pre FEV1/preFVC">
+				>
+				["at0217"] = <
+					text = <"Drug">
+					description = <"Details of Bronchodilator">
+				>
+				["at0218"] = <
+					text = <"Name">
+					description = <"give name of bronchodilator used">
+				>
+				["at0220"] = <
+					text = <"Concentration">
+					description = <"Give concentration of active ingredient">
+					comment = <"parts per million (ppm)">
 				>
 			>
 		>
@@ -471,12 +559,51 @@ ontology
 					description = <"*Details about environmental conditions undertaken at the time of spirometry recording. (en)">
 				>
 				["at0210"] = <
-					text = <"*Peak Expiratory Flow Rate (PEFR) (en)">
-					description = <"*output liters per minute (L/min) (en)">
+					text = <"*pre FEV1 (en)">
+					description = <"*Forced Expiratory Volume pre administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
 				>
 				["at0211"] = <
 					text = <"*Date and Time of Test (en)">
 					description = <"">
+				>
+				["at0212"] = <
+					text = <"*post FEV1 (en)">
+					description = <"*Forced Expiratory Volume post administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0213"] = <
+					text = <"*pre FVC (en)">
+					description = <"*Forced vital capacity performed pre administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0214"] = <
+					text = <"*post FVC (en)">
+					description = <"*Forced vital capacity performed post administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0215"] = <
+					text = <"*pre FEV1/FVC (en)">
+					description = <"*lung function pre administration of bronchodilation (en)">
+					comment = <"*calculated from pre FEV1/preFVC (en)">
+				>
+				["at0216"] = <
+					text = <"*Post FEV1/FVC (en)">
+					description = <"*lung function pre administration of bronchodilation (en)">
+					comment = <"*calculated from pre FEV1/preFVC (en)">
+				>
+				["at0217"] = <
+					text = <"*Drug (en)">
+					description = <"*Details of Bronchodilator (en)">
+				>
+				["at0218"] = <
+					text = <"*Name (en)">
+					description = <"*give name of bronchodilator used (en)">
+				>
+				["at0220"] = <
+					text = <"*Concentration (en)">
+					description = <"*Give concentration of active ingredient (en)">
+					comment = <"*parts per million (ppm) (en)">
 				>
 			>
 		>
@@ -575,12 +702,51 @@ ontology
 					description = <"Detaljer om luftforhold i omgivelsene under spirometriundersøkelsen.">
 				>
 				["at0210"] = <
-					text = <"*Peak Expiratory Flow Rate (PEFR) (en)">
-					description = <"*output liters per minute (L/min) (en)">
+					text = <"*pre FEV1 (en)">
+					description = <"*Forced Expiratory Volume pre administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
 				>
 				["at0211"] = <
 					text = <"*Date and Time of Test (en)">
 					description = <"">
+				>
+				["at0212"] = <
+					text = <"*post FEV1 (en)">
+					description = <"*Forced Expiratory Volume post administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0213"] = <
+					text = <"*pre FVC (en)">
+					description = <"*Forced vital capacity performed pre administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0214"] = <
+					text = <"*post FVC (en)">
+					description = <"*Forced vital capacity performed post administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0215"] = <
+					text = <"*pre FEV1/FVC (en)">
+					description = <"*lung function pre administration of bronchodilation (en)">
+					comment = <"*calculated from pre FEV1/preFVC (en)">
+				>
+				["at0216"] = <
+					text = <"*Post FEV1/FVC (en)">
+					description = <"*lung function pre administration of bronchodilation (en)">
+					comment = <"*calculated from pre FEV1/preFVC (en)">
+				>
+				["at0217"] = <
+					text = <"*Drug (en)">
+					description = <"*Details of Bronchodilator (en)">
+				>
+				["at0218"] = <
+					text = <"*Name (en)">
+					description = <"*give name of bronchodilator used (en)">
+				>
+				["at0220"] = <
+					text = <"*Concentration (en)">
+					description = <"*Give concentration of active ingredient (en)">
+					comment = <"*parts per million (ppm) (en)">
 				>
 			>
 		>
@@ -679,12 +845,51 @@ ontology
 					description = <"*Details about environmental conditions undertaken at the time of spirometry recording. (en)">
 				>
 				["at0210"] = <
-					text = <"*Peak Expiratory Flow Rate (PEFR) (en)">
-					description = <"*output liters per minute (L/min) (en)">
+					text = <"*pre FEV1 (en)">
+					description = <"*Forced Expiratory Volume pre administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
 				>
 				["at0211"] = <
 					text = <"*Date and Time of Test (en)">
 					description = <"">
+				>
+				["at0212"] = <
+					text = <"*post FEV1 (en)">
+					description = <"*Forced Expiratory Volume post administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0213"] = <
+					text = <"*pre FVC (en)">
+					description = <"*Forced vital capacity performed pre administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0214"] = <
+					text = <"*post FVC (en)">
+					description = <"*Forced vital capacity performed post administration of bronchodilator (en)">
+					comment = <"*output liters per (L) (en)">
+				>
+				["at0215"] = <
+					text = <"*pre FEV1/FVC (en)">
+					description = <"*lung function pre administration of bronchodilation (en)">
+					comment = <"*calculated from pre FEV1/preFVC (en)">
+				>
+				["at0216"] = <
+					text = <"*Post FEV1/FVC (en)">
+					description = <"*lung function pre administration of bronchodilation (en)">
+					comment = <"*calculated from pre FEV1/preFVC (en)">
+				>
+				["at0217"] = <
+					text = <"*Drug (en)">
+					description = <"*Details of Bronchodilator (en)">
+				>
+				["at0218"] = <
+					text = <"*Name (en)">
+					description = <"*give name of bronchodilator used (en)">
+				>
+				["at0220"] = <
+					text = <"*Concentration (en)">
+					description = <"*Give concentration of active ingredient (en)">
+					comment = <"*parts per million (ppm) (en)">
 				>
 			>
 		>
