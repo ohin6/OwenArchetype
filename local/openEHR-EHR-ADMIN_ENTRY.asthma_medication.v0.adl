@@ -1,0 +1,67 @@
+archetype (adl_version=1.4; uid=cb14e904-6a4b-405d-b526-7c5f9728c962)
+	openEHR-EHR-ADMIN_ENTRY.asthma_medication.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-06-11">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a2763c69bf7351c2d6b0592f1436243d">
+		["build_uid"] = <"2a1ac9da-2c14-37a4-b0b3-c5a9790af299">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Asthma_Medication
+		data matches {
+			ITEM_TREE matches {
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0002] occurrences matches {0..*} matches {    -- Drug
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Drug name
+								value matches {
+									DV_CODED_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Asthma_Medication">
+					description = <"Asthma_Medication">
+				>
+				["at0002"] = <
+					text = <"Drug">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Drug name">
+					description = <"">
+				>
+			>
+		>
+	>
