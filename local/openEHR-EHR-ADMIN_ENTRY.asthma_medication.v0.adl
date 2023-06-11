@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a2763c69bf7351c2d6b0592f1436243d">
+		["MD5-CAM-1.0.1"] = <"9427d0dea2633130c0548bd6a8f5be10">
 		["build_uid"] = <"2a1ac9da-2c14-37a4-b0b3-c5a9790af299">
 	>
 
@@ -37,6 +37,21 @@ definition
 							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Drug name
 								value matches {
 									DV_CODED_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Concentration
+								value matches {
+									DV_COUNT matches {*}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Normal usage instructions
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_TEXT
+								value matches {
+									DV_TEXT matches {*}
 								}
 							}
 						}
@@ -60,6 +75,18 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Drug name">
+					description = <"Use SnoMed Code">
+				>
+				["at0006"] = <
+					text = <"Concentration">
+					description = <"Concentration of active ingredient">
+				>
+				["at0007"] = <
+					text = <"Normal usage instructions">
+					description = <"Give details of how to administer drug in normal circumstances">
+				>
+				["at0008"] = <
+					text = <"DV_TEXT">
 					description = <"">
 				>
 			>
