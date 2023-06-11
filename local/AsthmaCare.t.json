@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "4.0.0",
+      "sem_ver" : "5.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "5500249fc268d507e7811f024a4195c5",
+      "MD5-CAM-1.0.1" : "3f8924f1db2811d74eedd71829f9d17e",
       "PARENT:MD5-CAM-1.0.1" : "B8AD0C7EB492491CE6F7968C1AFFB40C"
     },
     "details" : {
@@ -141,7 +141,7 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "SECTION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.49",
+        "nodeId" : "at0.67",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-001.v1",
@@ -150,10 +150,19 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "SECTION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.48",
+        "nodeId" : "at0.68",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-003.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "SECTION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.71",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-SECTION.ovl-referral_details-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -166,21 +175,30 @@
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.55",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-body_mass_index-001.v2",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.58",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-peakflow_result-001.v2",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "SECTION",
         "occurrences" : "0..1",
         "nodeId" : "at0.4",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.52",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-004.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -4699,7 +4717,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "58541353E6360A70E64CBE70C1E70B25"
+        "PARENT:MD5-CAM-1.0.1" : "835718CE5D40FEE9DCD118D558D5DE75"
       },
       "details" : {
         "de" : {
@@ -4760,6 +4778,21 @@
           "use" : "Use to provide a single place within the health record to document a range of clinical statements about adverse reactions, including:\r\n- record a clinical assessment of the individual’s propensity for a potential future reaction upon re-exposure; and\r\n- record cumulative information about the reaction to each exposure.\r\n\r\nUse to record information about the positive presence of the risk of an adverse reaction:\r\n- to support direct clinical care of an individual; \r\n- as part of a managed adverse reaction or allergy/intolerance list; \r\n- to support exchange of information about the propensity and events related to adverse reactions; \r\n- to inform adverse reaction reporting; and \r\n- to assist computerised knowledge-based activities such as clinical decision support and alerts.\r\n\r\nUse to record information about the risk of adverse reactions to a broad range of substances, including: incipients and excipients in medicinal preparations; biological products; metal salts; and organic chemical compounds.  \r\n\r\nAdverse reaction may be:\r\n- an immune mediated reaction - Types I-IV (including allergic reactions and hypersensitivities); or \r\n- a non-immune mediated reaction - including pseudo-allergic reactions, side effects, intolerances, drug toxicities (eg to Gentamicin).\r\nIn clinical practice distinguishing between immune-mediated and non-immune mediated reactions is difficult and often not practical. Identification of the type of reaction is not a proxy for seriousness or risk of harm to the patient, which is better expressed by the manifestation in clinical practice.\r\n\r\nThe risk of an adverse reaction event or manifestation should not be recorded without identifying a proposed causative substance or class of substance. If there is uncertainty that a specific substance is the cause, this uncertainty can be recorded using the ‘Status’ data element. If there are multiple possible substances that may have caused a reaction/manifestation, each substance should be recorded using a separate instance of this adverse reaction archetype with the ‘Status’ set to an initial state of ‘Suspected’ so that adverse reaction checking can be activated in clinical systems. Once the substance, agent or class is later proven not to be the cause for a given reaction then the ‘Status’ can be modified to ‘Refuted’.\r\n\r\nThis archetype has been designed to allow recording of information about a specific substance (amoxycillin, oysters, or bee sting venom) or, alternatively, a class of substance (eg Penicillins). If a class of substance is recorded then identification of the exact substance can be recorded on a per exposure basis.\r\n\r\nThe scope of this archetype has deliberately focused on identifying a pragmatic data set that are used in most clinical systems or will be suitable for most common clinical scenarios, however it permits extension of the model when additional detail is required, for example 'Reaction details', 'Exposure details', and 'Reporting details' slots. Examples of clinical situations where the extension may be required include: a detailed allergist/immunologist assessment, for reporting to regulatory bodies or use in a clinical trial.\r\n\r\nThe act of recording any adverse reaction risk in a health record involves the clinical assessment that a potential hazard exists for an individual if they are exposed to the same substance/agent/class in the future – that is, a relative contraindication - and the default ‘Criticality’ value should be set to ‘Low risk’. If a clinician considers that it is not safe for the individual to be deliberately re-exposed to the substance/agent again, for example, following a manifestation of a life-threatening anaphylaxis, then the 'Criticality' data element should be amended to ‘High’. \r\n\r\nA formal Adverse Event Report to regulatory bodies is a document that will contain a broad range of information in addition to the specific details about the adverse reaction. The report could utilise parts of this Risk of adverse reaction archetype plus include additional data as required per jurisdiction.\r\n\r\nAn adverse reaction or allergy/intolerance list is a record of all identified propensities for an adverse reaction for the individual upon future exposure to the substance or class, plus provides potential access to the evidence provided by details about each reaction event, such as manifestation.\r\n\r\nValuable first-level information that could be presented to the clinician when they need to assess propensity for future reactions are:\r\n- statements about previous clinical manifestations following exposure;\r\n- source of the information/reporter; and\r\n- the ‘Criticality’ flag.\r\nSecond-level information can be drawn from each exposure event and links to additional detailed information such as history, examination and diagnoses stored elsewhere in the record, if it is available.\r\n\r\nThis archetype is designed as one component of the therapeutic precautions family of archetypes that need to be considered when a clinician is about to commence a new treatment, test or procedure for an individual.\r\n\r\nLinks to other parts of the health record where further details may be located, such as consultation notes, is allowed by the openEHR reference model, but not modelled explicitly in this archetype.\r\n\r\nThe content of this archetype is a result of a collaboration between the openEHR and HL7 FHIR communities. FHIR specific content that was included as part of the peer review process has been removed from this openEHR archetype.",
           "misuse" : "Not to be used for recording physiological reactions to physical agents, such as heat, cold, sunlight, vibration, exercise activity, by infectious agents or food contaminants. Use a specific archetype for EVALUATION.problem/diagnosis or CLUSTER.symptom/sign for this purpose.\r\n\r\nNot to be used to record adverse events, including failures of clinical process, interventions or products. For example: abnormal use or mistakes/errors made in maladministration of an agent or substance; incorrect dosage; mislabelling; harm or injury caused by an intervention or procedure; overdose/poisoning etc. Use a specific archetype for the purpose. \r\n\r\nNot to be used to record an adverse reaction where the substance is unknown. Use EVALUATION.problem_diagnosis or CLUSTER.symptoms to record as part of the health record until a possible substance is identified.\r\n\r\nNot to be used to record reactions to transfusions of blood products. Use a specific archetype for the purpose. \r\n\r\nNot to be used as a proxy for an Adverse Event Report. See above for how it may be used as one component of an Adverse Event Report.\r\n\r\nNot to be used for recording 'alerts'. Use EVALUATION.precaution, EVALUATION.contraindication or related archetypes for this purpose.\r\n\r\nNot to be used for recording failed therapy.\r\n\r\nNot to be used for the explicit recording of an absence (or negative presence) of a reaction to 'any substances' or to identified substances, for example ‘No known allergies or adverse reactions’ or ‘No known allergies to Penicillin’. Use the EVALUATION.exclusion-adverse_reaction archetype to express a positive statement of adverse reaction exclusion.\r\n\r\nNot to be used for the explicit recording that no information was able to be obtained about the adverse reaction status of a patient. Use the EVALUATION.absence archetype to record that a positive statement that information was not able to be obtained, for example, if a non-cooperative patient refuses to answer questions.",
           "copyright" : "© Australian Digital Health Agency, openEHR Foundation, HL7 International, Nasjonal IKT",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att ge en klinisk bedömning av benägenheten för biverkningar vid framtida exponering för den angivna substansen eller substansklassen.\r\n\r\nAtt, vid identifierad benägenhet, registrera information eller bevis om en eller flera reaktionshändelser kännetecknade av en skadlig eller oönskad fysiologisk respons. Dessa ska vara sällsynta för individen och utlöses vid exponering av det angivna ämnet eller substansklassen.",
+          "keywords" : [ "reaktion", "allergi", "allergisk", "ogynnsam", "händelse", "effekt", "känslighet", "intolerans", "överkänslighet", "sidoeffekt", "giftighet", "läkemedel", "mat", "ombud", "ämne", "immun", "icke-immun", "kemisk", "anafylaxi", "allergen", "medicin", "tillägg", "läkemedel", "naturläkemedel", "immunologiska", "icke-immunologiska", "risk" ],
+          "use" : "Används för att ge utrymme åt dokumentation av kliniska uttalanden om biverkningar i hälsojournalen, inklusive: \r\n- registrera en klinisk bedömning av individens benägenhet för en potentiell framtida reaktion vid återexponering, och\r\n- registrera information om reaktionen vid varje exponeringstillfälle.\r\n\r\nAnvänds för att registrera information om förekomsten av risk för en biverkning:\r\n- för att direkt stödja klinisk vård av en individ;\r\n- som en del av biverkning eller allergi-/intoleranslista;\r\n- för att stödja utbyte av information om benägenheten och aktiviteter relaterade till biverkningar;\r\n- för att bidra med information till biverkningsrapportering; och\r\n- för att hjälpa datoriserade och kunskapsbaserade aktiviteter såsom kliniskt beslutsstöd och alarm.\r\n\r\nAnvänds för att registrera information om risken för biverkningar för flera olika substanser, såsom: incipients and excipients in medicinal preparations; biologiska produkter; metallsalter; och organiska kemiska föreningar.\r\n\r\nBiverkningar kan innefatta:\r\n- en immunmedierad reaktion av typ I-IV (inklusive allergiska reaktioner och överkänslighet); eller\r\n- en icke immunmedierad reaktion, inklusive pseudoallergiska reaktioner, biverkningar, intoleranser, läkemedeltoxicitet (t.ex. gentamicin).\r\nI klinisk praxis är det svårt och ofta opraktiskt att skilja mellan immunförmedlade och icke-immunförmedlade reaktioner. Identifiering av reaktionstypen utgör inte ett belägg för grad av allvarlighet eller risk för patientskada. Detta uttrycks bättre av manifestation i klinisk praxis.\r\n\r\nRisken för en biverkning eller manifestation bör inte registreras utan identifiering av en föreslagen orsakssubstans eller substansklass. Om det råder osäkerhet huruvida ett specifikt ämne är orsaksdrivande, kan denna osäkerhet registreras med hjälp av dataelementet ”Status”. Om det finns flera möjliga ämnen som kan ha orsakat en reaktion/manifestation, bör varje ämne registreras med hjälp av en separat instans tillsammans med ”Misstänkt” som ”Status”, så att kontroll av biverkningar kan aktiveras i kliniska system. Om ämnet, medlet eller substansklassen senare inte visar sig vara orsaken till en given reaktion kan \"Status\" ändras till \"Vederlagd\".\r\n\r\nDenna arketyp har utformats för att möjliggöra registrering av information om ett specifikt ämne (amoxycillin, ostron eller bi-gift) eller en ämnesklass (t.ex. penicillin). Om en klass av ett ämne registreras, kan identifiering av det exakta ämnet registreras per exposure basis.\r\n\r\nDenna arketyp fokuserar på att identifiera en datamängd som används i de flesta kliniska system, eller som är lämpat för de vanligaste kliniska scenarierna. Vid krav på tillägg av ytterligare detaljer, till exempel ”Reaktionsdetaljer”, ”Exponeringsdetaljer” och ”Rapporteringsdetaljer”, tillåts förlängning av modellen. Exempel på kliniska situationer där sådan förlängning kan vara aktuell är bland annat vara vid immunologiska bedömningar, rapportering till tillsynsorgan eller vid användning i klinisk prövning. \r\n\r\nRegistrering av eventuella biverkningsrisker i en hälsojournal involverar en klinisk bedömning om huruvida framtida exponering av aktuella ämnet/medlet/klassen utgör en potentiell risk, en så kallad relativ kontraindikation. Initieringsvärdet för dataelementet ”Kritisk nivå” bör vara “Låg risk”. Om en läkare däremot anser att det inte är säkert för individen att medvetet återexponeras för ämnet, till exempel efter en manifestation av en livshotande anafylax, bör ”Kritisk nivå” i stället vara \"Hög risk”.\r\n\r\nEn formell biverkningsrapport till ett tillsynsorgan är ett dokument som innehåller en stor mängd information utöver de specifika detaljerna om själva biverkningen. Rapporten skulle kunna baseras på delar av denna arketyp, och inkludera ytterligare data enligt behov per jurisdiktion.\r\n\r\nEn biverknings- eller allergi-/intoleranslista är ett register över en individs identifierade benägenheter att utveckla biverkningar vid exponering för ett ämne eller klass, inklusive tillhandahålla bevisning för varje reaktionshändelse, såsom manifestation.\r\n\r\nVärdefull förstahandsinformation för läkaren vid bedömning av benägenhet för framtida reaktioner inkluderar:\r\n- uttalanden om tidigare kliniska manifestationer efter exponering;\r\n- källa till informationen/reportern, och\r\n- status på ”Kritisk nivå”.\r\nAndrahandsinformation erhålls vid varje exponeringstillfälle som sedan kan kopplas till ytterligare information i journalen, såsom som anamnes, undersökningar och diagnoser. \r\n\r\nDenna arketyp är utformad som en del av the therapeutic precautions family of archetypes, vilken kräver övervägning vid påbörjan av en ny behandling, test eller procedur för en individ.\r\n\r\nKopplingar till andra delar av hälsojournalen där ytterligare detaljer kan finnas, till exempel konsultationsanteckningar, är tillåtna enligt openEHR-referensmodellen, men modelleras inte uttryckligen i denna arketypen.\r\n\r\nInnehållet i denna arketyp är ett resultat av ett samarbete mellan openEHR- och HL7 FHIR- communities. FHIR-specifikt innehåll som vanligtvis inkluderas som en del av peer review-processen har tagits bort från denna openEHR-arketyp.\r\n",
+          "misuse" : "Ska inte användas för att registrera fysiologiska reaktioner på fysiska ämnen, såsom värme, kyla, solljus, vibrationer, träningsaktivitet, smittsamma ämnen eller livsmedelsföroreningar. Använd i stället en specifik arketyp för EVALUATION.problem/diagnosis eller CLUSTER.symptom/sign för detta ändamål.\r\n\r\nSka inte användas för att registrera biverkningar eller misslyckande kliniska processer, ingripanden eller produkter. Till exempel: onormal användning eller felaktig administrering av ett medel eller ämne; felaktig dosering; felmärkning; skada orsakad av ett ingripande eller förfarande; överdos/förgiftning osv. Använd i stället en specifik arketyp för ändamålet.\r\n\r\nSka inte användas för att registrera en biverkning vars orsakssubstans är okänd. Använd i stället EVALUATION.problem_diagnosis eller CLUSTER.symptoms som del av hälsojournalen för registrering fram tills det att substansen är identifierad. \r\n\r\nSka inte användas för att registrera reaktioner vid blodtransfusion. Använd i stället en specifik arketyp för detta ändamål. \r\n\r\nSka inte användas som proxy för biverkningsrapport. Se ovan hur denna arketyp i stället kan användas som en del i biverkningsrapporten. \r\n\r\nSka inte användas för att registrera ”alarm”. Använd i stället EVALUATION.precaution, EVALUATION.contraindication eller annan relaterad arketyp för detta ändamål. \r\n\r\nSka inte användas för att registrera misslyckad behandling. \r\n\r\nSka inte användas för att explicit registrera en frånvaro (eller negativ närvaro) av en reaktion på substanser, till exempel ”Inga kända allergier eller biverkningar” eller ”Inga kända allergier mot penicillin”. Använd i stället EVALUATION.exclusion-negative_reaction-arketypen för att uttrycka ett positivt uttalande om uteslutning av biverkningar.\r\n\r\nSka inte användas för att explicit registrera att ingen information kunde erhållas angående patientens biverkningsstatus. Använd i stället EVALUATION.absence-arketypen för att registrera att ett positivt uttalande om att information inte kunde erhållas, till exempel om en icke-samarbetsvillig patient vägrar att svara på frågor.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -5368,6 +5401,14 @@
             "code" : "ac0.1",
             "description" : ""
           }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
         }
       },
       "termBindings" : { },
@@ -5433,6 +5474,20 @@
         "name" : "Osmeire Chamelette Sanzovo",
         "organisation" : "Hospital Sírio Libanês",
         "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Emma Malm",
+        "organisation" : "Karolinska Universitetssjukhuset",
+        "email" : "emma.malm@cambio.se"
       },
       "otherDetails" : { }
     } ]
@@ -5513,7 +5568,162 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte.",
+          "keywords" : [ "Abschnitt", "Template", "Überschrift", "Ad hoc", "Abschnittsüberschrift" ],
+          "use" : "Dieser Archetyp kann für die Erstellung einer Abschnittsüberschrift in einem Template verwendet werden. Die Überschrift kann, passend zu dem jeweiligen klinischen Kontext, umbenannt werden. Zum Beispiel: \"Ad hoc Überschrift\" wird umbenannt in \"Untersuchungsergebnisse\".\r\n\r\n",
+          "misuse" : "Die Überschrift sollte in einem Template nicht unverändert verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.",
+          "keywords" : [ ],
+          "use" : "Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".",
+          "misuse" : "Ska inte lämnas oförändrad i en openEHR-mall.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Базовый заголовок раздела, должен быть переименован в локальном шаблоне ",
+          "keywords" : [ "раздел", "шаблон", "заготовка", "название", "образец" ],
+          "use" : "используется для создания и именования разделов в локальных шаблонах",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.",
+          "keywords" : [ ],
+          "use" : "Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".",
+          "misuse" : "Skal ikke stå med uendret navn i en templat.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Proporcionar un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico.",
+          "keywords" : [ ],
+          "use" : "Utilizar para construir un encabezado de sección en una plantilla y que será renombrado para su empleo en un contexto clínico específico. Por ejemplo, \"Encabezado ad hoc\" puede renombrarse como \"Hallazgos de examen\".",
+          "misuse" : "No debe mantenerse sin cambios en una plantilla.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Oferecer um cabeçalho de uma sessão genérica que será renomeado no template para adequar-se a um contexto clínico específico.",
+          "keywords" : [ "cabeçalho" ],
+          "use" : "Utilize para construir um cabeçalho de uma sessão (de um template) que será renomeada para adequar-se a um contexto clínico específico. Por exemplo: \"cabeçalho Ad hoc\" renomeado para \"Achados de exame\".",
+          "misuse" : "Não deve manter a configuração original no template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a generic section header which will be renamed in a template to suit a specific clinical context.",
+          "keywords" : [ ],
+          "use" : "Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".",
+          "misuse" : "Not to be left unchanged in a template.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Fornire un'intestazione generica della sezione che sarà rinominata in un template per adattarsi ad uno specifico contesto clinico.",
+          "keywords" : [ ],
+          "use" : "Usato per costruire un'intestazione di sezione in un template che sarà rinominato in base al contesto clinico specifico. Per esempio: \"Intestazione ad hoc\" rinominata in \"Risultati dell'esame\".",
+          "misuse" : "Non deve essere lasciato invariato in un template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
     "differential" : true,
@@ -5822,7 +6032,53 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "75F0FE57A0A92ECC8129254AAAE50E4F"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Zugehörigkeit, Verwandtschaft oder Verbindung einer Person zu einer oder mehreren Personengruppen, die normalerweise durch die Person selbst identifiziert werden.",
+          "keywords" : [ "Ethnizität", "Kultur", "Sprache", "Rasse", "Stamm", "Zugehörigkeit", "Glauben", "Verwandtschaft", "Identität", "Clan", "Gruppe", "Staatsangehörigkeit", "Staatsbürgerschaft", "Nation", "politisch" ],
+          "use" : "Wird verwendet, um die Zugehörigkeit, Verwandtschaft oder Verbindung einer Person zu einer oder mehreren Personengruppen darzustellen, die normalerweise selbst identifiziert werden.\r\n\r\nEthnizität ist ein Konzept, das häufig uneinheitlich verwendet wird, sodass vorhandene oder ältere Daten inhaltlich sehr unterschiedlich sein können, einschließlich, aber nicht beschränkt auf:\r\n- Eine lange gemeinsame Geschichte (schriftlich oder mündlich);\r\n- Eine kulturelle Tradition, einschließlich familiärer, sozialer und religiöser Bräuche;\r\n- Ein gemeinsamer geografischer Ursprung;\r\n- Eine gemeinsame Sprache oder\r\n- Eine Minderheit oder eigenständige Gruppe innerhalb des lokalen Gemeindekontexts.\r\n\r\nBei der Gestaltung dieses Archetyps wurde die Struktur bewusst einfach gehalten, um alle Anforderungen an die Repräsentation von Ethnizität zu unterstützen. Wenn das Verständnis für ethnische Zugehörigkeit und angemessene Wertesätze identifiziert und vereinbart wird, kann dieser Archetyp wachsen, um die sich entwickelnde Klarheit der Anforderungen zu unterstützen. Das Datenelement „Ethnizität“ ermöglicht Mehrfachvorkommen, sodass mehr als eine ethnische und kulturelle Identität für die Person aus einem einzigen Wertesatz erfasst werden kann, und dass auch mehr als eine Darstellung von „Ethnizität“ erfasst werden kann, z. B. explizite Erfassung First People-Status.\r\n\r\nDas Datenelement „Herkunft“ wurde ebenfalls aufgenommen, um die Bewertung des Gesundheitsrisikos in Bezug auf die Familiengeschichte und Erbkrankheiten zu unterstützen, wie z. B. genetische Variationen, die das Risiko für Morbus Crohn bei aschkenasischen Juden erhöhen.\r\n\r\nDas Ausmaß der Überschneidung zwischen „Ethnizität“ und „Herkunft“ kann von Person zu Person sehr unterschiedlich sein, aber die Aufteilung in einzelne Datenelemente ermöglicht eine angemessene Verwendung im klinischen Kontext zur Entscheidungsunterstützung und Bereitstellung von Gesundheitsleistungen.\r\n\r\nDieser Archetyp wurde so konzipiert, dass er als einzelne Instanz in einer Gesundheitsakte aufgezeichnet und im Laufe der Zeit als neue Version beibehalten, aktualisiert und überarbeitet werden kann.\r\n\r\nEthnizität wird oft als Bestandteil einer demografischen Aufzeichnung einer Person angesehen, wurde jedoch innerhalb dieses klinischen Archetyps für Situationen dargestellt, in denen sie in einer klinischen Datensammlung dargestellt werden muss oder beispielsweise zur Unterstützung einer kultursensiblen und angemessenen Gesundheitsversorgung erforderlich ist in Gemeinschaften der First Nations.\r\n\r\nDas Konzept der Kategorisierung nach Rasse oder Hautfarbe ist umstritten. An einigen Stellen mag der Begriff „Rasse“ als akzeptabel und austauschbar mit „Ethnizität“ angesehen werden, an anderen ist er jedoch illegal. Um zur Verwirrung beizutragen, enthalten viele Wertesätze für ethnische Zugehörigkeit auch Werte, die körperliche Merkmale wie Hautfarbe oder geografische Herkunft beschreiben. Das Konzept „Rasse“ kann manchmal als unbeholfener Proxy zur Identifizierung von Risikofaktoren im Zusammenhang mit sozialen Determinanten der Gesundheit (SDOH) verwendet werden, es wird jedoch dringend empfohlen, Archetypen zu verwenden, die SDOH-Konzepte für eine genauere Datenerfassung darstellen.",
+          "misuse" : "Darf nicht verwendet werden, um das „Geburtsland“ einer Person darzustellen. Verwenden Sie zu diesem Zweck das Datenelement „Geburtsland“ innerhalb des Archetyps EVALUATION.birth_details.\r\n\r\nNicht zur Darstellung einer Religionszugehörigkeit verwenden. Verwenden Sie dazu den Archetyp CLUSTER.religion.\r\n\r\nDarf nicht verwendet werden, um das selbst identifizierte Geschlecht darzustellen. Verwenden Sie zu diesem Zweck das Datenelement „Geschlechtsidentität“ innerhalb des Archetyps EVALUATION.gender.\r\n\r\nNicht zur Darstellung von Sprachanforderungen für Übersetzungszwecke verwenden. Verwenden Sie dazu die CLUSTER.language.\r\n\r\nDarf nicht verwendet werden, um formelle Aufzeichnungen über den ethnischen Hintergrund darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et individs selvopplevde og vanligvis selvrapporterte tilknytning, likhet eller forbindelse med en eller flere grupperinger av mennesker.",
+          "keywords" : [ "etnisitet", "kultur", "språk", "nasjon", "stamme", "rase", "tilknytning", "tro", "slektskap", "nasjonalitet", "statsborgerskap", "identitet", "klan", "gruppe" ],
+          "use" : "Bruk for å registrere et individs selvopplevde og vanligvis selvrapporterte tilknytning, likhet eller forbindelse med en eller flere grupperinger av mennesker.\r\n\r\nEtnisitet er et konsept som ofte brukes inkonsekvent, som gjør at eksisterende eller historiske data kan variere voldsomt i innhold. Dette inkluderer, men er ikke begrenset til:\r\n\r\n- Langvarig og delt historie (muntlig eller skriftlig)\r\n- Kulturelle tradisjoner, inkludert familiære, sosiale og religiøse skikker\r\n- Delt geografisk opphav\r\n- Felles språk\r\n- En minoritet eller særskilt gruppe innenfor lokalsamfunnet\r\n\r\nI utarbeidelsen av denne arketypen har strukturen bevisst blitt laget enkel, for å kunne støtte hvilket som helst krav for å representere etnisitet. Når det er en allmenn og omforent forståelse av etnisitet og tilhørende verdisett, kan denne arketypen utvides for å dekke de kravene som utkrystalliserer seg. Dataelementet \"Etnisitet\" er åpen for å kunne repeteres, slik at mer enn én etnisk og kulturell identitet kan lagres, enten i form av et flervalg i et verdisett, eller ved at flere forekomster av \"Etnisitet\" blir registrert. For eksempel hvis man skal registrere eksplisitt tilhørighet til en urbefolkningsgruppe.\r\n\r\nDataelementet \"Opphav\" er også lagt til, for å legge til rette for å registrere tilhørighet til grupper som kan ha familiær og arvelig sykdom, slik som genetiske variasjoner som øker sannsynligheten for Crohns sykdom hos askenasiske jøder.\r\n\r\nAndel av overlapp mellom \"Etnisitet\" og \"Avstamning\" kan variere veldig mellom individer, men å separere disse to til distinkte dataelementer vil øke muligheten til å bruke dem til beslutningsstøtte og tilpasning av helsetjenester på en god måte.\r\n\r\nArketypen er utformet for å kunne fungere som en enkeltstående forekomst i en pasientjournal og som blir oppdatert som en ny versjon når den blir revidert.\r\n\r\nEtnisitet er ofte ansett som en del av de demografiske oppføringene i en journal. Likevel er etnisitet tatt inn som del av denne kliniske arketypen i de tilfellene en trenger å samle data som kan støtte kulturelt tilpasset og hensiktsmessige helsetjenester, for eksempel for urbefolkningsgrupper.\r\n\r\nKonseptet med kategorisering etter rase eller hudfarge er kontroversielt. Noen steder kan begrepet \"rase\" være akseptabelt og anses å være synonymt med \"etnisitet\", mens det er ulovlig andre steder. Noe som øker forvirring er at mange verdisett for etnisitet også inneholder verdier som beskriver fysiske karaktertrekk som hudfarge eller geografisk opprinnelse. \"Rase\" også er i noen myndighetsområder brukt som et klossete stedfortredende begrep for sosiale determinanter for helse. Vi anbefaler imidlertid sterkt å bruke arketyper som er laget spesielt for sosiale determinanter for helse for å få mer presis datafangst.",
+          "misuse" : "Skal ikke brukes for å registrere fødeland til et individ. Bruk elementet \"Country of birth\" i arketypen EVALUATION.birth_details til dette.\r\n\r\nSkal ikke brukes for å registrere religiøs tilknytning. Bruk arketypen CLUSTER.religion (Livssyn) til dette.\r\n\r\nSkal ikke brukes for å registrere den selvopplevde kjønnsidentiteten til et individ. Bruk elementet \"Kjønnsidentitet\" i arketypen EVALUATION.gender til dette.\r\n\r\nSkal ikke brukes for å registrere individets språk i forbindelse med behov for tolking. Bruk arketypen CLUSTER.language til dette.\r\n\r\nSkal ikke brukes for å representere eller erstatte formelle registreringer av etnisk bakgrunn eller for å vedlikeholde et offisielt demografisk register eller indeks. Bruk en formell Master Pasient Indeks for dette, eller arketyper som er basert på openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the affiliation, kinship or connection of an individual with one or more groupings of people, usually self-identified.",
+          "keywords" : [ "ethnicity", "culture", "language", "race", "tribe", "affiliation", "belief", "kinship", "identity", "clan", "group", "nationality", "citizenship", "nation", "political" ],
+          "use" : "Use to record the affiliation, kinship or connection of an individual with one or more groupings of people, usually self-identified.\r\n\r\nEthnicity is a concept that is frequently used inconsistently, such that existing or legacy data may be quite varied in content, including but not limited to:\r\n- A long-shared history (written or oral);\r\n- A cultural tradition, including family, social and religious customs;\r\n- A common geographic origin;\r\n- A common language; or\r\n- A minority or distinct group within the local community context.\r\n\r\nIn designing this archetype, the structure has deliberately been kept simple, to support any and all requirements for representing ethnicity. As the understanding around ethnicity and appropriate value sets are identified and agreed upon, this archetype may grow to support evolving clarity of requirements. The data element 'Ethnicity' allows multiple occurrences so that more than one ethnic and cultural identity to be recorded for the individual from a single value set, and also so that more than one representation of 'Ethnicity' can be recorded, for example explicitly recording First People status.\r\n\r\nThe 'Ancestry' data element has also been included to support health risk assessment related to family history and inherited disease, such as a genetic variations that increase the risk of Crohn's disease in Ashkenazi Jews. \r\n\r\nThe amount of overlap between 'Ethnicity' and 'Ancestry may vary enormously between individuals, but separating each into distinct data elements will allow appropriate usage within the clinical context for decision support and provision of healthcare.\r\n\r\nThis archetype has been designed to be recorded as a single instance within a health record, persisted, updated and revised over time as a new version.\r\n\r\nEthnicity is often considered as a component of a demographic record for an individual however it has been represented within this clinical archetype for situations when it needs to be represented in a clinical data collection or is required to support culturally sensitive and appropriate healthcare delivery, for example in First Nations communities.\r\n\r\nThe concept of categorisation by race or skin colour is controversial. In some places, the term 'race' may be considered acceptable and interchangeable with 'ethnicity', yet is illegal in others. Contributing to the confusion, many value sets for ethnicity also contain values that describe physical characteristics such as skin colour or geographical origin. The concept of 'Race' may sometimes be used as a clumsy proxy for identifying risk factors related to social determinants of health (SDOH), however it is strongly recommended that archetypes that represent SDOH concepts be used for more accurate data capture.",
+          "misuse" : "Not to be used to represent the 'Country of birth' of an individual. Use the 'Country of birth' data element within the EVALUATION.birth_details archetype for this purpose.\r\n\r\nNot to be used to record a religious affiliation. Use the CLUSTER.religion archetype for this purpose.\r\n\r\nNot to be used to record self-identified gender. Use the 'Gender identity' data element within the EVALUATION.gender archetype for this purpose. \r\n\r\nNot to be used to record language requirements for translation purposes. Use the CLUSTER.language for this purpose.\r\n\r\nNot to be used to represent or replace formal records of ethnic background or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index for this purpose, or archetypes based on the openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.ethnicity.v1",
     "differential" : true,
@@ -5979,7 +6235,85 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "BF9B28403CBB9F2FB9C120F3EB89DA8E"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung des Geschlechts einer Person.",
+          "keywords" : [ "Geschlecht", "männlich", "weiblich", "divers", "androgyn", "Junge", "Mädchen", "Mann", "Frau", "Transsexuelle", "Bigender", "geschlechtslos", "agender", "transgeschlechtlich", "Transgender", "Transfrau", "Transmann" ],
+          "use" : "Der Archetyp wird verwendet, um Details über das Geschlecht der Person darzustellen, einschließlich des administrativen, rechtlichen und bei der Geburt zugewiesenen Geschlechts, zusätzlich der Geschlechtsidentität, des Ausdrucks des Geschlechts und des bevorzugten Pronomen.\r\n\r\nDas Ziel dieses Archetyps ist es, Details, die mit dem Geschlecht einer Person verbunden sind, zu erfassen. Aufgrund des modernen Gender-Denkens sowie neuer Erkenntnisse über psychologische, biologische und soziale Manifestationen von Geschlecht ergibt sich ein breiteres Spektrum an Beschreibungen.\r\n\r\nDieser Archetyp ermöglicht auch die Erfassung und Unterscheidung von rechtlichem und administrativem Geschlecht.\r\n\r\nIn den meisten Anwendungsfällen wird das „Administrative Geschlecht“ als Äquivalent zur traditionellen Definition von „Geschlecht“ in aktuellen oder älteren Systemen verwendet.",
+          "misuse" : "Nicht zur Darstellung von Informationen über die sexuelle Orientierung oder Ausübung einer Person verwenden.\r\n\r\nNicht für die Darstellung des genetischen oder chromosomalen Geschlechts verwenden. Derzeit wird dies in der Regel als Laborergebnis erfasst. Die formale Darstellung des „Genetischen Geschlechts“ ist noch nicht genau definiert und kann die Kombination von Informationsachsen umfassen, einschließlich Chromosomen- und Rezeptordaten, Mosaikvarianten und Diagnosen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "purpose" : "Para registar detalhes sobre o género de um indivíduo",
+          "keywords" : [ ],
+          "use" : "*Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems. (en)",
+          "misuse" : "*Not to be used for recording information relating to the sexual orientation or sexual activity of an individual.\r\n\r\nNot to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en individs kön.",
+          "keywords" : [ "kön", "manligt", "kvinnligt", "androgyn", "pojke", "flicka", "man", "kvinna", "transsexuell", "bigender", "agender", "transpersoner", "transman", "transkvinna" ],
+          "use" : "*Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems. (en)",
+          "misuse" : "Ska inte användas för att registrera information som berör en individs sexuella läggning eller sexuella aktivitet.\r\n\r\nSka inte användas för registrering av genetiskt eller kromosomalt kön. För närvarande registreras detta vanligtvis via ett laboratorietest. Formell representation av \"genetiskt kön\" är inte definierat och kan involvera en kombination av flera olika parametrar inklusive data från receptorer, kromosomer, mosaicism och diagnoser.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere individets kjønn.",
+          "keywords" : [ "kjønn", "mann", "kvinne", "androgyn", "gutt", "jente", "pike", "trans", "transmann", "transkvinne", "transseksuell" ],
+          "use" : "Brukes for å angi individets kjønn, inkludert administrativt, juridisk, og anatomisk kjønn. I tillegg kjønnsidentitet, fremtoning og foretrukne pronomen.\r\n\r\nAmbisjonen til denne arketypen er å gjøre det mulig å registrere et bredere spekter av detaljer som er knyttet til kjønnet til et individ, som gjenspeiler moderne tenkning om kjønn så vel som ny kunnskap om hvordan kjønn manifesterer seg psykologisk, biologisk og sosialt.\r\n\r\nI Norge er det niende sifferet i fødselsnummeret en markering på kjønn. De fleste systemer i Norge benytter dette til å utlede individets kjønn. Med denne arketypen kan man skille mellom det juridiske kjønnet, slik det fremkommer i fødselsnummeret og det kjønnet man administrativt vil tilordne et individ, for eksempel for praktiske formål som å planlegge hvilket rom et individ skal legges på. Det er opp til leverandørene og implementasjon om man som utgangspunkt skal benytte \"Administrativt kjønn\" eller \"Juridisk kjønn\", eller om man vil sette verdien i disse to elementene likt og åpne for å kunne endre manuelt i de tilfellene man trenger det. Eksempel på dette siste er om juridisk kjønn ikke er oppdatert i henhold til hvordan et individ fremstår.\r\n\r\nDenne arketypen kan på et senere utvides til å inneholde informasjon om kjønn som ennå ikke er vanlig brukt, eller dette kan legges inn i SLOT'et \"Ytterligere detaljer\".",
+          "misuse" : "Skal ikke brukes til å registrere informasjon relatert til seksuell orientering eller adferd.\r\n\r\nSkal ikke brukes til å registrere genetisk kjønn. Per i dag registeres dette som regel som en diagnose eller et laboratoriesvar. Verdisett for et dataelement som \"Genetisk kjønn\" er heller ennå ikke godt definert, og kan bestå av kombinasjoner av forskjellige akser, inkludert data knyttet til kromosomer og reseptorkjønn, mosaikktilstander og diagnoser.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about the gender of an individual.",
+          "keywords" : [ "sex", "male", "female", "androgynous", "boy", "girl", "man", "woman", "transsexual", "bigender", "agender", "transgender", "transman", "transwoman" ],
+          "use" : "Use to record details about the individual's gender, including administrative and legal gender and assigned sex at birth, in addition to gender identity, expression and preferred pronoun.\r\n\r\nThe intent of this archetype is to record a broad range of details connected to the gender of an individual, due to modern thinking of gender as well as new knowledge of psychological, biological and social manifestations of gender.\r\n\r\nThis archetype also allows the recording of, and differentiation between, legal and administrative gender.\r\n\r\nIn most common use cases 'Administrative gender' will be used, as equivalent of the traditional definition of \"Sex\" in current or legacy systems.",
+          "misuse" : "Not to be used for recording information relating to the sexual orientation or sexual activity of an individual.\r\n\r\nNot to be used for recording genetic or chromosomal sex. Currently this is usually recorded as a laboratory test result. Formal representation of 'Genetic sex' is not yet well defined and may involve the combination of information axes, including chromosomal and receptor data, mosaic variants and diagnoses.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.gender.v1",
     "differential" : true,
@@ -6199,7 +6533,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "5d8ee06707ffa747e8ae23e6ad551167"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.patientid.v0",
     "differential" : true,
@@ -6259,7 +6606,51 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "A9AA24874908E5DFC16BABE7C45F48A9"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Altersparameter einer Person zu einem bestimmten Zeitpunkt.",
+          "keywords" : [ "Alter, Chronologisches Alter, Korrigiertes alter, Altersklasse, Alterkategorie, Altersgruppe" ],
+          "use" : "Verwenden Sie diesen Archetyp, um die Altersparameter einer Person zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nVerwenden Sie diesen Archetyp innerhalb eines Templates zusammen mit anderen kontextbezogenen Archetypen. Beispiel: Verwendung mit dem Archetyp OBSERVATION.child_growth, um das korrigierte Alter eines Säuglings im Rahmen der Überwachung des Kinderwachstums darzustellen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om alderen til et individ på et gitt tidspunkt.",
+          "keywords" : [ ],
+          "use" : "Bruk for å registrere detaljer om alderen til et individ på et gitt tidspunkt.\r\n\r\nBruk i et templat sammen med andre relevante arketyper som passer med konteksten alderen skal registreres i. For eksempel sammen med arketyper for vekstkurve, for å registrere justert alder for premature.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about the age of an individual at a specific point in time.",
+          "keywords" : [ ],
+          "use" : "Use to record parameters about the age of an individual at a specific point in time.\r\n\r\nUse within a template alongside other contextually relevant archetypes. For example: use with OBSERVATION.child_growth to record the adjusted age of an infant as part of monitoring child growth patterns.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.age.v0",
     "differential" : true,
@@ -6436,7 +6827,70 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "37053661135B974855AAA356073EA23A"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Zusammenfassung oder beständiger Information zu aktuellen und früheren Jobs und / oder Rollen einer Person.",
+          "keywords" : [ "Beschäftigung", "Studium", "Job", "Arbeit", "Pflegekraft", "Rolle", "Pensionär", "Schüler", "Mitarbeiter", "Arbeitgeber", "Beruf", "Arbeitslosigkeit", "Berufstätigkeit", "Kind", "Rentner", "Behinderte" ],
+          "use" : "Zur Darstellung einer Zusammenfassung oder beständiger Information zu aktuellen und früheren Jobs und / oder Rollen einer Person.\r\n\r\nDieser Archetyp wurde entwickelt, um als eigenständiger Archetyp im Kontext einer sozialen Vorgeschichte (oder ähnlich) in einem Template verwendet zu werden. Es ist beabsichtigt, eine Zusammenfassung aller Beschäftigungen im weitesten Sinne zu bieten. Verwenden Sie für jeden Job oder jede Rolle eine separate Instanz des CLUSTER.occupation_record im SLOT für \"Beschäftigungsepisode\".",
+          "misuse" : "Nicht zur Darstellung strukturierter Angaben zu einem bestimmten Job oder einer bestimmten Rolle verwenden. Verwenden Sie zu diesem Zweck den Archetyp CLUSTER.occupation_record im SLOT \"Beschäftigung\".\r\n\r\nNicht zur detaillierten Beschreibung von Gesundheitsrisiken oder der Exposition gegenüber gefährlichen Substanzen am Arbeitsplatz verwenden. Verwenden Sie für diese Zwecke den Archetyp EVALUATION.health_risk oder EVALUATION.exposure.\r\n\r\nDarf nicht verwendet werden, um Informationen über Einkommensquellen oder Einkommensangaben für die Person darzustellen. Verwenden Sie dafür den Archetyp CLUSTER.income_summary.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et sammendrag eller varig (persistent) informasjon om et individs nåværende eller tidligere arbeid og/eller roller.",
+          "keywords" : [ "arbeid", "arbeidstaker", "arbeidsgiver", "arbeidsforhold", "arbeidshistorikk", "jobb", "ansatt", "yrke", "arbeidsløs", "studerer", "student", "elev", "trygdet", "ufør", "arbeidssituasjon", "erverv", "yrkestilknytning", "pensjon", "pensjonist", "attføring", "bransje", "arbeidsledig", "hjemmeværende", "stilling", "profesjon", "frivillig" ],
+          "use" : "Brukes for å registrere et sammendrag eller varig (persistent) informasjon om et individs nåværende eller tidligere arbeid og/eller roller.\r\n\r\nArketypen er laget for å være en frittstående arketype, og kan benyttes som del av individets sosialanamnese i en templat.\r\nDen er ment å gi et sammendrag over alle former for arbeid/roller. For hver enkelt jobb eller rolle brukes én instans av arketypen CLUSTER.occupation_record (Arbeidsforhold/rolle) i SLOTet \"Arbeidsepisode\".",
+          "misuse" : "Brukes ikke for å registrere strukturerte detaljer om en spesifikk rolle eller bidrag. Bruk arketypen CLUSTER.occupation_record (Arbeidsforhold/rolle) i SLOTet \"Arbeidsepisode\" for dette formålet.\r\n\t\r\nBrukes ikke for detaljerte beskrivelser av helserisikoer eller eksponering for farlige substanser i arbeidssituasjonen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.\r\n\r\nBrukes ikke for å registrere informasjon om individets inntekt eller inntektskilder. Bruk arketypen CLUSTER.income_summary for dette formålet.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record a summary or persistent information about an individual's current and past jobs and/or roles.",
+          "keywords" : [ "employment", "study", "job", "work", "carer", "role", "pensioner", "student", "employee", "employer", "profession", "unemployment", "occupation", "child", "retiree", "disabled" ],
+          "use" : "Use to record a summary or persistent information about an individual's current and past jobs and/or roles.\r\n\r\nThis archetype has been designed to be used as a standalone archetype within the context of a Social History (or similar) template. It is intended to provide a summary of all occupations, considered in the broadest sense. For each job or role, use a separate instance of the CLUSTER.occupation_record within the SLOT for 'Occupation episode'.",
+          "misuse" : "Not to be used for recording structured details about a specific job or role. Use the CLUSTER.occupation_record archetype within 'Occupation record' SLOT for this purpose.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the workplace. Use the EVALUATION.health_risk or EVALUATION.exposure archetype for these purposes.\r\n\r\nNot to be used to record information about sources of income or income details for the individual. Use the CLUSTER.income_summary archetype for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare un sommario o informazioni persistenti sulle attività lavorative e/o ruoli presenti e passati di un individuo.",
+          "keywords" : [ "impiego, studio, lavoro, occupazione, badante, ruolo, pensionato, studente, impiegato, datore di lavoro, professione, disoccupazione, occupazione, figlio, disabile" ],
+          "use" : "Usato per registrare un sommario o informazioni persistenti sulle attività lavorative e/o ruoli presenti e passati di un individuo.\r\n\r\nQuesto archetipo è stato ideato per essere usato come archetipo a sé stante all'interno di un template per la 'Storia sociale' (o simili). L'archetipo intende fornire un sommario  di tutte le occupazioni, considerate nel senso più ampio del termine. Per ogni professione o ruolo, usare una istanza separata dell'archetipo CLUSTER.occupation_record all'interno dello SLOT 'Episodio lavorativo'.",
+          "misuse" : "Non utilizzare per memorizzare dettagli strutturati riguardanti una specifica professione o ruolo. Per questo scopo, usare invece l'archetipo CLUSTER.occupation_record all'interno dello SLOT 'Episodio lavorativo'.\r\n\r\nNon utilizzare per descrizioni dettagliate dei rischi per la salute o dell'esposizione a sostanze pericolose nel luogo di lavoro. Utilizzare invece gli archetipi EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNon utilizzare per memorizzare informazioni sulle fonti o dettagli del reddito dell'individuo. Per questo scopo, utilizzare l'archetipo EVALUATION.income_summary.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.occupation_summary.v1",
     "differential" : true,
@@ -6595,7 +7049,130 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "C186DA445F8C45636F769D02CD5758DF"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Darstellung von detaiilierten Informationen zu einem Job oder einer Rolle, die von einer Person während eines bestimmten Zeitraums ausgeführt wurde.",
+          "keywords" : [ "Beschäftigung", "Arbeitgeber", "Job", "Tätigkeit", "Arbeit", "Beruf", "arbeitslos", "Mitarbeiter", "Arbeitslosigkeit", "studieren", "beschäftigt", "Schüler", "Branche", "Berufstätigkeit", "Freiwilliger", "Berufung", "Handel", "Arbeiter", "Ehrenamtliche", "Position", "Arbeitsplatz" ],
+          "use" : "Verwenden Sie diesen Archetyp, um detaillierte Angaben zu einem Job oder einer Rolle darzustellen, die von einer Person während eines bestimmten Zeitraums ausgeführt wurde.\r\n\r\nDer Umfang dieses Archetyps umfasst alle Beschäftigungen oder Tätigkeiten einer Person. Zum Beispiel: ein bezahlter Job oder Dienst; unbezahlte Arbeit jeglicher Art wie eine Freiwilligentätigket; oder Rollen wie Ruhestand oder Student.\r\n\r\nMehrere Instanzen dieses Archetyps, die im Laufe der Zeit erfasst werden, führen zur Übersicht eines Verlaufs vergangener und aktueller Jobs und / oder Rollen.\r\n\r\nEine aktive, aktuelle Beschäftigung kann aus \"Beginn\" abgeleitet werden, wenn unter \"Ende\" nichts vermerkt ist.\r\n\r\nEine Person kann viele gleichzeitige Beschäftigungen ausüben, von denen jede bezahlt oder unbezahlt sein kann. Jede Beschäftigung sollte in einer separaten Instanz dieses Archetyps dargestellt werden.\r\n\r\nWenn sich die Details der Beschäftigung wesentlich ändern, z. B. eine Änderung der Rolle / des Titels oder der Anzahl der Stunden, sollte dies als separate Instanz dieses Archetyps dargestellt werden.\r\n\r\nDieser Archetyp wurde speziell für die Verwendung im SLOT \"Beschäftigungsepisode\" im Archetyp \"EVALUATION.occupation_summary\" entwickelt, kann aber auch in anderen ENTRY- oder CLUSTER-Archetypen verwendet werden, sofern dies klinisch angemessen ist.\r\n\r\nEs können offensichtliche oder tatsächliche Überlappungen zwischen den Datenelementen dieses Archetyps und demografische Details zu Berufs- / Beschäftigungsdetails an anderen Stellen der klinischen oder administrativen Systeme geben. Die Datenelemente dieses Archetyps wurden speziell zur Unterstützung klinischer Zwecke entwickelt, einschließlich der Erstellung eines ärztlichen Attests für einen aktuellen Arbeitgeber.",
+          "misuse" : "Darf nicht verwendet werden, um vorübergehende Änderungen oder Episoden innerhalb eines einzelnen Beschäftigungsdatensatzes darzustellen, z. B. Urlaub. Dies ist mit diesen Archetyp nicht möglich und sollte Teil des Human Relations-Systems eines Arbeitgebers sein.\r\n\r\nNicht zur detaillierten Beschreibung von Gesundheitsrisiken oder der Exposition gegenüber gefährlichen Substanzen am Arbeitsplatz verwenden. Verwenden Sie zu diesem Zweck die Archetypen EVALUATION.health_risk oder EVALUATION.exposure.\r\n\r\nDarf nicht verwendet werden, um Informationen über Einkommensquellen oder Einkommensangaben für die Person darzustellen. Verwenden Sie zu diesem Zweck den Archetyp EVALUATION.income_summary.\r\n\r\nNicht zur Darstellung von Informationen über die Beschäftigung einer Person zu einem bestimmten Zeitpunkt (z. B. am 16. Juni 2014) oder während eines relativen Zeitintervalls (z. B. „in den letzten 30 Tagen“) verwenden. Verwenden Sie einen geeigneten OBSERVATION-Archetyp für diesen Zweck.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt"
+          },
+          "purpose" : "Registrar detalhes sobre um único trabalho ou função executada por um indivíduo durante um período especificado.\r\n",
+          "keywords" : [ "emprego", "Empregador", "trabalho", "ocupação", "trabalhos", "profissão", "desempregado", "empregado", "desemprego", "estudante", "aluno", "setor", "profissão", "voluntário", "vocação", "comércio", "trabalhador", "posição" ],
+          "use" : "Use para registrar detalhes sobre um único trabalho ou função realizada por uma pessoa durante um período especificado.\r\n\r\nO escopo deste arquétipo inclui todas as ocupações ou atividades realizadas por um indivíduo. Por exemplo: um trabalho remunerado ou emprego; trabalho não remunerado de qualquer tipo, como uma posição de voluntário; ou papéis como aposentado ou aluno.\r\n\r\nVárias instâncias desse arquétipo capturadas ao longo do tempo resultarão na agregação de um histórico de trabalhos e / ou funções anteriores e atuais.\r\n\r\nUma ocupação ativa ou atual pode estar implícita a partir de uma 'Data de início', mas não pela 'Data de encerramento'.\r\n\r\nUm indivíduo pode realizar ocupações simultâneas, cada uma das quais podendo ser remuneradas ou não. Cada ocupação deve ser registrada em uma instância separada desse arquétipo.\r\n\r\nSe os atributos de ocupação mudarem significativamente, como uma mudança de função / título ou número de horas, isso deverá ser registrado como uma instância separada desse arquétipo.\r\n\r\nEsse arquétipo foi projetado especificamente para ser usado no SLOT 'Episódio de ocupação' dentro do arquétipo EVALUATION.occupation_summary, mas também pode ser usado em qualquer outro arquétipo ENTRY ou CLUSTER, onde for clinicamente apropriado.\r\n\r\nPode haver alguma sobreposição aparente ou real entre os elementos de dados neste arquétipo e os detalhes de ocupação / emprego que podem ser armazenados como detalhes demográficos em sistemas clínicos ou administrativos. Esses elementos de dados foram projetados especificamente para apoiar fins clínicos, incluindo a geração de um atestado médico para um empregador atual.",
+          "misuse" : "\t\r\nNão deve ser usado para gravar alterações ou episódios temporários em um registro único de ocupação, como estar de licença. Isso está fora do escopo desse arquétipo e deve fazer parte do sistema de recursos humanos de um empregador.\r\n\r\nNão deve ser usado para descrições detalhadas de riscos para a saúde ou exposição a substâncias perigosas no local de trabalho. Use os arquétipos EVALUATION.health_risk ou EVALUATION.exposure para essa finalidade.\r\n\r\nNão deve ser usado para registrar informações sobre fontes de renda ou detalhes de renda da pessoa. Use o arquétipo EVALUATION.income_summary para esse fim.\r\n\r\nNão deve ser usado para registrar informações sobre a ocupação de um indivíduo em um momento específico (por exemplo, em 16 de junho de 2014) ou durante um intervalo de tempo relativo (por exemplo, 'nos últimos 30 dias'). Use um arquétipo do tipo OBSERVATION para esse fim.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.",
+          "keywords" : [ "arbeid", "arbeidstaker", "arbeidsgiver", "arbeidsforhold", "arbeidshistorikk", "jobb", "ansatt", "yrke", "arbeidsløs", "studerer", "student", "elev", "trygdet", "ufør", "arbeidssituasjon", "erverv", "yrkestilknytning", "pensjon", "pensjonist", "attføring", "bransje", "arbeidsledig", "hjemmeværende", "stilling", "profesjon", "frivillig", "vernepliktig", "sektor", "næring", "verv" ],
+          "use" : "Brukes for å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.\r\n\r\nArketypen omfatter alle typer arbeid eller aktiviteter individet har eller har hatt. For eksempel: En/et betalt eller ubetalt jobb/arbeid/verv, samt ulike roller som for eksempel pensjonist, hjemmeværende eller student.\r\n\r\nVed å benytte denne arketypen til gjentatte registreringer, vil en få fram en historisk oversikt over nåværende og tidligere arbeidsforhold /roller et individ har eller har hatt.\r\n\r\nEt aktivt, nåværende arbeidsforhold/roller kan bli utledet fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\".\r\n\r\nEt individ kan ha mange samtidige arbeidsforhold/rolle, og de kan hver for seg være betalt eller ubetalt. Hvert slik arbeidsforhold registreres i egne instanser av denne arketypen.\r\n\r\nHvis detaljer om et arbeidsforhold/rolle endrer seg vesentlig, som forandring av tittel eller stillingsprosent, registreres dette i egne instanser av denne arketypen.\r\n\r\nArketypen er laget for å benyttes i SLOTet \"Arbeidsepisode\" i arketypen EVALUATION.occupation_summary (Arbeidssammendrag), men kan også brukes innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk relevant.\r\n\r\nDet kan fremstå som å være overlapp, reell eller tilsynelatende, mellom dataelementene i denne arketypen og demografiske opplysninger om sysselsetting/arbeidsforhold andre steder i kliniske systemer. Dataelementene i denne arketypen er laget spesifikt for å støtte kliniske bruksområder, inkludert sykemeldinger eller legeerklæringer.",
+          "misuse" : "Brukes ikke for å registrere midlertidige endringer eller episoder innen en enkelt arbeidsepisode, som å være i permisjon. Dette er ikke innenfor anvendelsesområdet for denne arketypen, og skal registreres i et personal- eller HR-system.\r\n\r\nBrukes ikke for å beskrive helserisikoer eller eksponering for farlige substanser i arbeidssituasjonen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.\r\n\r\nBrukes ikke for å registrere informasjon om individets inntektskilder eller detaljer om inntekt. Bruk arketypen EVALUATION.income_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om arbeid /rolle for et individ på en bestemt dato (for eksempel 16. juni 2014) eller i løpet av en relativ tidsperiode, som for eksempel \"siste 30 dager\". Dette kan utledes fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\", og må registreres i en egen OBSERVATION-arketype for dette formålet.",
+          "copyright" : "© 2010 NEHTA, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar detalhes sobre um único trabalho ou função executada por um indivíduo durante um período especificado.",
+          "keywords" : [ "emprego", "Empregador", "trabalho", "ocupação", "trabalhos", "profissão", "desempregado", "empregado", "desemprego", "estudante", "aluno", "setor", "profissão", "voluntário", "vocação", "comércio", "trabalhador", "posição" ],
+          "use" : "Use para registrar detalhes sobre um único trabalho ou função realizada por uma pessoa durante um período especificado.\r\n\r\nO escopo deste arquétipo inclui todas as ocupações ou atividades realizadas por um indivíduo. Por exemplo: um trabalho remunerado ou emprego; trabalho não remunerado de qualquer tipo, como uma posição de voluntário; ou papéis como aposentado ou aluno.\r\n\r\nVárias instâncias desse arquétipo capturadas ao longo do tempo resultarão na agregação de um histórico de trabalhos e / ou funções anteriores e atuais.\r\n\r\nUma ocupação ativa ou atual pode estar implícita a partir de uma 'Data de início', mas não pela 'Data de encerramento'.\r\n\r\nUm indivíduo pode realizar ocupações simultâneas, cada uma das quais podendo ser remuneradas ou não. Cada ocupação deve ser registrada em uma instância separada desse arquétipo.\r\n\r\nSe os atributos de ocupação mudarem significativamente, como uma mudança de função / título ou número de horas, isso deverá ser registrado como uma instância separada desse arquétipo.\r\n\r\nEsse arquétipo foi projetado especificamente para ser usado no SLOT 'Episódio de ocupação' dentro do arquétipo EVALUATION.occupation_summary, mas também pode ser usado em qualquer outro arquétipo ENTRY ou CLUSTER, onde for clinicamente apropriado.\r\n\r\nPode haver alguma sobreposição aparente ou real entre os elementos de dados neste arquétipo e os detalhes de ocupação / emprego que podem ser armazenados como detalhes demográficos em sistemas clínicos ou administrativos. Esses elementos de dados foram projetados especificamente para apoiar fins clínicos, incluindo a geração de um atestado médico para um empregador atual.",
+          "misuse" : "Não deve ser usado para gravar alterações ou episódios temporários em um registro único de ocupação, como estar de licença. Isso está fora do escopo desse arquétipo e deve fazer parte do sistema de recursos humanos de um empregador.\r\n\r\nNão deve ser usado para descrições detalhadas de riscos para a saúde ou exposição a substâncias perigosas no local de trabalho. Use os arquétipos EVALUATION.health_risk ou EVALUATION.exposure para essa finalidade.\r\n\r\nNão deve ser usado para registrar informações sobre fontes de renda ou detalhes de renda da pessoa. Use o arquétipo EVALUATION.income_summary para esse fim.\r\n\r\nNão deve ser usado para registrar informações sobre a ocupação de um indivíduo em um momento específico (por exemplo, em 16 de junho de 2014) ou durante um intervalo de tempo relativo (por exemplo, 'nos últimos 30 dias'). Use um arquétipo do tipo OBSERVATION para esse fim.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about a single job or role carried out by an individual during a specified period of time.",
+          "keywords" : [ "employment", "employer", "job", "occupation", "work", "profession", "unemployed", "employee", "unemployment", "studying", "employed", "student", "sector", "profession", "volunteer", "vocation", "trade", "worker", "volunteer", "position" ],
+          "use" : "Use to record details about a single job or role carried out by an individual during a specified period of time. \r\n\r\nThe scope of this archetype is inclusive of all occupations or activities undertaken by an individual. For example: a paid job or employment; unpaid work of any type such as a volunteer position; or roles such as being retired or a student. \r\n\r\nMultiple instances of this archetype captured over time will result in the aggregation of a history of past and present jobs and/or roles.\r\n\r\nAn active, or current occupation may be implied from a 'Date commenced' but no 'Date ceased'. \r\n\r\nAn individual may carry out many simultaneous occupations, each of which may be paid or unpaid. Each occupation should be recorded in a separate instance of this archetype.\r\n\r\nIf occupation attributes change significantly, such as a change of role/title or number of hours, then this should be recorded as a separate instance of this archetype.\r\n\r\nThis archetype has been specifically designed to be used in the 'Occupation episode' SLOT within the EVALUATION.occupation_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.\r\n\r\nThere may be some apparent or real overlap between the data elements in this archetype and occupation/employment details that may be stored as demographic details in clinical or administrative systems. These data elements have been designed specifically to support clinical purposes including generation of a medical certificate to a current employer.",
+          "misuse" : "Not to be used to record temporary changes or episodes within a single occupation record, such as being on leave. This is out of scope for this archetype and should be part of an employer's human relations system.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the workplace. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.\r\n\r\nNot to be used to record information about sources of income or income details for the individual. Use the EVALUATION.income_summary archetype for this purpose.\r\n\r\nNot to be used to record information about the occupation of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare i dettagli della singola professione svolta o ruolo ricoperto da un individuo durante un determinato periodo di tempo.",
+          "keywords" : [ "lavoro, impiego, datore di lavoro, occupazione, disoccupazione, professione, disoccupato, occupato, dipendente, impiegato, studente, settore, volontario, vocazione, mestiere, lavoratore, posizione" ],
+          "use" : "Usato per registrare i dettagli della singola professione svolta o ruolo ricoperto da un individuo durante un determinato periodo di tempo.\r\n\r\nL'ambito di questo archetipo comprende tutte le occupazioni o attività svolte da un individuo. Ad esempio: un lavoro o impiego retribuiti; un qualsiasi lavoro non retribuito, come un'attività di volontariato; o ruoli come essere in pensione o uno studente. \r\n\r\nPiù istanze di questo archetipo catturate nel tempo possono essere aggregate per costruire la storia occupazionale di un individuo, che comprende occupazioni e ruoli passati e presenti.\r\n\r\nÈ possibile dedurre se l'occupazione sia attiva/corrente se è presente una 'Data di inizio' ma non una 'Data di cessazione'.\r\n\r\nUn individuo può avere più occupazioni contemporaneamente, ciascuna delle quali può essere retribuita o meno. Ogni occupazione dovrebbe essere registrata in una istanza separata di questo archetipo. \r\n\r\nSe i dettagli dell'occupazione cambiano significativamente, ad esempio in caso di modifica del ruolo/titolo o numero di ore, questo dovrebbe corrispondere ad un'istanza separata di questo archetipo.\r\n\r\nQuesto archetipo è stato sviluppato per essere usato nello SLOT 'Episodio lavorativo' all'interno dell'archetipo EVALUATION.occupation_summary, ma è possibile utilizzarlo all'interno di altri archetipi di tipo ENTRY o CLUSTER quando clinicamente appropriato. \r\n\r\nCi potrebbe essere una sovrapposizione, apparente o reale, tra i dati all'interno di questo archetipo e i dettegli sull'occupazione/impiego memorizzati come informazioni demografiche all'interno di sistemi clinici o amministrativi.  I contenuti sono stati espressamente progettati per supportare l'attività clinica, compresa la generazione di certificati medici per un datore di lavoro.",
+          "misuse" : "Non utilizzare per memorizzare cambiamenti o episodi temporanei all'interno di un singolo record di occupazione, come ad esempio essere in congedo. Questo non rientra nello scopo dell'archetipo e dovrebbe far parte del sistema di gestione delle risorse umane del datore di lavoro. \r\n\r\nNon utilizzare per descrizioni dettagliate dei rischi per la salute o dell'esposizione a sostanze pericolose nel luogo di lavoro. Utilizzare invece gli archetipi EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNon utilizzare per memorizzare informazioni sulle fonti o dettagli del reddito dell'individuo. Per questo scopo, utilizzare l'archetipo EVALUATION.income_summary.\r\n\r\nNon utilizzare per memorizzare informazioni sull'occupazione di un individuo in uno specifico punto nel tempo (ad esempio, il 16 giugno 2014) o durante un intervallo di tempo (ad esempio 'negli ultimi 30 giorni'). Per questo scopo, usare un appropriato archetipo di tipo OBSERVATION. ",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Un travail ou un rôle unique exercé par un individu pendant une période de temps déterminée.",
+          "keywords" : [ "emploi", "employeur", "emploi", "Occupation", "travail", "profession", "sans emploi", "employé", "chômage", "en train d'étudier", "employé", "étudiant", "secteur", "profession", "bénévole", "vocation", "Commerce", "ouvrier", "bénévole", "position" ],
+          "use" : "*Use to record details about a single job or role carried out by an individual during a specified period of time. \r\n\r\nThe scope of this archetype is inclusive of all occupations or activities undertaken by an individual. For example: a paid job or employment; unpaid work of any type such as a volunteer position; or roles such as being retired or a student. \r\n\r\nMultiple instances of this archetype captured over time will result in the aggregation of a history of past and present jobs and/or roles.\r\n\r\nAn active, or current occupation may be implied from a 'Date commenced' but no 'Date ceased'. \r\n\r\nAn individual may carry out many simultaneous occupations, each of which may be paid or unpaid. Each occupation should be recorded in a separate instance of this archetype.\r\n\r\nIf occupation attributes change significantly, such as a change of role/title or number of hours, then this should be recorded as a separate instance of this archetype.\r\n\r\nThis archetype has been specifically designed to be used in the 'Occupation episode' SLOT within the EVALUATION.occupation_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.\r\n\r\nThere may be some apparent or real overlap between the data elements in this archetype and occupation/employment details that may be stored as demographic details in clinical or administrative systems. These data elements have been designed specifically to support clinical purposes including generation of a medical certificate to a current employer.(en)",
+          "misuse" : "*Not to be used to record temporary changes or episodes within a single occupation record, such as being on leave. This is out of scope for this archetype and should be part of an employer's human relations system.\r\n\r\nNot to be used for detailed descriptions of health risks or exposure to hazardous substances in the workplace. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.\r\n\r\nNot to be used to record information about sources of income or income details for the individual. Use the EVALUATION.income_summary archetype for this purpose.\r\n\r\nNot to be used to record information about the occupation of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Para registrar detalles sobre un trabajo o rol llevado a cabo por un individuo durante un periodo de tiempo especificado.",
+          "keywords" : [ "empleo", "empleador", "trabajo", "ocupación", "tarea", "profesión", "desempleado", "empleado", "desempleo", "estudiando", "empleado", "estudiante", "sector", "profesión", "voluntario", "vocación", "comercio", "trabajador", "voluntario", "cargo" ],
+          "use" : "Usar para registrar detalles sobre un trabajo o rol particular llevado a cabo por un individuo durante un periodo de tiempo especificado.\r\n\r\nEl alcance de este arquetipo incluye todos los empleos o actividades llevadas a cabo por el individuo. Por ejemplo: Un trabajo o empleo pagado; trabajo no remunerado de cualquier tipo como voluntario; o roles tales como estar jubilado o ser estudiante.\r\n\r\nMúltiples instancias de este arquetipo capturadas a lo largo del tiempo resultarán en una agregación de un histórico de trabajos y/o roles presentes o pasados.\r\n\r\nUn trabajo actual puede deducirse de la 'Fecha empezado' pero no de la 'Fecha finalizado'.\r\n\r\nUn individuo puede llevar a cabo muchas ocupaciones al mismo tiempo, las cuales pueden ser remuneradas o no remuneradas. Cada ocupación debería de ser registrada en una instancia separada de este arquetipo.\r\n\r\nSi los atributos de la ocupación cambian significativamente, tales como cambios en el título/rol o el número de horas, éstas se deberían de registrar en una instancia separada de este arquetipo.\r\n\r\nEste arquetipo ha sido específicamente diseñado para ser usado en el SLOT de 'Episodio de ocupación' dentro del arquetipo EVALUATION.occupation_summary, pero también puede ser usado dentro de cualquier otro arquetipo ENTRY o CLUSTER, cuando sea clínicamente apropiado.\r\n\r\nPuede haber una superposición aparente o real entre los elementos de datos en este arquetipo y detalles sobre la ocupación/empleo que puedan haber sido incluidos como detalles demográficos en sistemas clínicos o administrativos. Estos elementos de datos se han diseñado específicamente para dar soporte a propósitos clínicos como puede ser la generación de un certificado médico para el empleador actual.",
+          "misuse" : "No debe ser usado para registrar cambios temporales o episodios dentro de un único registro ocupacional, tales como estar de baja. Esto está fuera del alcance de este arquetipo y debería ser parte de un sistema de recursos humanos del empleador.\r\n\r\nNo debe ser usado para una descripción detallada de los riesgos de salud o exposición a sustancias nocivas en el lugar de trabajo. Para este propósito use los arquetipos EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNo debe ser usado para registrar información sobre fuentes o detalles de ingresos de un individuo. Para este propósito use el arquetipo EVALUATION.income_summary.\r\n\r\nNo debe ser usado para registrar información sobre la ocupación de un individuo en un punto concreto de tiempo (por ejemplo, el 16 de Junio de 2014) o durante un periodo de tiempo relativo (por ejemplo 'durante los últimos 30 días'). Para este propósito use un arquetipo OBSERVATION adecuado.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.occupation_record.v1",
     "differential" : true,
@@ -7154,7 +7731,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "797c75f233a37295ba94e11f9bdfea42"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.initial_asthma.v0",
     "differential" : true,
@@ -7223,7 +7813,162 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte.",
+          "keywords" : [ "Abschnitt", "Template", "Überschrift", "Ad hoc", "Abschnittsüberschrift" ],
+          "use" : "Dieser Archetyp kann für die Erstellung einer Abschnittsüberschrift in einem Template verwendet werden. Die Überschrift kann, passend zu dem jeweiligen klinischen Kontext, umbenannt werden. Zum Beispiel: \"Ad hoc Überschrift\" wird umbenannt in \"Untersuchungsergebnisse\".\r\n\r\n",
+          "misuse" : "Die Überschrift sollte in einem Template nicht unverändert verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.",
+          "keywords" : [ ],
+          "use" : "Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".",
+          "misuse" : "Ska inte lämnas oförändrad i en openEHR-mall.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Базовый заголовок раздела, должен быть переименован в локальном шаблоне ",
+          "keywords" : [ "раздел", "шаблон", "заготовка", "название", "образец" ],
+          "use" : "используется для создания и именования разделов в локальных шаблонах",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.",
+          "keywords" : [ ],
+          "use" : "Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".",
+          "misuse" : "Skal ikke stå med uendret navn i en templat.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Proporcionar un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico.",
+          "keywords" : [ ],
+          "use" : "Utilizar para construir un encabezado de sección en una plantilla y que será renombrado para su empleo en un contexto clínico específico. Por ejemplo, \"Encabezado ad hoc\" puede renombrarse como \"Hallazgos de examen\".",
+          "misuse" : "No debe mantenerse sin cambios en una plantilla.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Oferecer um cabeçalho de uma sessão genérica que será renomeado no template para adequar-se a um contexto clínico específico.",
+          "keywords" : [ "cabeçalho" ],
+          "use" : "Utilize para construir um cabeçalho de uma sessão (de um template) que será renomeada para adequar-se a um contexto clínico específico. Por exemplo: \"cabeçalho Ad hoc\" renomeado para \"Achados de exame\".",
+          "misuse" : "Não deve manter a configuração original no template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a generic section header which will be renamed in a template to suit a specific clinical context.",
+          "keywords" : [ ],
+          "use" : "Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".",
+          "misuse" : "Not to be left unchanged in a template.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Fornire un'intestazione generica della sezione che sarà rinominata in un template per adattarsi ad uno specifico contesto clinico.",
+          "keywords" : [ ],
+          "use" : "Usato per costruire un'intestazione di sezione in un template che sarà rinominato in base al contesto clinico specifico. Per esempio: \"Intestazione ad hoc\" rinominata in \"Risultati dell'esame\".",
+          "misuse" : "Non deve essere lasciato invariato in un template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
     "differential" : true,
@@ -7503,252 +8248,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "2f067e3c-793c-4e34-befe-16c5f4104f20",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-SECTION.ovl-adhoc-004.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "SECTION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "ru" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "заготовка заголовка (4)",
-            "description" : "Образец заголовка раздела"
-          }
-        },
-        "es-ar" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Encabezado ad hoc (4)",
-            "description" : "Un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico."
-          }
-        },
-        "sl" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Naslov sekcije (4)",
-            "description" : "Naslov sekcije"
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Templat-overskrift (4)",
-            "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Cabeçalho Ad hoc (4)",
-            "description" : "Um cabeçalho de sessão genérico que deve ser renomeado no template para adequar-se a um contexto clínico específico."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rubrik (4)",
-            "description" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Ad hoc Überschrift (4)",
-            "description" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte."
-          }
-        },
-        "it" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Intestazione di sezione ad hoc (4)",
-            "description" : "Un'intestazione di sezione generica che dovrebbe essere rinominata in un template per adattarsi ad uno specifico contesto clinico."
-          }
-        },
-        "fr" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rubrique ad hoc (4)",
-            "description" : "Un en-tête de section générique qui doit être renommé dans un modèle pour s'adapter à un contexte clinique spécifique."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "46fe0e95-f5cc-44c8-8616-3b9fd0ca6e61",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Ramona Wellmann",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "wellmann.ramona@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ru"
-      },
-      "author" : {
-        "name" : "Art Latyp Латыпов Артур Шамилевич",
-        "organisation" : "RusBITech РусБИТех, Москва"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Daniel Hall",
-        "organisation" : "Region Östergötland",
-        "email" : "daniel.hall@regionostergotland.se"
-      },
-      "accreditation" : "Åsa Skagerhult, Lisa Axelsson",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "einar.fosse@unn.no" : "einar.fosse@unn.no",
-        "name" : "Einar Fosse",
-        "organisation" : "Norwegian Centre for Integrated Care and Telemedicine, Tromsø, Norway"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Vladimir Pizzo",
-        "organisation" : "Hospital Sírio Libanês, São Paulo, Brazil",
-        "email" : "vladimir.pizzo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : {
-        "name" : "?"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "it"
-      },
-      "author" : {
-        "name" : "Paolo Anedda",
-        "organisation" : "Inpeco",
-        "email" : "paolo.anedda@inpeco.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Better - Pathfinder",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "86f1320e-cc76-4871-bccb-88bba8e2e16c",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -7760,7 +8259,70 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "8C75665CB2BB8D77131D4F1DAC8F9E2D"
       },
-      "details" : { }
+      "details" : {
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)",
+          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)" ],
+          "use" : "*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Method' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Breathing equipment' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Breathing equipment' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using the OBSERVATION.body_temperature archetype alongside the spirometry archetype. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)",
+          "misuse" : "*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere resultatet av en lungefunksjonstest utført med et spirometer eller en PEF-måler.",
+          "keywords" : [ "pulmonar,", "lunge", "spirometri", "PEF", "PEFR", "bronkie", "bronkial", "luftvei", "kols", "astma", "pusteprøve", "blåsetest", "belastningsspiro", "løpetest", "astmaundersøkelse", "metakolintest" ],
+          "use" : "Brukes for å registrere resultatene av en spirometriundersøkelse eller en PEF-måling.\r\n\r\nDenne arketypen er ment for bruk til å registrere resultater fra: \r\n- elektroniske og mekaniske måleinstrumenter. Bruk elementet \"Målingstype\" under Protokoll for å registrere hvilken målemetode som ble brukt.\r\n- både oral og nasal ekspiratorisk og inspiratorisk testing. Bruk elementet \"Metode\" under Protokoll for å registrere hvordan målingen ble utført. For eksempel munnstykke eller maske. Målinger med ulikt \"Metode\" må registreres med separate instanser av arketypen.\r\n- inspiratoriske og ekspiratoriske målinger. Testens navn vil angi om den gir et ekspiratorisk eller inspiratorisk resultat. \r\n\r\nHvis spirometriundersøkelsen utføres i forbindelse med administrering av bronkodilatorer eller irritanter/allergener, så bør detaljene om hva som er administrert registreres ved bruk av arketypen ACTION.medication (Legemiddelhåndtering) i samme COMPOSITION. \r\n\r\nHvis man må registrere ytterligere informasjon om kroppstemperatur, lufttrykk eller luftfuktighet i omgivelsene, kan detaljene om dette registeres ved hjelp av andre arketyper. Kroppstemperatur kan registreres ved bruk av arketypen OBSERVATION.body_temperature (Kroppstemperatur) i samme COMPOSITION. Lufttrykk eller luftfuktighet kan registreres ved bruk av arketypen CLUSTER.environmental_conditions i SLOTet \"Omgivelsesforhold\".\r\n\r\n\"Uspesifisert hendelse\" kan repeteres og begrenses for å støtte representasjon av\r\n- Flere målinger og gjennomsnitt av disse – \"Uspesifisert hendelse\" repeteres så mange ganger som nødvendig, samt i tillegg en intervallhendelse med den matematiske funksjonen \"gjennomsnitt\"\r\n- Resultatet av provokasjons- eller reversilibilitetstest – repeter \"Uspesifisert hendelse\" og endre navn til \"Baseline\" og Etter provokasjon/bronkodilator. Der det er passende, kan det spesifiseres en tidsforskyvning.",
+          "misuse" : "Skal ikke brukes for å registrere resultatene av andre typer lungefunksjonstester, som for eksempel plethysmografi eller lungediffusjonstester. Bruk spesifikke arketyper for disse formålene.\r\n\r\nSkal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat).\r\n\r\nSkal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results of a pulmonary function test performed using a spirometer or peak flow meter.",
+          "keywords" : [ "respiratory", "pulmonary", "spirometry", "peak flow", "lung", "bronchial", "airway", "pef", "pefr" ],
+          "use" : "Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.",
+          "misuse" : "Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)",
+          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)" ],
+          "use" : "*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Method' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Breathing equipment' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Breathing equipment' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using the OBSERVATION.body_temperature archetype alongside the spirometry archetype. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)",
+          "misuse" : "*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.spirometry_result.v2",
     "differential" : true,
@@ -8081,7 +8643,17 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ ],
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "property",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "terminologyId" : {
+                                    "value" : "openehr"
+                                  },
+                                  "constraint" : [ "126" ]
+                                } ]
+                              } ],
                               "attributeTuples" : [ {
                                 "@type" : "C_ATTRIBUTE_TUPLE",
                                 "members" : [ {
@@ -8680,6 +9252,7 @@
                                 "children" : [ {
                                   "@type" : "C_INTEGER",
                                   "rmTypeName" : "INTEGER",
+                                  "occurrences" : "1..1",
                                   "constraint" : [ {
                                     "lower" : 2,
                                     "upper" : 2,
@@ -9127,7 +9700,118 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EEC8640C1336806D602A1BC344D4F733"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung der Daten eines Medizingerätes, welches in der Gesundheitsversorgung eingesetzt wird.",
+          "keywords" : [ "Medizingerät", "Maschine", "Implantat", "Gerät", "Katheter", "Prothese", "Hilfsmittel", "biomedizinisch", "Instrument", "Gerätschaften", "Ausrüstung", "Messgerät", "Monitor", "Software" ],
+          "use" : "Zur Erfassung der Details eines Medizingerätes, welches in der Gesundheitsversorgung eingesetzt wird.\r\n\r\nDie Verwendung des Begriffs \"Medizingerät\" variiert je nach Kontext. In der Welt der Standards bezieht sich der Begriff „Gerät“ in der Regel auf mechanische oder elektronische Geräte, die das Gesundheitswesen unterstützen und eine strenge Dokumentation in Bezug auf Standortverfolgung, Wartung, Kalibrierung, Softwareversionen usw. erfordern. Im terminologischen Kontext ist die Verwendung von Medizingeräten sehr weit verbreitet, einschließlich aller medizinischen Produkte, die für die direkte oder indirekte Bereitstellung der klinischen Versorgung verwendet werden können, sofern sie nicht auf eine Weise wirken, die eine direkte pharmakologische, metabolische oder immunologische Wirkung hat.\r\n\r\nBeispiele für medizinische Geräte reichen von einfachen Geräten wie Blasenkathetern, Zungenspateln, Kontaktlinsen, künstlichen Gelenkimplantaten, Brustimplantaten und einfachen\r\nVerbänden bis hin zu fortschrittlichen Geräten wie künstlichen Herzen, Spritzenpumpen, Spirometern, Anwendungen für Mobiltelefone und computergestützten Geräten zur Erfassung medizinischer Point-of-Care-Messungen. \r\n\r\nIn der komplexen Situation, in der ein chirurgisch implantiertes Gerät als Mittel zur Abgabe von Therapeutika, wie bei einer Chemotherapie direkt in den Körper verwendet wird, werden mit diesem Archetyp nur die Details des Medizinprodukts selbst, sowie die Bestellung von Medikamenten und Details zum Medikament aufgezeichnet. Die tatsächliche Verabreichung des therapeutischen Mittels wird unter Verwendung spezifischer arzneimittelbezogener Instruktions- und Aktionsarchetypen aufgezeichnet. \r\n\r\nDieser Archetyp soll das Gerüst für die strukturierte Darstellung von Medizingeräten bereitstellen. Die hier enthaltenen Datenelemente sind für keinen Gerätetyp spezifisch. Für Einmalprodukte sind normalerweise Datenelemente wie Chargennummer und Verfallsdatum erforderlich. Im Gegensatz dazu sind diese normalerweise nicht relevant für langlebige Geräte, die häufig eine Reihe von Kennungen aufweisen, einschließlich UID, Seriennummer, Modell usw.\r\n\r\nDarüber hinaus erfordern verschiedene Arten von Geräten spezifische Informationen, die für ihren Zweck relevant sind. Diese Daten können mithilfe bestimmter CLUSTER-Archetypen aufgezeichnet werden, die im SLOT \"Specific Properties\" (Spezifische Eigenschaften) eingefügt sind. Zum Beispiel: Für die Verwendung eines Harnkatheters sind möglicherweise zusätzliche Angaben zum Durchmesser und der Länge des Katheters, Materialzusammensetzung, Anzahl der Lumen usw. erforderlich.\r\n\r\nWenn das Medizinprodukt eine Reihe von Komponenten enthält, welche für eine Aufzeichnung von Details erforderlich ist, sollte jede einzelne Komponente explizit unter Verwendung eines zusätzlichen Archetyps CLUSTER.device aufgezeichnet werden, der in den SLOT 'Components' eingefügt wird.\r\n\r\nIm Datenfeld 'Software-Version' kann nur eine Version erfasst werden. Dies gilt hauptsächlich für ein Gerät, bei dem es sich um ausschließlich eine Softwareanwendung handelt. Wenn das Gerät über mehrere Software- oder Hardwarekomponenten verfügt, die spezifiziert werden müssen, sollte dies unter Verwendung des Zusatzes CLUSTER.device erfolgen, der in den SLOT 'Components' eingefügt wird.\r\n\r\nVerwenden Sie den Archetyp CLUSTER.device_details, der in den SLOT 'Asset Management' in diesem Archetyp eingefügt ist, um zusätzliche Details für dauerhafte oder andauernde Geräte aufzuzeichnen, die sich auf den Besitz, die Verfolgung des physischen Standorts, Wartungspläne usw. beziehen.\r\n\r\nDieser Archetyp wurde für die allgemeine Verwendung in anderen Archetypen entwickelt, die ein Gerät beschreiben müssen. Beispiele sind: OBSERVATION.blood_pressure für das Blutdruckmessgerät; OBSERVATION.ecg für das EKG-Gerät; BEOBACHTUNG.Urinanalyse der Reagenzstreifen und der zum Testen verwendeten Vorrichtung; ACTION.procedure; und CLUSTER.exam_tympanic_membrane, um das verwendete Otoskop zu beschreiben.",
+          "misuse" : "Nicht zur Aufzeichnung von Daten bezüglich der Medizinprodukte, die eine direkte pharmakologische, metabolische oder immunologische Wirkung\r\nhaben, verwenden. Zum Beispiel: Ein mit Arzneimitteln imprägnierter Verband, für den ein Rezept erforderlich ist, sollte unter Verwendung des Archetyps INSTRUCTION.medication_order aufgezeichnet werden, der sich\r\nauf die Wirkstoffe, die Dosierung usw. konzentriert.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en medicinsk utrustning som används vid tillhandahållandet av hälso- och sjukvård.",
+          "keywords" : [ "utrustning", "maskin", "implantera", "apparat", "kateter", "protes", "aid", "biomedicinsk", "instrument", "Utrustning", "meter", "övervaka", "programvara" ],
+          "use" : "Arketypen används för att registrera information om en medicinsk utrustning. Medicinsk utrustning används vid tillhandahållande av hälso- och sjukvård.\r\nAnvändningen av termen \"medicinsk utrustning\" varierar beroende på sammanhanget. Termen utrustning enligt standarder används för att beskriva mekaniska eller elektroniska produkter som stöder hälso- och sjukvård och kräver noggrann dokumentation om platsspårning, underhåll, kalibrering, programvaruversioner etc. Inom terminologin, användningen av termen utrustning är mycket bred. Det inkluderar alla medicinska utrustningar som kan användas i direkt eller indirekt tillhandahållande av klinisk vård. Termen används inte för de utrustning som registrerar data om läkemedel som har en direkt farmakologisk, metabolisk eller immunologisk effekt. \r\n\r\nExempel på medicintekniska produkter: enkla apparater urinkatetrar, tungdämpare, kontaktlinser, konstgjorda ledimplantat, bröstimplantat. Samt vanliga förband till avancerade utrustningar som konstgjorda hjärtan, sprutdrivare, spirometrar, mobiltelefonapplikationer, även datoriserade utrustningar som fångar upp sjukvårdsmedicinska mätningar.\r\n\r\nDenna arketyp kan användas för att beskrivautrustningar som används i komplicerade situationer, för exempel: i ett fall där en kirurgiskt implanterad utrustning används för att leverera terapeutiska medel direkt in i kroppen i en kemoterapi behandling. Fast används arketypen medicinsk utrustning för att bara registrera detaljerna om själva den medicinska utrustningen och inte behandlingen. Beställningen för medicinering och detaljer om faktiska administrering av det terapeutiska medlet kommer att registreras med hjälp av specifika läkemedelsrelaterade INSTRUKTIONS- och HANDLINGS-arketyper.\r\n\r\nDen här arketypen är designad för att ge ramverk för en strukturerad representation av medicinsk utrustning. Dataelementen i arketypen är inte specifika för någon typ av utrustning. Utrustningar för engångsbruk kräver vanligtvis dataelement som partinummer och utgångsdatum. Däremot är dessa vanligtvis inte relevanta för hållbara utrustningar som ofta har en uppsättning av identifierare, inklusive ett UID, serienummer, modell etc.\r\n\r\nOlika typer av utrustningar kommer att kräva ha specifik information som är relevant för utrustningens syfte. Dessa data kan registreras med specifika CLUSTER-arketyper infogade i SLOT för 'Specifika egenskaper'. Till exempel: användning av en urinkatet kan kräva ytterligare detaljer om kateterns diameter och längd, materialkomposition, antal lumen etc.\r\n\r\nOm den medicinska utrustningen har ett antal komponenter som kräver registrering av detaljer, bör varje enskild komponent registreras med hjälp av en extra CLUSTER.device-arketyp som sätts in i \"Components\" SLOT.\r\n\r\nDatafältet 'Programvara version' gör det möjligt att bara en enda version blir registrerad. Detta gäller främst för en utrustning som är en programvara. Om utrustningen har flera programvara- eller hårdvara komponenter som behöver specificeras, bör detta göras med hjälp av ett tillägg CLUSTER.device som sätts in i 'Components' SLOT.\r\n\r\nDenna arketyp har designats för generisk användning inom andra arketyper. d.v.s. Arketyper som behöver beskriva en utrustning. Exempel är: OBSERVATION.blood_pressure för blodtrycksmätaren; OBSERVATION.ecg för EKG-maskinen; OBSERVATION. Urinanalys för reagensremsorna och anordningen som används för testning; ACTION.procedure; och CLUSTER.exam_tympanic_membrane för att specificera det använda otoskopet.",
+          "misuse" : "Får inte användas för att registrera data om läkemedel som har en direkt farmakologisk, metabolisk eller immunologisk effekt. Till exempel: ett läkemedelsimpregnerat förband som kräver recept bör registreras med hjälp av INSTRUCTION.medication_order-arketypen, med fokus på de aktiva ingredienserna, dosering etc. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om medisinsk utstyr benyttet i utførelsen av helsetjenester.",
+          "keywords" : [ "medisinsk utstyr", "maskin", "implantat", "apparat", "kateter", "protese", "hjelpemiddel", "instrument", "utstyr", "måler", "monitor", "software", "programvare", "MTU", "medisinsk teknisk utstyr", "MU" ],
+          "use" : "Benyttes for å registrere detaljer om medisinsk utstyr benyttet i utførelsen av helsetjenester.\r\n\r\nTermen \"medisinsk utstyr\" varierer med ulike kontekster. Innen standardisering refererer termen ofte til mekanisk eller elektronisk utstyr som støtter helsetjenesten og krever streng dokumentasjon rundt lokalisering, vedlikehold, kalibrering, programvareversjoner etc. I en terminologikontekst er bruken av \"medisinsk utstyr\" veldig bred, og inkluderer et hvilket som helst medisinsk utstyr som benyttes direkte eller indirekte i utførelsen av helsetjenester. Unntak er utstyr som har en direkte farmakologisk, metabolsk og immunologisk effekt. \r\n\r\nEksempler på medisinsk utstyr strekker seg fra enkelt utstyr som urinkatetre, spatler, kontaktlinser, leddproteser, brystimplantater, bandasjer, hofteproteser, sprøytepumper og spirometre, til avansert utstyr som kunstige hjerter, mobiltelefonapplikasjoner og pasientnære datastyrte enheter for å fange opp medisinske målinger.\r\n\r\nI en kompleks setting hvor en kirurgisk implantert enhet skal brukes for å tilføre et legemiddel, for eksempel cellegift direkte i kroppen, vil denne arketypen kun registrere detaljer om det medisinske utstyret. Ordinasjonen og detaljer rundt den faktiske administrasjonen av legemidlet vil bli lagret i spesifikke medikasjonsrelaterte INSTRUCTION og ACTION-arketyper \r\n\r\nDenne arketypen er designet for å gi et rammeverk for strukturert representasjon av et hvilket som helst medisinsk utstyr, og dataelementene i arketypen er ikke spesifikke for en enkelt type utstyr. Engangsutstyr vil vanligvis kreve registrering av lot-nummer og utløpsdato, i motsetning til flergangsutstyr som vil kreve en rekke identifikatorer som UID, serienummer, modell etc.\r\n\r\nUlikt utstyr vil kunne kreve spesifikk informasjon som er relevant for deres bruksområde. Data om dette kan lagres i spesifikke CLUSTER-arketyper lagt til i SLOTet \"Spesifikke detaljer\". For eksempel: Ved bruk av et urinkateter vil man kunne ønske å registrere tilleggsinformasjon som diameter og lengde på kateteret, hvilke materialer kateteret består av, antall lumen osv.\r\n\r\nHar det medisinske utstyret flere komponenter som krever registrering av detaljer må hver komponent registreres i egen CLUSTER.device arketype lagt til i SLOTet \"Komponent\".\r\n\r\nDatafeltet \"Programvareversjon\" tillater at kun en versjon registreres. Feltet benyttes i hovedsak for medisinsk utstyr som er en programvareapplikasjon. Har det medisinske utstyret flere programvare- eller maskinvarekomponenter som må spesifiseres, gjøres dette ved å legge til en ny CLUSTER.device i \"Komponent\"-SLOTet.\r\n\r\nFor å registrere tilleggsinformasjon for varig eller permanent utstyr som omhandler eierskap, fysisk lokalisering, vedlikeholdsplaner etc, bruk CLUSTER.device_details-arketypen lagt til i SLOTet \"Forvaltning av det medisinske utstyret\" i denne arketypen.\r\n\r\nArketypen er designet for generisk bruk i andre arketyper der man trenger å beskrive medisinsk utstyr. Eksempler: OBSERVATION.blood_pressure for sfygmomanometer, OBSERVATION.ecg for EKG-appararatet, OBSERVATION.urinalysis for urinstix og utstyr som brukes for testing, ACTION.procedure og CLUSTER.exam_tympanic_membrane for detaljer om otoskopet som er benyttet.",
+          "misuse" : "Brukes ikke for å registrere data om medisinske produkter som utøver en direkte farmakologisk, metabolsk eller immunologisk effekt. For eksempel: En bandasje som inneholder et medikament som krever resept registreres i arketypen INSTRUCTION.medication_order, med fokus på aktive ingredienser, dose etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar los detalles de un objeto físico, producto o dispositivo utilizado en el sentido mas amplio de la provisión de cuidados de la salud, pero no como medio terapéutico o metabólico.",
+          "keywords" : [ "dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto" ],
+          "use" : "Utilizado para registrar los detalles de cualquier dispositivo genérico que puede ser utilizado directamente de un modo terapéutico o diagnóstico, o indirectamente como apoyo a la provisión de cuidados de la salud. El uso del término dispositivo varía dependiendo del contexto. En el mundo de los estándares, el término dispositivo tiende a referirse a dispositivos mecánicos o electrónicos que actuan como apoyo del cuidado de la salud y que requiren documentación rigurosa en cuanto a especificaciones, mantenimiento, etc. En el contexto de las terminologías, el uso de dispositivo es muy amplio, incluyendo a cualquier objeto físico que pueda ser utilizado directa o indirectamente en la provisión de cuidados clínicos. Los ejemplos incluyen ventiladores, medidores de flujo expiratorio máximo, espirómetros, lentes oculares y de contacto, catéteres endovasculares, implantes mamarios, prótesis, tubos de drenaje y anillos para callos. \r\nEste arquetipo esta diseñado para proveer la base de una representación estructurada de cualquier dispositivo, desde el simple ejemplo de una marca de tira reactiva urinaria con una fecha de vencimiento hasta un oído biónico implantable que puede requerir documentación compleja, software, hardware, mantenimiento, calibración, etc.\r\nPara los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).",
+          "misuse" : "No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar os detalhes de um dispositivo médico usado na prestação de cuidados de saúde.",
+          "keywords" : [ "dispositivo", "máquina", "implante", "catéter", "prótese", "cuidado", "biomedical", "instrumento", "equipamento", "monitor", "software", "utensílio" ],
+          "use" : "Use para gravar os detalhes de um dispositivo médico utilizado na prestação de cuidados de saúde .\r\n\r\nO uso do termo \"dispositivo médico\" varia dependendo do contexto. No mundo dos padrões, o termo dispositivo tende a referir-se a dispositivos mecânicos ou eletrônicos que apoiam cuidados de saúde e exigem documentação rigorosa sobre rastreamento de localização, manutenção, calibração, versões de software etc. Dentro do contexto da terminologia o uso de dispositivo é muito amplo , incluindo qualquer dispositivo médico que pode ser utilizado direta ou indiretamente em cuidados clínicos , desde que não atue de forma que exerça uma ação farmacológica direta , metabólica ou como efeito imunológico .\r\n\r\nOs dispositivos médicos variam de dispositivos simples, como catéteres urinários, abaixadores de língua, lentes de contato, próteses articulares, os implantes mamários e curativos simples, até dispositivos avançados, como corações artificiais, espirômetros, além de aplicativos para celulares e dispositivos computadorizados que capturam medidas médicas.\r\n\r\nEm situações complexas, onde um dispositivo implantado cirurgicamente é usado para administrar agentes terapêuticos, tais como a quimioterapia, este arquétipo irá ser utilizado para gravar apenas os detalhes sobre o próprio dispositivo médico e a prescrição da medicação e detalhes sobre o administração real do agente terapêutico serão registrados utilizando-se a arquétipos INSTRUCTION e ACTION sobre a medicação específica.\r\n\r\nEste arquétipo é projetado para fornecer a estrutura para representação estruturada de qualquer dispositivo médico e os elementos de dados que estão contidos aqui não são específicos para algum tipo de dispositivo. Dispositivos de uso único comumente vão exigir elementos de dados, tais como número de lote e data de validade. Em contrapartida estes geralmente não são relevantes para dispositivos duráveis que, muitas vezes, têm um conjunto de identificadores, incluindo uma UID, número de série, modelo, etc..\r\n\r\nAlém disso, diferentes tipos de dispositivos exigirão informações específicas relevantes para a sua finalidade. Estes dados podem ser gravados utilizando-se arquétipos CLUSTER específico inseridos no SLOT das propriedades específicas. Por exemplo: utilização de um catéter urinário pode exigir detalhes adicionais sobre o diâmetro e o comprimento do catéter, composição do material, número de lúmens etc.\r\n\r\nSe o dispositivo médico tem um número de componentes que necessitem de gravação de dados, todos os componentes individuais deverão ser registrados explicitamente utilizando-se um arquétipo CLUSTER.device adicional introduzido nos campos dos componentes.\r\n\r\nO campo de dados versão do software permite apenas uma única versão a ser gravado. Isto é especialmente aplicável para um dispositivo que é uma aplicação de software. Se o dispositivo possui vários componentes de software ou hardware que precisam ser especificados, este deve ser feito por meio de um CLUSTER.device além de inserido no slot do 'Componentes'.\r\n\r\nPara gravar detalhes adicionais para dispositivos duráveis ou permanentes que se relacionam com a posse, rastreamento de localização física, programações de manutenção etc, o uso do arquétipo CLUSTER.device_details no slot \"A gestão de ativos\" desse arquétipo.\r\n\r\nEste arquétipo foi projetado para uso genérico com outros arquétipos que precisam descrever um dispositivo. Exemplos incluem: OBSERVATION.blood_pressure para o esfigmomanômetro; OBSERVATION.ecg para o equipamento de ECG; OBSERVATION.urinalysis para as tiras de reagente e o dispositivo usado para os testes; ACTION.procedure; e CLUSTER.exam_tympanic_membrane para detalhar o otoscópio usado.",
+          "misuse" : "Não deve ser utilizado para gravar dados sobre os medicamentos que exercem uma ação farmacológica direta , metabólica ou efeito imunológico. Por exemplo: um curativo impregnado que exige uma prescrição deve ser gravado utilizando-se o o arquétipo INSTRUCTION.medication_order, com foco em ingredientes ativos, dosagem, etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل التفاصيل حول شيئ محسوس, مُنتَج أو جهيزة يتم استخدامها في أوسع وصف لتقديم الخدمة الصحية, و لكن دون طريقة أيضية أو علاجية مباشِرة.",
+          "keywords" : [ "الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ" ],
+          "use" : "يستخدم لتسجيل التفاصيل حول أي جهيزة جنيسة (غير محدودة الملكية) و التي يمكن أن تستخدم إما مباشرةً بطريقة علاجية أو تشخيصية أو تستخدم بشكل غير مباشر لدعم تقديم الخدمة الصحية.\r\nو يختلف استخدام اللفظ (جهيزة) على حسب السياق. \r\nو في داخل عالم المعايير, فإن اللفظ (جهيزة) يميل إلى الإشارة إلى الجهائز الإلكترونية أو الميكانيكية/الحركية و التي تدعم الرعاية الصحية, و تتطلب توثيق مكثف فيما يتعلق بالمواصفات و الصيانة... إلى آخره.\r\nو في سياق عالم المصطلحات فإن استخدام (جهيزة) واسع جدا, بما في ذلك أي شيئ محسوس يمكن استخدامه في تقديم الرعاية الصحية إما بشكل مباشر أو غير مباشر. \r\nو تتضمن الأمثلة: دوائر أجهزة التنفس الصناعي, مقاييس الجريان القِمِّي, مقاييس التنفس, نظارات العين, العدسات اللاصقة, القثطار داخل الوريد, طُعوم الثدي, البِدْلات, أنابيب المَنْزَح, و الحلقات المسمارية.\r\n\r\nو تم تصميم هذا النموذج ليمثل الأساس لعرض مركب لأي جهيزة, من مثال بسيط لنوع من غميسة البول مع تاريخ الاستخدام, إلى طعم أذن من كائن حيّ و الذي يتطلب توثيق مركب مثل البرنامج الإلكتروني, و الأجزاء الصلبة, و الصيانة و التعيير, إلى آخره.\r\n\r\nو بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.",
+          "misuse" : "لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the details of a medical device used in the provision of healthcare.",
+          "keywords" : [ "device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software" ],
+          "use" : "Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, artificial joint implants, breast implants and plain dressings through to advanced devices such as artificial hearts, syringe drivers, spirometers, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific properties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.\r\n\r\nThis archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.",
+          "misuse" : "Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
     "differential" : true,
@@ -9344,6 +10028,368 @@
       },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "4df5ded5-eddf-4555-897f-00b35837ef7f",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "E6E1FB050659D261B841146D96F4DFB0"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.body_mass_index.v2",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-body_mass_index-001.v2"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "pt-br" : { },
+        "es-ar" : { },
+        "fa" : { },
+        "en" : { },
+        "ar-sy" : { },
+        "nl" : { },
+        "zh-cn" : { },
+        "el" : { },
+        "nb" : { },
+        "sv" : { },
+        "fi" : { },
+        "de" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "558871bf-2ff2-4fa7-bb0d-8ebe003d3d18",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout",
+        "organisation" : "MHH-Hannover",
+        "email" : "ballout.sarah@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fi"
+      },
+      "author" : {
+        "name" : "Vesa Peltola",
+        "organisation" : "Tieto Finland",
+        "email" : "vesa.peltola@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Kirsi Poikela",
+        "organisation" : "Tieto Sweden AB",
+        "email" : "ext.kirsi.poikela@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Domingo Liotta",
+        "organisation" : "Universidad de Morón"
+      },
+      "accreditation" : "Universidad de Morón",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Morgan Karlsen",
+        "organisation" : "DIPS ASA",
+        "email" : "lmk@dips.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Ana Paula de Andrade",
+        "organisation" : "Core Consulting",
+        "email" : "ana.andrade@coreconsulting.com.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "el"
+      },
+      "author" : {
+        "name" : "George Nikolaidis",
+        "organisation" : "Ergobyte Informatics S.A.",
+        "email" : "gnikolaidis@ergobyte.gr"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fa"
+      },
+      "author" : {
+        "name" : "Shahla Foozonkhah",
+        "organisation" : "Ocean Informatics",
+        "email" : "shahla.foozonkhah@oceaninformatics.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "BIPH, Taikang Insurance Group",
+        "email" : "linforest@163.com"
+      },
+      "accreditation" : "Laboratory Medicine",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Marja Buur, Joost Holslag",
+        "organisation" : "Medisch Centrum Alkmaar, Nedap",
+        "email" : "m.buur-krom@mca.nl, joost.holslag@nedap.com"
+      },
+      "accreditation" : "Nurse Informatics, MD",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "23558f8b-7b98-4350-bfd9-f2a7ddd276e6",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "1ce159ec80e01cbb408aeec098233ae6"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.peakflow_result.v2",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-peakflow_result-001.v2"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "sl" : { },
+        "nb" : { },
+        "fi" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "74bae2f5-2f72-4b3d-8096-dfb0a34ce1af",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fi"
+      },
+      "author" : {
+        "name" : "Vesa Peltola",
+        "organisation" : "Tieto Finland Oy",
+        "email" : "vesa.peltola@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Mikkel Johan Gaup Grønmo, Silje Ljosland Bakke, Marit Alice Venheim, Hanne Marte Bårholm",
+        "organisation" : "Helse-Nord, Forvaltningssenter EPJ, Helse Vest IKT AS",
+        "email" : "mikkel.johan.gaup.gronmo@helse-nord.no, silje.ljosland.bakke@helse-vest-ikt.no, marit.alice.venheim@helse-vest-ikt.no, hanne.marte.sandal.barholm@helse-vest-ikt.no"
+      },
+      "accreditation" : "Nasjonal IKT HF",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "?"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "74a31946-b735-4f72-9f10-3ffb3525c9c1",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "7DAA69B9A4F026B57C71629C1B49D260"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-SECTION.referral_details.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-SECTION.ovl-referral_details-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "SECTION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "cac8073d-4bf0-45b2-9dc8-39829125c1e5",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
