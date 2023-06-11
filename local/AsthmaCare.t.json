@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "5.0.0",
+      "sem_ver" : "6.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "3f8924f1db2811d74eedd71829f9d17e",
+      "MD5-CAM-1.0.1" : "22652c4791dd24c30a817afb6c782737",
       "PARENT:MD5-CAM-1.0.1" : "B8AD0C7EB492491CE6F7968C1AFFB40C"
     },
     "details" : {
@@ -172,24 +172,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-007.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.55",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-body_mass_index-001.v2",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.58",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-peakflow_result-001.v2",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -479,7 +461,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Reason for referral",
+            "text" : "Referral to asthma care",
             "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
           }
         },
@@ -1268,6 +1250,24 @@
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-spirometry_result-001.v2",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.7",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-peakflow_result-001.v2",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.9",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-imaging_exam_result-001.v1",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -8017,6 +8017,15 @@
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-alcohol_consumption_summary-001.v1",
           "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.7",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-body_mass_index-001.v2",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -10041,7 +10050,196 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "E6E1FB050659D261B841146D96F4DFB0"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Repräsentation des Body-Mass-Index (BMI) einer Person.",
+          "keywords" : [ "Fettleibigkeit", "Index", "Körpermasse", "BMI", "Anorexie", "Quetelet", "Unterernährung", "Versagen beim Gedeihen", "Bulimie" ],
+          "use" : "Zur Repräsentation des Body-Mass-Index sowohl von Erwachsenen als auch von Kindern.\r\n\r\nZur Repräsentation des Body-Mass-Index entweder manuell (d.h. Berechnung und direkte Eingabe durch den Kliniker) oder automatisch (d.h. Berechnung und Eingabe erfolgt automatisch durch eine Software-Anwendung, basierend auf separaten Größen- und Gewichtsmessungen).\r\n\r\nFormel: Der Body-Mass-Index wird üblicherweise als Gewicht (kg) / [Größe (m) zum Quadrat] berechnet. Dies ist die angenommene Formel, sofern im Element Formel im Protokoll nicht anders angegeben. Alternativ kann der Body-Mass-Index unter der Verwendung von Pfund und Zentimeter geschätzt werden: Gewicht (lb) / [Körpergröße (in) zum Quadrat] x 703 (wobei Unzen (oz) und Bruchteile in Dezimalwerte geändert werden).\r\n\r\nIn einigen Situationen wird die Formel des Body-Mass-Index korrigiert, z.B. für die Verwendung bei Amputierten -diese spezielle Formel kann als Teil des Protokolls erfasst werden. Alternativ kann die übliche Body-Mass-Index-Berechnung bei Amputierten und ähnlichen Verletzungen oder Behinderungen verwendet werden, wenn statt der tatsächlichen Größe und des tatsächlichen Gewichts gegebenenfalls die angepasste Körpergröße und/oder das angepasste Gewicht eingesetzt wurde. Siehe openEHR-EHR-OBSERVATION.height-adjusted und openEHR-EHR-OBSERVATION.body_weight-adjusted.\r\n\r\nSiehe WHO-Referenz zur Anpassung von Größe/Länge für den Body Mass Index in der Pädiatrie. \r\n\r\nBei Kindern und Jugendlichen muss der BMI anhand von altersbezogenen Referenztabellen ermittelt werden.",
+          "misuse" : "Nicht zur Repräsentation der Daten bezüglich der Perzentile des Body Mass Index gedacht. Verwenden Sie zu diesem Zweck den Archetyp OBSERVATION.child_growth.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record the Body Mass Index (BMI) of an individual.(en)",
+          "keywords" : [ "*obesity(en)", "*index(en)", "*body mass(en)", "*BMI(en)", "*anorexia(en)", "*Quetelet(en)", "*malnutrition(en)", "*failure to thrive(en)", "*bulimia(en)" ],
+          "use" : "*Use to record the Body Mass Index of both adults and children.\r\n\r\nUse to enter the Body Mass Index either manually (ie calculated and directly entered by the clinician), or automatically (ie calculation and entry is done automatically by a software application, based on separate height and weight measurements).\r\n\r\nFormulas: Body Mass Index is commonly calculated as weight (kg) / [height (m) squared]. This is the assumed formula unless otherwise specified in the Formula element within Protocol. Alternatively estimate Body Mass Index using pounds and inches: weight (lb) / [height (in) squared] x 703 (with ounces (oz) and fractions changed to decimal values).\r\n\r\nIn some situations the Body Mass Index formula is corrected eg for use in amputees - this specific formula can be recorded as part of the protocol.  Alternatively the common Body Mass Index calculation can be used with amputees and similar injuries or disabilities if using adjusted height and/or adjusted weight, as appropriate, rather than actual height and weight.   See openEHR-EHR-OBSERVATION.height-adjusted and openEHR-EHR-OBSERVATION.body_weight-adjusted.\r\n\r\nSee WHO reference re adjusting height/length for Body Mass Index in paediatrics. \r\n\r\nIn children and teens, BMI needs to be assessed using age-related reference charts.(en)",
+          "misuse" : "*Not intended to record information regarding Body Mass Index percentiles - these will be recorded in separate archetypes.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera en individs BMI, (body mass index) dvs. kroppsmasseindex.\r\nBMI är ett beräknat relationstal som beskriver hur en individs kroppsvikt relaterar till den vikt som anses normal, eller önskvärd, för individens längd.\r\n",
+          "keywords" : [ "fetma", "index", "kroppsmassa", "BMI", "anorexi", "Quetelet", "undernäring", "dålig viktökning", "bulimi" ],
+          "use" : "Används för att registrera BMI för både vuxna och barn.\r\nAnvänds för att mata in BMI antingen manuellt (dvs. beräknat och direkt angivet av klinikern), eller automatiskt (dvs. beräkning och inmatning görs automatiskt av ett program, baserat på separata vikt-och längdmätningar).\r\n\r\nFormel: BMI beräknas vanligen som vikt i kilo delat med höjd i meter i kvadrat. Om inte annat anges i formelfältet är det den angivna formeln som används. Alternativt går det att uppskatta BMI med pounds (lb.) och inches: vikt (lb.) delat med längd (inch) i kvadrat x 703 (uns (oz.) och fraktioner ändras till decimalvärden).\r\n\r\nI vissa situationer är BMI- formeln korrigerad exempelvis för användning i amputeringar. Denna specifika formel kan registreras som en del av protokollet. Alternativt kan den gemensamma BMI-beräkningen användas med amputeringar och liknande skador eller funktionshinder om man använder justerad längd och eller justerad vikt i förekommande fall, snarare än faktisk längd och vikt. Se arketyperna: \r\nopenEHR-EHR-OBSERVATION.height-adjusted och openEHR-EHR-OBSERVATION.body_weight-adjusted.\r\n\r\nSe WHO:s-referens angående justeringar av höjd och längd för BMI inom pediatrik. Hos barn och tonåringar måste BMI bedömas med hjälp av åldersrelaterade referensdiagram.\r\n",
+          "misuse" : "Ska inte användas för att registrera information om BMI procent. De registreras i separata arketyper.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Å registrere et individs kroppsmasseindeks/body mass index (KMI/BMI). Forkortelsen BMI foretrekkes i arketyper, siden dette er et innarbeidet uttrykk også i norsk klinisk praksis.\r\n\r\nKroppsmasseindeks er en beregnet verdi som beskriver hvordan individets kroppsvekt forholder seg til høyden.",
+          "keywords" : [ "fedme", "indeks", "kroppsmasse", "BMI", "KMI", "anoreksi", "Quetelet indeks", "feilernæring", "vektøkning", "vektutvikling", "bulimi", "spiseforstyrrelse", "overvekt", "undervekt", "slanking", "vekttap", "høyde", "vekt", "underernæring", "ernæringsmessig risiko", "underernæring", "adipositas", "kroppsmasseindeks", "muskelmasse" ],
+          "use" : "Brukes for å registrere kroppsmasseindeks hos både voksne og barn. \r\n\r\nBrukes til manuell registrering av kroppsmasseindeks (dvs. beregnet og skrives inn direkte av klinikeren), eller automatisk (dvs. beregning og oppføring er gjort automatisk av et program, basert på måling av høyde og vekt). \r\n\r\nFormler: Kroppsmasseindeks utregnes på følgende måte: vekt (kg) / [høyde (m) x høyde(m)]. Dette er den antatte formelen, med mindre annet er angitt i elementet som beskriver formel i protokollen.\r\n\r\nI enkelte situasjoner kan en modifisert beregning benyttes, for eksempel ved bruk hos en person som har amputert begge bein, - denne spesifikke formelen kan tas opp som en del av protokollen. Alternativt kan den vanlige formelen for kroppsmasseindeks brukes for personer med amputerte lemmer og lignende skader eller funksjonshemminger hvis du bruker justert høyde og / eller justert vekt. Se openEHR-EHR-OBSERVATION.height og openEHR-EHR-OBSERVATION.body_weight. \r\n\r\nSe WHO referanse for justert høyde / lengde for kroppsmasseindeks i pediatri. \r\n\r\nFor barn og tenåringer vurderes BMI ved hjelp av aldersjusterte referansediagrammer.",
+          "misuse" : "Ikke beregnet til å registrere informasjon om persentiler av kroppsmasseindeks - disse vil bli registrert i egne arketyper.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar el Índice de Masa Corporal (IMC) de un individuo.\r\nEl Índice de Masa Corporal  es una cociente que describe la manera en que el peso de un individuo se considera normal, o deseable, respecto a su altura. ",
+          "keywords" : [ "obesidad(sp)", "índice(sp)", "masa corporal(sp)", "IMC(sp)", "anorexia(sp)", "Quetelet(sp)", "malnutrición(sp)", "bulimia(sp)", "desnutrición(sp)" ],
+          "use" : "Usar para registrar el Índice de Masa Corporal de adultos y niños.\r\nUsar para ingresar el Índice de Masa Corporal manualmente (ej: calculado e ingresado directamente por el médico), o automáticamente (ej: cálculo y entrada se realiza automáticamente por una aplicación de software, basado en la medición de peso y altura por separado).\r\nFórmulas: Índice de Masa Corporal comúnmente se calcula como peso (kg) / [altura (m) al cuadrado].  Este es la fórmula asumida a menos que se especifique otra en el elemento Fórmula dentro de Protocolo. Otras alternativas estiman el Índice de Masa Corporal usando libras y pulgadas: peso (lb) / [altura (in) al cuadrado) x 703 (con onzas (oz) y fracciones ajustados a valores decimales).\r\nEn algunas situaciones la fórmula de Índice de Masa Corporal se corrige por ej: para el uso de amputados - esa fórmula específica puede registrarse como parte del protocolo. Alternativamente el cálculo de Índice de Masa Corporal puede ser usado con amputados y similares o personas con discapacidades si se usa 'altura ajustada' y/o 'peso ajustado' apropiadamente en lugar de altura y peso actual. Véase openEHR-EHR-OBSERVATION.height-adjusted and openEHR-EHR-OBSERVATION.body_weight-adjusted. \r\nVéase las recomendaciones de la OMS respecto a adecuar peso/altura para el Índice se Masa Corporal en pediatría.\r\nEn niños y adolescentes, IMC debe calcularse usando cartillas de referencia por edades.",
+          "misuse" : "No se usa para el registro de percentiles de Índice de Masa Corporal - estos se registran en otros arquetipos por separado.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Registrar o Índice de Massa Corporal (IMC) de um indivíduo.",
+          "keywords" : [ "obesidade", "índice", "massa corporal", "IMC", "anorexia", "Quetelet", "subnutrição", "subdesenvolvimento", "bulimia" ],
+          "use" : "Usado para gravar o Índice de Massa Corporal de adultos e crianças.\r\n\r\nUse para registrar o Índice de Massa Corporal manualmente (isto é, calculado e digitado pelo médico) ou automaticamente (cálculo feito automaticamente por uma aplicação de software, com base na medição de altura e peso).\r\n\r\nFórmulas: Índice de Massa Corporal é normalmente calculado como peso (kg) / [altura (m) ao quadrado]. Esta é a fórmula assumida a menos que haja especificações no elemento Fórmula dentro do protocolo. O Índice de Massa Corporal pode ser medido com libras e polegadas: peso (lb) / [altura (polegadas) ao quadrado ] x 703 (com onças (oz) e frações alterando casas decimais).\r\n\r\nEm algumas situações, a fórmula do Índice de Massa Corporal é corrigida, por exemplo para uso em pacientes amputados - esta fórmula específica pode ser registrada como parte do protocolo. Alternativamente, o Índice de Massa Corporal pode ser usado com amputados e lesões semelhantes ou deficiências similares se usados altura ajustada e/ou peso ajustado, conforme o caso, ao invés dos valores reais de altura e peso. Veja openEHR-EHR-OBSERVATION.height-adjusted e OBSERVATION.body_weight-adjusted.\r\n\r\nVeja as referências da OMS para ajustes de altura/comprimento para Índice de Massa Corporal em pediatria.\r\n\r\nEm crianças e adolescentes, o IMC deve ser avaliada por meio de tabelas de referência relacionadas com a idade.",
+          "misuse" : "Não se destina ao registro de informações sobre os percentis de Índice de Massa Corporal - usar o arquétipo OBSERVATION.child_growth para esse propósito.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "el" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "el"
+          },
+          "purpose" : "Η καταγραφή του Δείκτη Μάζας Σώματος (ΔΜΣ) ενός ατόμου.\r\nΟ Δείκτης Μάζας Σώματος είναι μια υπολογιζόμενη αναλογία που περιγράφει πώς το σωματικό βάρος ενός ατόμου σχετίζεται με το βάρος που θεωρείται φυσιολογικό, ή επιθυμητό, αναλογικά με το ύψος του.",
+          "keywords" : [ "παχυσαρκία", "δείκτης", "μάζα σώματος", "ΔΜΣ", "ανορεξία", "Quetelet", "υποσιτισμός", "αδυναμία ανάπτυξης", "βουλιμία" ],
+          "use" : "Χρησιμοποιείται για την καταγραφή του Δείκτη Μάζας Σώματος για ενήλικες και παιδιά.\r\nΧρησιμοποιείται για την εισαγωγή του ΔΜΣ, είτε χειροκίνητα (δηλ. με υπολογισμό και απευθείας καταχώρηση από τον ιατρό), είτε αυτόματα (δηλ. ο υπολογισμός και η καταγραφή γίνεται αυτόματα από την εφαρμογή λογισμικού, μετά από ξεχωριστή καταχώρηση των μετρήσεων του σωματικού βάρους και ύψους). \r\nΜαθηματικοί τύποι: Ο ΔΜΣ υπολογίζεται συνήθως ως βάρος (kg) / [ύψος (m) εις το τετράγωνο]. Αυτός είναι ο εννοούμενος τύπος, εκτός εάν ορίζεται διαφορετικά στο πεδίο \"Μαθηματικός τύπος\" του πρωτοκόλλου. Εναλλακτικά, ο ΔΜΣ μπορεί να υπολογιστεί κατ' εκτίμηση από τον τύπο: ΔΜΣ = βάρος (lb) / [ύψος (in) εις το τετράγωνο] x 703.\r\nΣε ορισμένες περιπτώσεις, όπως για παράδειγμα σε ακρωτηριασμούς, ο ΔΜΣ πρέπει να διορθωθεί - αυτός ο μαθηματικός τύπος μπορεί να αποτελέσει μέρος του πρωτοκόλλου. Εναλλακτικά, ο ΔΜΣ μπορεί να χρησιμοποιηθεί σε περιπτώσεις ακρωτηριασμών ή άλλων παρόμοιων τραυματισμών λαμβάνοντας υπόψη το κατάλληλα προσαρμοσμένο ύψος ή/και βάρος και όχι το πραγματικό.\r\nβλ. openEHR-EHR-OBSERVATION.height-adjusted και openEHR-EHR-OBSERVATION.body_weight-adjusted. \r\nβλ. Παγκόσμιος Οργανισμός Υγείας (WHO): Re adjusting height/length for Body Mass Index in paediatrics.\r\nΣτους εφήβους και τα παιδιά, ο ΔΜΣ πρέπει να αξιολογηθεί χρησιμοποιώντας πίνακες αναφοράς που σχετίζονται με την ηλικία.",
+          "misuse" : "Δεν προορίζεται για την καταγραφή πληροφοριών που αφορούν την ποσοστιαία κατάταξη με βάση το ΔΜΣ. Για την καταγραφή αυτή υπάρχουν χωριστά αρχέτυπα.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the Body Mass Index (BMI) of an individual.",
+          "keywords" : [ "obesity", "index", "body mass", "BMI", "anorexia", "Quetelet", "malnutrition", "failure to thrive", "bulimia" ],
+          "use" : "Use to record the Body Mass Index of both adults and children.\r\n\r\nUse to enter the Body Mass Index either manually (ie calculated and directly entered by the clinician), or automatically (ie calculation and entry is done automatically by a software application, based on separate height and weight measurements).\r\n\r\nFormulas: Body Mass Index is commonly calculated as weight (kg) / [height (m) squared]. This is the assumed formula unless otherwise specified in the Formula element within Protocol. Alternatively estimate Body Mass Index using pounds and inches: weight (lb) / [height (in) squared] x 703 (with ounces (oz) and fractions changed to decimal values).\r\n\r\nIn some situations the Body Mass Index formula is corrected eg for use in amputees - this specific formula can be recorded as part of the protocol.  Alternatively the common Body Mass Index calculation can be used with amputees and similar injuries or disabilities if using adjusted height and/or adjusted weight, as appropriate, rather than actual height and weight.   See openEHR-EHR-OBSERVATION.height-adjusted and openEHR-EHR-OBSERVATION.body_weight-adjusted.\r\n\r\nSee WHO reference re adjusting height/length for Body Mass Index in paediatrics. \r\n\r\nIn children and teens, BMI needs to be assessed using age-related reference charts.",
+          "misuse" : "Not intended to record information regarding Body Mass Index percentiles - use the OBSERVATION.child_growth archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل معامل كتلة الجسم للشخص.\r\nمعامل كتلة الجسم هو نسبة محسوبة تصف العلاقة بين وزن جسم الشخص و الوزن الطبيعي أو المرغوب المناسب لطول الجسم.",
+          "keywords" : [ "*Quetelet(en)", "السمنة", "معامل", "كتلة الجسم", "معامل كتلة الجسم", "فقدان الشهية", "سوء التغذية", "الفشل في النماء", "النُّهام" ],
+          "use" : "يستخدم لتسجيل معامل كتلة الجسم لكل من البالغين و الأطفال.\r\n\r\nيستخدم لإدخال معامل كتلة الجسم المحسوب بشكل يدوي (محسوب و مسَجَّل بشكل مباشر بواسطة الطبيب السريري) أو تلقائيا (يتم الحساب و الإدخال تلقائيا من خلال برنامج كمبيوتر, على أساس قياسات منفردة للطول و الوزن)\r\n\r\nالصيَغ: عادة ما يتم حساب معامل كتلة الجسم بقسمة الوزن بالكيلوغرام على مربع الطول بالميتر المربع.\r\n\r\nو هذه هي الصيغة المفترضة ما لم يتم تحديد خلاف ذلك في البروتوكول المستخدم.\r\n\r\nو يمكن تقدير معامل كتلة الجسم باستخدام الباوند و البوصة : بقسمة الوزن بالباوند على مربع الطول بالبوصة المربعة و ضرب الناتج في 307 - - مع تحويل الأونصات و الكسور الحسابية إلى قيم عشرية.\r\n\r\nفي بعض المواقف يتم تصحيح معامل كتلة الجسم, مثلا عند استخدامه في الأشخاص الذين يعانون من بتر في أي من الأعضاء - و يمكن استخدام هذه الصيغة الخاصة كجزء من البروتوكول.\r\nكما يمكن استخدام الصيغة الشهيرة لحساب معامل كتلة الجسم للأشخاص الذين يعانون من البرت أو من إصابات أو إعاقات مشابهة إذا تم استخدام قياسات مصححة للطول و/أو الوزن, حيثما كان مناسبا, بدلا من الطول أو الوزن الحقيقين. \r\nيمكن الرجوع إلى نموذج ملاحظة. الطول المصحح و نموذج ملاحظة. وزن الجسم المصحح.\r\n\r\nيمكن الرجوع إلى مرجع منظمة الصحة العالمية لتصحيح قياسات الطول و الوزن لقياس معامل كتلة الجسم في الأطفال.\r\nفي الأطفال و المراهقين, توجد حاجة لتقييم معامل كتلة الجسم باستخدام المخطط المرجعي المرتبط بالعمر.",
+          "misuse" : "لا يستخدم لتسجيل المعلومات الخاصة بالشرائح المئوية لمعامل كتلة الجسم - حيث يتم تسجيلها في نماذج منفردة.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fa" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fa"
+          },
+          "purpose" : " برای ثبت شاخص توده بدن فرد  بکار می رود \r\nشاخص توده بدن نسبتی است که نحوه ارتباط وزن بدن با وزن طبیعی یا مورد دلخواه، با توجه به قد فرد را محاسبه می کند که بصورت وزن طبیعی یا مطلوب فرد در نظر گرفته می شود     ",
+          "keywords" : [ "چاقی", "شاخص", "توده بدن", "شاخص توده بدن", "بی اشتهایی", "اندکس کوت لت(شاخص توده بدن)", "سو تغذیه", "اختلال رشد", "پرخوری" ],
+          "use" : " برای ثبت شاخص توده بدن بزرگسالان و کودکان بکار می رود برای وارد کردن شاخص توده بدن بصورت دستی(توسط افراد بالینی محاسبه و بطور مستقیم ثبت می شود) یا بطور خودکار (محاسبات بطور خودکار توسط نرم افزار و بر اساس اندازه های جداگانه قد و وزن انجام می شود) محاسبه و ثبت می شود.ء\r\nفرمولها : شاخص توده بدن معمولا بصورت وزن بر حسب کیلو گرم تقسیم بر [قد بر حسب متر به توان دو] محاسبه می شود. در محاسبات همیشه فرض بر این فرمول است مگر اینکه عناصر فرمول در پروتکل مدنظر مشخص شوند. همچنین بعنوان فرمولی جایگزین برای تخمین شاخص توده بدن از پوند و اینچ نیز استفاده می شود : وزن بر حسب پوند تقسیم بر [قد بر حسب اینچ به توان دو] ضرب در 703 (مقادیر کسری بصورت اعشاری تغییر می یابند).\r\nشاخص توده بدن برای بکار گیری در شرایطی همچون قطع عضو تصحیح می شود ،این فرمول را می توان بصورت بخشی از پروتکل ثبت نمود. بعنوان فرمولی جایگزین، می توان از فرمول شاخص توده بدن، با تاثیر دادن قد یا وزن معادل (تطبیق یافته) عضو معیوب به جای قد یا وزن واقعی، در موارد قطع عضو و صدمات مشابه یا ناتوانی ها، نیز استفاده کرد.ء\r\nببینید:ء\r\nopenEHR-EHR-OBSERVATION.height-adjusted  وopenEHR-EHR-OBSERVATION.body_weight-adjusted.\r\nمرجع سازمان جهانی بهداشت در مورد استفاده از وزن و یا قد برای شاخص توده بدن در اطفال را بینید.\r\nدر بچه ها و نوجوانان لازم است شاخص توده بدن با استفاده از جدول مرجع سن مربوطه محاسبه شود\r\n  ",
+          "misuse" : " برای ثبت اطلاعات در مورد شاخص توده بدن به درصد در نظر گرفته نشده است-  این موارد در الگو ساز جداگانه ای ثبت خواهد شد",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在记录个人的体重指数（ Body Mass Index，BMI）。\r\n",
+          "keywords" : [ "体重指数", "体质指数", "体质量指数", "肥胖", "指数", "体重", "体质", "体质量", "BMI", "厌食", "厌食症", "食欲缺乏", "克托莱", "凯特勒", "凯特莱", "克托莱指数", "凯特勒指数", "凯特莱指数", "营养不良", "营养不足", "发育停滞", "生长迟缓", "发育不良", "成长失调", "贪食", "贪食症", "善饥", "食欲过盛" ],
+          "use" : "用于记录成年人和儿童的体重指数。\r\n用于采用手工方式（即直接由临床医生计算机和录入）或自动化方式（依据单独的身高和体重测量结果，由软件应用程序自动地完成计算和录入）录入体重指数。\r\n计算公式：体重指数通常是体重(kg)/[身高(m)的平方]，即体重指数=体重(公斤)÷ 身高(米)的平方 kg/m^2。除非在方案的公式元素之中另有规定，这将是假设采用的公式。体重指数的另一种计算公式则是：体重(lb) / [身高 (in)的平方] x 703（其中，盎司(oz)和小数部分均变为十进制值）。\r\n在某些情况下，会对体重指数公式加以校正；比如，用于被截肢者的时候——可将这种特殊的公式记录为方案的组成部分。或者，对于被截肢者和类似损伤或残疾者，在合适的情况下，如果采用的是经过调整的身高和/或经过调整的体重，而不是实际身高和体重，亦可采用上述常用的体重指数计算方法。参见调整型身高原始型openEHR-EHR-OBSERVATION.height-adjusted和调整型体重原始型openEHR-EHR-OBSERVATION.body_weight-adjusted。\r\n对于儿科患者体重指数，关于身高/体重的重新调整，请参见WHO的参考标准。\r\n对于儿童和青少年，需要采用与年龄相关的参考表（age-related reference charts）来评估BMI。",
+          "misuse" : "并非旨在记录关于体重指数百分位数的信息——后者的记录将采用不同的原始型。",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Het registreren van de Body Mass Index (BMI) van een persoon.\r\nDe Body Mass Index is een berekening hoe het lichaamsgewicht van een persoon zich verhoudt tot het normale gewicht, of gewenste gewicht, t.o.v. de lengte van de persoon.",
+          "keywords" : [ "obesitas", "indexbody mass", "BMI", "anorexia", "Quetelet", "ondervoeding", "onvermogen op gewicht te blijven, onvermogen om te groeien", "boulimia" ],
+          "use" : "Wordt gebruikt voor het registreren van de Body Mass Index van zowel volwassenen als kinderen. \r\nWordt gebruikt door de Body Mass Index of manueel (d.w.z. berekend en direct ingevoerd door de clinicus), of automatisch (d.w.z. dat de berekening en invoer automatisch door een software applicatie, gebaseerd op afzonderlijke lengte en gewicht metingen gedaan wordt) in te voeren.\r\nFormule: Body Mass Index wordt gewoonlijk berekend door gewicht (kg)/[lengte (m) in het kwadraat]. Dit is de veronderstelde formule, tenzij anders gespecificeerd in het Formule element in Protocol.\r\nAlternatieve geschatte Body Mass Index gebruik makend van pounds en inches: gewicht (lb)/[lengte(in) in het kwadraat] x 703 (met ounces (oz) en gedeeltes gewijzigd tot op de decimaal).\r\nIn sommige situaties wordt de Body Mass Index formule gecorrigeerd, b.v. voor gebruik bij geamputeerden - deze specifieke formule kan geregistreerd worden als onderdeel van het protocol. Alternatief kan de gewoonlijke Body Mass Index berekening gebruikt worden bij geamputeerden en vergelijkbare verwondingen of handicaps, bij gebruikmaking van aangepaste gewicht en/of lengte in plaats van de werkelijke lengte en gewicht. Gebruik daarvoor openEHR-EHR-OBSERVATION.height-adjusted (openEHR-EHR-OBSERVATION.lengte-aangepast) en openEHR-EHR-OBSERVATION.body_weight-adjusted (openEHR-EHR-OBSERVATION.lichaamsgewicht-aangepast).\r\nZie de WHO richtlijnen tot aanpassing van hoogte / lengte voor Body Mass Index in de pediatrie.\r\nBij kinderen en tieners, dient de BMI te worden beoordeeld met behulp van leeftijd-gerelateerde referentie lijsten.",
+          "misuse" : "Niet bestemd voor het registreren van informatie over de Body Mass Index percentielen - deze zullen worden opgenomen in afzonderlijke archetypen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.body_mass_index.v2",
     "differential" : true,
@@ -10257,7 +10455,70 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "1ce159ec80e01cbb408aeec098233ae6"
       },
-      "details" : { }
+      "details" : {
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)",
+          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)" ],
+          "use" : "*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Method' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Breathing equipment' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Breathing equipment' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using the OBSERVATION.body_temperature archetype alongside the spirometry archetype. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)",
+          "misuse" : "*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere resultatet av en lungefunksjonstest utført med et spirometer eller en PEF-måler.",
+          "keywords" : [ "pulmonar,", "lunge", "spirometri", "PEF", "PEFR", "bronkie", "bronkial", "luftvei", "kols", "astma", "pusteprøve", "blåsetest", "belastningsspiro", "løpetest", "astmaundersøkelse", "metakolintest" ],
+          "use" : "Brukes for å registrere resultatene av en spirometriundersøkelse eller en PEF-måling.\r\n\r\nDenne arketypen er ment for bruk til å registrere resultater fra: \r\n- elektroniske og mekaniske måleinstrumenter. Bruk elementet \"Målingstype\" under Protokoll for å registrere hvilken målemetode som ble brukt.\r\n- både oral og nasal ekspiratorisk og inspiratorisk testing. Bruk elementet \"Metode\" under Protokoll for å registrere hvordan målingen ble utført. For eksempel munnstykke eller maske. Målinger med ulikt \"Metode\" må registreres med separate instanser av arketypen.\r\n- inspiratoriske og ekspiratoriske målinger. Testens navn vil angi om den gir et ekspiratorisk eller inspiratorisk resultat. \r\n\r\nHvis spirometriundersøkelsen utføres i forbindelse med administrering av bronkodilatorer eller irritanter/allergener, så bør detaljene om hva som er administrert registreres ved bruk av arketypen ACTION.medication (Legemiddelhåndtering) i samme COMPOSITION. \r\n\r\nHvis man må registrere ytterligere informasjon om kroppstemperatur, lufttrykk eller luftfuktighet i omgivelsene, kan detaljene om dette registeres ved hjelp av andre arketyper. Kroppstemperatur kan registreres ved bruk av arketypen OBSERVATION.body_temperature (Kroppstemperatur) i samme COMPOSITION. Lufttrykk eller luftfuktighet kan registreres ved bruk av arketypen CLUSTER.environmental_conditions i SLOTet \"Omgivelsesforhold\".\r\n\r\n\"Uspesifisert hendelse\" kan repeteres og begrenses for å støtte representasjon av\r\n- Flere målinger og gjennomsnitt av disse – \"Uspesifisert hendelse\" repeteres så mange ganger som nødvendig, samt i tillegg en intervallhendelse med den matematiske funksjonen \"gjennomsnitt\"\r\n- Resultatet av provokasjons- eller reversilibilitetstest – repeter \"Uspesifisert hendelse\" og endre navn til \"Baseline\" og Etter provokasjon/bronkodilator. Der det er passende, kan det spesifiseres en tidsforskyvning.",
+          "misuse" : "Skal ikke brukes for å registrere resultatene av andre typer lungefunksjonstester, som for eksempel plethysmografi eller lungediffusjonstester. Bruk spesifikke arketyper for disse formålene.\r\n\r\nSkal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat).\r\n\r\nSkal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results of a pulmonary function test performed using a spirometer or peak flow meter.",
+          "keywords" : [ "respiratory", "pulmonary", "spirometry", "peak flow", "lung", "bronchial", "airway", "pef", "pefr" ],
+          "use" : "Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.",
+          "misuse" : "Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)",
+          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)" ],
+          "use" : "*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Method' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Breathing equipment' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Breathing equipment' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using the OBSERVATION.body_temperature archetype alongside the spirometry archetype. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)",
+          "misuse" : "*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.peakflow_result.v2",
     "differential" : true,
@@ -10352,7 +10613,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "7DAA69B9A4F026B57C71629C1B49D260"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide an example framework for modelling a referral within a template.",
+          "keywords" : [ "referral", "request" ],
+          "use" : "Use to provide an example framework for modelling a referral within a template.\r\n\r\nThis archetype is intended to be nested within the COMPOSITION.request or any relevant COMPOSITION archetype.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.referral_details.v0",
     "differential" : true,
@@ -10364,7 +10641,29 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "SECTION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "INSTRUCTION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-INSTRUCTION.ovl-service_request-001.v1",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "EVALUATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -10390,6 +10689,1457 @@
       "codeString" : "en"
     },
     "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "14d8b195-bda7-4562-95dc-8de78e3bc561",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "6175B5DE04E6302E3DEB0C8EB876BE34"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.service_request.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-INSTRUCTION.ovl-service_request-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "INSTRUCTION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "activities",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ACTIVITY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "description",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ITEM_TREE",
+              "nodeId" : "at0009",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0121.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0148.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0135.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0153.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0062.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0064.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0152.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0065.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0068.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "CODE_PHRASE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "at0136", "at0137", "at0138" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0040.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0145.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0144.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0147.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_BOOLEAN",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_BOOLEAN",
+                          "rmTypeName" : "Boolean",
+                          "occurrences" : "1..1",
+                          "constraint" : [ true ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0076.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_BOOLEAN",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_BOOLEAN",
+                          "rmTypeName" : "Boolean",
+                          "occurrences" : "1..1",
+                          "constraint" : [ true ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0078.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0150.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0008",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0010.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0011.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0127.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "it" : { },
+        "de" : { },
+        "sv" : { },
+        "pt-br" : { },
+        "nl" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "9b5845da-4da6-48ff-acc9-a91a018f60ed",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "rehberg.alina@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Sofia Janstad",
+        "organisation" : "SLL",
+        "email" : "sofia.lang-janstad@sll.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Marit Alice Venheim",
+        "organisation" : "Nasjonal IKT HF, Norway, Helse Vest IKT",
+        "email" : "marit.alice.venheim@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Clínica Parente Pizzo",
+        "email" : "vrppizzo@gmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Francesca Frexia",
+        "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
+        "email" : "francesca.frexia@crs4.it"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Mattijs Kuhlmann, Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "mattijs.kuhlmann@nedap.com, joost.holslag@nedap.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "36203dcc-4261-476c-85c1-0008a463273f",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "fa" : { },
+        "ar-sy" : { },
+        "de" : { },
+        "es-ar" : { },
+        "pt-br" : { },
+        "zh-cn" : { },
+        "nb" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "263a2a2e-9098-49b1-b4ab-1a243de3fbb9",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Nadim Anani",
+        "organisation" : "Health Informatics Centre, Karolinska Institutet, Sweden"
+      },
+      "accreditation" : "fluent in both English and German, Medical Informatics 'MSc' degree from Heidelberg, 2 years professional experience in health informatics, some translation experience, openEHR knowledge.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Kirsi Poikela",
+        "organisation" : "Tieto Sweden AB",
+        "email" : "ext.kirsi.poikela@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Dr. Leonardo Der Jachadurian",
+        "organisation" : "Bitios.com"
+      },
+      "accreditation" : "Medical Doctor (Internal Medicine Specialist)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Ingrid Heitmann",
+        "organisation" : "NTNU and OUS, Registered nurse",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Emerson Urushibata",
+        "organisation" : "Universidade de São Paulo"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fa"
+      },
+      "author" : {
+        "name" : "Shahla Foozonkhah",
+        "organisation" : "Ocean Informatics",
+        "email" : "shahla.foozonkhah@oceaninformatics.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "MAY L",
+        "organisation" : "CSDC",
+        "email" : "hcn2020@126.com"
+      },
+      "accreditation" : "What goes here?",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "f69b3af3-efa4-4e84-aad3-7b9bafa4d1d0",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "60DD7069B50AAF5B394E3F246F80BCB5"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.imaging_exam_result.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-imaging_exam_result-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0002",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0091.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0055.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0070.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0072.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0071.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0061.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0014.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0008.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0056.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0063.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0057.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0021.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0058.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0020.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0059.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0023.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0047",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0048.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0108.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0107.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-device-002.v1",
+                      "referenceType" : "archetypeOverlay"
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0025",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0092.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0105.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0104.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0099.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0100", "at0101", "at0102", "at0103" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0098.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_URI",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0106.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0087.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0049.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0088.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0062.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0093",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0094.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0095.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0096.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0097.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_URI",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0027",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0031.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0028.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_IDENTIFIER",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0029.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Chest X-Ray result",
+            "description" : "The result of an imaging examination performed on an individual, using radiological techniques."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0073", "at0074", "at0075", "at0076", "at0077", "at0078", "at0079", "at0080", "at0090" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "7a6046b4-804f-4b4f-bda2-661f5814f290",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "application" : "Adl Designer",
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : {
+        "notes" : "Generated automatically by Adl Designer"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Linda Aulin",
+        "organisation" : "Region Stockholm",
+        "email" : "linda.aulin@sll.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen, Liv Laugen",
+        "organisation" : "​Oslo University Hospital, Norway",
+        "email" : "varntzen@ous-hf.no, liv.laugen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "390e336f-358f-4378-8fd1-7fe7ce8580ef",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "EEC8640C1336806D602A1BC344D4F733"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-device-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0021.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0020.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0022.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0025.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0024.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0008.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : { },
+        "en" : { },
+        "es-ar" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "de" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "6f11730d-4a02-4ceb-9c00-54b899bf4a2a",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Anneka Sargeant",
+        "organisation" : "Institut für Medizinische Informatik - Universitätsmedizin Göttingen",
+        "email" : "anneka.sargeant@med.uni-goettingen.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Elham Gholami",
+        "organisation" : "SLL",
+        "email" : "elham.gholami@sll.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
+        "email" : "amarch@cas.austral.edu.ar"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand",
+        "organisation" : "Helse Bergen HF"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    } ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
