@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a48f8dfa4811287f36478009449f623c">
+		["MD5-CAM-1.0.1"] = <"77149a69821f7657d7d4eaed8f05b9da">
 		["build_uid"] = <"2a1ac9da-2c14-37a4-b0b3-c5a9790af299">
 	>
 
@@ -34,7 +34,7 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					CLUSTER[at0002] occurrences matches {0..*} matches {    -- Drug
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Drug name
+							ELEMENT[at0004] matches {    -- Drug name
 								value matches {
 									DV_CODED_TEXT matches {*}
 								}
@@ -44,24 +44,24 @@ definition
 									DV_COUNT matches {*}
 								}
 							}
-							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Normal usage instructions
+							ELEMENT[at0007] matches {    -- Normal usage instructions
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Drug-to-drug interactions
+							ELEMENT[at0009] occurrences matches {0..*} matches {    -- Drug-to-drug interactions
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							CLUSTER[at0011] occurrences matches {0..1} matches {    -- Usage
+							CLUSTER[at0011] occurrences matches {0..*} matches {    -- Usage
 								items cardinality matches {1..*; unordered} matches {
-									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Scenario
+									ELEMENT[at0012] matches {    -- Scenario
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Frequency
+									ELEMENT[at0014] matches {    -- Frequency
 										value matches {
 											DV_COUNT matches {*}
 										}
