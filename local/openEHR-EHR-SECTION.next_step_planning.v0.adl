@@ -45,7 +45,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9D5EB3A8E67BDF2E23AF01E27214BC37">
+		["MD5-CAM-1.0.1"] = <"f58be333f840432191387b484ebbc74a">
 		["build_uid"] = <"a8a57a1b-1b46-4d65-8d4f-82f739ba0e1c">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -60,10 +60,6 @@ definition
 					archetype_id/value matches {/.*/}
 			}
 			allow_archetype INSTRUCTION[at0003] occurrences matches {0..*} matches {    -- Service request
-				include
-					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.request(-[a-zA-Z0-9_]+)*\.v([0-9]+)/}
-				exclude
-					archetype_id/value matches {/.*/}
 			}
 		}
 	}
