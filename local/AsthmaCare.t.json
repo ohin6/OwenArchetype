@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "29.0.0",
+      "sem_ver" : "30.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "c2709caab2aaa3aca48001f9d5741957",
+      "MD5-CAM-1.0.1" : "980dd1baf8153631b979077b4d45293e",
       "PARENT:MD5-CAM-1.0.1" : "B8AD0C7EB492491CE6F7968C1AFFB40C"
     },
     "details" : {
@@ -3349,15 +3349,6 @@
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-SECTION.ovl-diagnostic_reports-001.v0",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "SECTION",
-          "occurrences" : "0..1",
-          "nodeId" : "at0.49",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1",
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -11653,414 +11644,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "78480ffe-96a1-47fc-b4e7-b1dbcf388863",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte.",
-          "keywords" : [ "Abschnitt", "Template", "Überschrift", "Ad hoc", "Abschnittsüberschrift" ],
-          "use" : "Dieser Archetyp kann für die Erstellung einer Abschnittsüberschrift in einem Template verwendet werden. Die Überschrift kann, passend zu dem jeweiligen klinischen Kontext, umbenannt werden. Zum Beispiel: \"Ad hoc Überschrift\" wird umbenannt in \"Untersuchungsergebnisse\".\r\n\r\n",
-          "misuse" : "Die Überschrift sollte in einem Template nicht unverändert verwendet werden.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.",
-          "keywords" : [ ],
-          "use" : "Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".",
-          "misuse" : "Ska inte lämnas oförändrad i en openEHR-mall.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ru" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ru"
-          },
-          "purpose" : "Базовый заголовок раздела, должен быть переименован в локальном шаблоне ",
-          "keywords" : [ "раздел", "шаблон", "заготовка", "название", "образец" ],
-          "use" : "используется для создания и именования разделов в локальных шаблонах",
-          "misuse" : "*Not to be left unchanged in a template.(en)",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.",
-          "keywords" : [ ],
-          "use" : "Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".",
-          "misuse" : "Skal ikke stå med uendret navn i en templat.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Proporcionar un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico.",
-          "keywords" : [ ],
-          "use" : "Utilizar para construir un encabezado de sección en una plantilla y que será renombrado para su empleo en un contexto clínico específico. Por ejemplo, \"Encabezado ad hoc\" puede renombrarse como \"Hallazgos de examen\".",
-          "misuse" : "No debe mantenerse sin cambios en una plantilla.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Oferecer um cabeçalho de uma sessão genérica que será renomeado no template para adequar-se a um contexto clínico específico.",
-          "keywords" : [ "cabeçalho" ],
-          "use" : "Utilize para construir um cabeçalho de uma sessão (de um template) que será renomeada para adequar-se a um contexto clínico específico. Por exemplo: \"cabeçalho Ad hoc\" renomeado para \"Achados de exame\".",
-          "misuse" : "Não deve manter a configuração original no template.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To provide a generic section header which will be renamed in a template to suit a specific clinical context.",
-          "keywords" : [ ],
-          "use" : "Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".",
-          "misuse" : "Not to be left unchanged in a template.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sl" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sl"
-          },
-          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
-          "keywords" : [ ],
-          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
-          "misuse" : "*Not to be left unchanged in a template.(en)",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "it" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "it"
-          },
-          "purpose" : "Fornire un'intestazione generica della sezione che sarà rinominata in un template per adattarsi ad uno specifico contesto clinico.",
-          "keywords" : [ ],
-          "use" : "Usato per costruire un'intestazione di sezione in un template che sarà rinominato in base al contesto clinico specifico. Per esempio: \"Intestazione ad hoc\" rinominata in \"Risultati dell'esame\".",
-          "misuse" : "Non deve essere lasciato invariato in un template.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "fr" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fr"
-          },
-          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
-          "keywords" : [ ],
-          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
-          "misuse" : "*Not to be left unchanged in a template.(en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "SECTION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Diagnosis",
-            "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
-          }
-        },
-        "ru" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "заготовка заголовка (5)",
-            "description" : "Образец заголовка раздела"
-          }
-        },
-        "es-ar" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Encabezado ad hoc (5)",
-            "description" : "Un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico."
-          }
-        },
-        "sl" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Naslov sekcije (5)",
-            "description" : "Naslov sekcije"
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Templat-overskrift (5)",
-            "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Cabeçalho Ad hoc (5)",
-            "description" : "Um cabeçalho de sessão genérico que deve ser renomeado no template para adequar-se a um contexto clínico específico."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rubrik (5)",
-            "description" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Ad hoc Überschrift (5)",
-            "description" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte."
-          }
-        },
-        "it" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Intestazione di sezione ad hoc (5)",
-            "description" : "Un'intestazione di sezione generica che dovrebbe essere rinominata in un template per adattarsi ad uno specifico contesto clinico."
-          }
-        },
-        "fr" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rubrique ad hoc (5)",
-            "description" : "Un en-tête de section générique qui doit être renommé dans un modèle pour s'adapter à un contexte clinique spécifique."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "46fe0e95-f5cc-44c8-8616-3b9fd0ca6e61",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Ramona Wellmann",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "wellmann.ramona@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ru"
-      },
-      "author" : {
-        "name" : "Art Latyp Латыпов Артур Шамилевич",
-        "organisation" : "RusBITech РусБИТех, Москва"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Daniel Hall",
-        "organisation" : "Region Östergötland",
-        "email" : "daniel.hall@regionostergotland.se"
-      },
-      "accreditation" : "Åsa Skagerhult, Lisa Axelsson",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "einar.fosse@unn.no" : "einar.fosse@unn.no",
-        "name" : "Einar Fosse",
-        "organisation" : "Norwegian Centre for Integrated Care and Telemedicine, Tromsø, Norway"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Vladimir Pizzo",
-        "organisation" : "Hospital Sírio Libanês, São Paulo, Brazil",
-        "email" : "vladimir.pizzo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : {
-        "name" : "?"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "it"
-      },
-      "author" : {
-        "name" : "Paolo Anedda",
-        "organisation" : "Inpeco",
-        "email" : "paolo.anedda@inpeco.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Better - Pathfinder",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "715164c3-a18d-4e77-847d-daf65dd1953f",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -18903,7 +18486,17 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0002.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -19611,15 +19204,6 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "OBSERVATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0001.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-spirometry_result-002.v2",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..1",
           "nodeId" : "at0001.2",
           "attributes" : [ ],
           "attributeTuples" : [ ],
@@ -19721,1813 +19305,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "3308a8a4-3161-4948-829b-802e7d21c552",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "EEC8640C1336806D602A1BC344D4F733"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Erfassung der Daten eines Medizingerätes, welches in der Gesundheitsversorgung eingesetzt wird.",
-          "keywords" : [ "Medizingerät", "Maschine", "Implantat", "Gerät", "Katheter", "Prothese", "Hilfsmittel", "biomedizinisch", "Instrument", "Gerätschaften", "Ausrüstung", "Messgerät", "Monitor", "Software" ],
-          "use" : "Zur Erfassung der Details eines Medizingerätes, welches in der Gesundheitsversorgung eingesetzt wird.\r\n\r\nDie Verwendung des Begriffs \"Medizingerät\" variiert je nach Kontext. In der Welt der Standards bezieht sich der Begriff „Gerät“ in der Regel auf mechanische oder elektronische Geräte, die das Gesundheitswesen unterstützen und eine strenge Dokumentation in Bezug auf Standortverfolgung, Wartung, Kalibrierung, Softwareversionen usw. erfordern. Im terminologischen Kontext ist die Verwendung von Medizingeräten sehr weit verbreitet, einschließlich aller medizinischen Produkte, die für die direkte oder indirekte Bereitstellung der klinischen Versorgung verwendet werden können, sofern sie nicht auf eine Weise wirken, die eine direkte pharmakologische, metabolische oder immunologische Wirkung hat.\r\n\r\nBeispiele für medizinische Geräte reichen von einfachen Geräten wie Blasenkathetern, Zungenspateln, Kontaktlinsen, künstlichen Gelenkimplantaten, Brustimplantaten und einfachen\r\nVerbänden bis hin zu fortschrittlichen Geräten wie künstlichen Herzen, Spritzenpumpen, Spirometern, Anwendungen für Mobiltelefone und computergestützten Geräten zur Erfassung medizinischer Point-of-Care-Messungen. \r\n\r\nIn der komplexen Situation, in der ein chirurgisch implantiertes Gerät als Mittel zur Abgabe von Therapeutika, wie bei einer Chemotherapie direkt in den Körper verwendet wird, werden mit diesem Archetyp nur die Details des Medizinprodukts selbst, sowie die Bestellung von Medikamenten und Details zum Medikament aufgezeichnet. Die tatsächliche Verabreichung des therapeutischen Mittels wird unter Verwendung spezifischer arzneimittelbezogener Instruktions- und Aktionsarchetypen aufgezeichnet. \r\n\r\nDieser Archetyp soll das Gerüst für die strukturierte Darstellung von Medizingeräten bereitstellen. Die hier enthaltenen Datenelemente sind für keinen Gerätetyp spezifisch. Für Einmalprodukte sind normalerweise Datenelemente wie Chargennummer und Verfallsdatum erforderlich. Im Gegensatz dazu sind diese normalerweise nicht relevant für langlebige Geräte, die häufig eine Reihe von Kennungen aufweisen, einschließlich UID, Seriennummer, Modell usw.\r\n\r\nDarüber hinaus erfordern verschiedene Arten von Geräten spezifische Informationen, die für ihren Zweck relevant sind. Diese Daten können mithilfe bestimmter CLUSTER-Archetypen aufgezeichnet werden, die im SLOT \"Specific Properties\" (Spezifische Eigenschaften) eingefügt sind. Zum Beispiel: Für die Verwendung eines Harnkatheters sind möglicherweise zusätzliche Angaben zum Durchmesser und der Länge des Katheters, Materialzusammensetzung, Anzahl der Lumen usw. erforderlich.\r\n\r\nWenn das Medizinprodukt eine Reihe von Komponenten enthält, welche für eine Aufzeichnung von Details erforderlich ist, sollte jede einzelne Komponente explizit unter Verwendung eines zusätzlichen Archetyps CLUSTER.device aufgezeichnet werden, der in den SLOT 'Components' eingefügt wird.\r\n\r\nIm Datenfeld 'Software-Version' kann nur eine Version erfasst werden. Dies gilt hauptsächlich für ein Gerät, bei dem es sich um ausschließlich eine Softwareanwendung handelt. Wenn das Gerät über mehrere Software- oder Hardwarekomponenten verfügt, die spezifiziert werden müssen, sollte dies unter Verwendung des Zusatzes CLUSTER.device erfolgen, der in den SLOT 'Components' eingefügt wird.\r\n\r\nVerwenden Sie den Archetyp CLUSTER.device_details, der in den SLOT 'Asset Management' in diesem Archetyp eingefügt ist, um zusätzliche Details für dauerhafte oder andauernde Geräte aufzuzeichnen, die sich auf den Besitz, die Verfolgung des physischen Standorts, Wartungspläne usw. beziehen.\r\n\r\nDieser Archetyp wurde für die allgemeine Verwendung in anderen Archetypen entwickelt, die ein Gerät beschreiben müssen. Beispiele sind: OBSERVATION.blood_pressure für das Blutdruckmessgerät; OBSERVATION.ecg für das EKG-Gerät; BEOBACHTUNG.Urinanalyse der Reagenzstreifen und der zum Testen verwendeten Vorrichtung; ACTION.procedure; und CLUSTER.exam_tympanic_membrane, um das verwendete Otoskop zu beschreiben.",
-          "misuse" : "Nicht zur Aufzeichnung von Daten bezüglich der Medizinprodukte, die eine direkte pharmakologische, metabolische oder immunologische Wirkung\r\nhaben, verwenden. Zum Beispiel: Ein mit Arzneimitteln imprägnierter Verband, für den ein Rezept erforderlich ist, sollte unter Verwendung des Archetyps INSTRUCTION.medication_order aufgezeichnet werden, der sich\r\nauf die Wirkstoffe, die Dosierung usw. konzentriert.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att registrera information om en medicinsk utrustning som används vid tillhandahållandet av hälso- och sjukvård.",
-          "keywords" : [ "utrustning", "maskin", "implantera", "apparat", "kateter", "protes", "aid", "biomedicinsk", "instrument", "Utrustning", "meter", "övervaka", "programvara" ],
-          "use" : "Arketypen används för att registrera information om en medicinsk utrustning. Medicinsk utrustning används vid tillhandahållande av hälso- och sjukvård.\r\nAnvändningen av termen \"medicinsk utrustning\" varierar beroende på sammanhanget. Termen utrustning enligt standarder används för att beskriva mekaniska eller elektroniska produkter som stöder hälso- och sjukvård och kräver noggrann dokumentation om platsspårning, underhåll, kalibrering, programvaruversioner etc. Inom terminologin, användningen av termen utrustning är mycket bred. Det inkluderar alla medicinska utrustningar som kan användas i direkt eller indirekt tillhandahållande av klinisk vård. Termen används inte för de utrustning som registrerar data om läkemedel som har en direkt farmakologisk, metabolisk eller immunologisk effekt. \r\n\r\nExempel på medicintekniska produkter: enkla apparater urinkatetrar, tungdämpare, kontaktlinser, konstgjorda ledimplantat, bröstimplantat. Samt vanliga förband till avancerade utrustningar som konstgjorda hjärtan, sprutdrivare, spirometrar, mobiltelefonapplikationer, även datoriserade utrustningar som fångar upp sjukvårdsmedicinska mätningar.\r\n\r\nDenna arketyp kan användas för att beskrivautrustningar som används i komplicerade situationer, för exempel: i ett fall där en kirurgiskt implanterad utrustning används för att leverera terapeutiska medel direkt in i kroppen i en kemoterapi behandling. Fast används arketypen medicinsk utrustning för att bara registrera detaljerna om själva den medicinska utrustningen och inte behandlingen. Beställningen för medicinering och detaljer om faktiska administrering av det terapeutiska medlet kommer att registreras med hjälp av specifika läkemedelsrelaterade INSTRUKTIONS- och HANDLINGS-arketyper.\r\n\r\nDen här arketypen är designad för att ge ramverk för en strukturerad representation av medicinsk utrustning. Dataelementen i arketypen är inte specifika för någon typ av utrustning. Utrustningar för engångsbruk kräver vanligtvis dataelement som partinummer och utgångsdatum. Däremot är dessa vanligtvis inte relevanta för hållbara utrustningar som ofta har en uppsättning av identifierare, inklusive ett UID, serienummer, modell etc.\r\n\r\nOlika typer av utrustningar kommer att kräva ha specifik information som är relevant för utrustningens syfte. Dessa data kan registreras med specifika CLUSTER-arketyper infogade i SLOT för 'Specifika egenskaper'. Till exempel: användning av en urinkatet kan kräva ytterligare detaljer om kateterns diameter och längd, materialkomposition, antal lumen etc.\r\n\r\nOm den medicinska utrustningen har ett antal komponenter som kräver registrering av detaljer, bör varje enskild komponent registreras med hjälp av en extra CLUSTER.device-arketyp som sätts in i \"Components\" SLOT.\r\n\r\nDatafältet 'Programvara version' gör det möjligt att bara en enda version blir registrerad. Detta gäller främst för en utrustning som är en programvara. Om utrustningen har flera programvara- eller hårdvara komponenter som behöver specificeras, bör detta göras med hjälp av ett tillägg CLUSTER.device som sätts in i 'Components' SLOT.\r\n\r\nDenna arketyp har designats för generisk användning inom andra arketyper. d.v.s. Arketyper som behöver beskriva en utrustning. Exempel är: OBSERVATION.blood_pressure för blodtrycksmätaren; OBSERVATION.ecg för EKG-maskinen; OBSERVATION. Urinanalys för reagensremsorna och anordningen som används för testning; ACTION.procedure; och CLUSTER.exam_tympanic_membrane för att specificera det använda otoskopet.",
-          "misuse" : "Får inte användas för att registrera data om läkemedel som har en direkt farmakologisk, metabolisk eller immunologisk effekt. Till exempel: ett läkemedelsimpregnerat förband som kräver recept bör registreras med hjälp av INSTRUCTION.medication_order-arketypen, med fokus på de aktiva ingredienserna, dosering etc. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere detaljer om medisinsk utstyr benyttet i utførelsen av helsetjenester.",
-          "keywords" : [ "medisinsk utstyr", "maskin", "implantat", "apparat", "kateter", "protese", "hjelpemiddel", "instrument", "utstyr", "måler", "monitor", "software", "programvare", "MTU", "medisinsk teknisk utstyr", "MU" ],
-          "use" : "Benyttes for å registrere detaljer om medisinsk utstyr benyttet i utførelsen av helsetjenester.\r\n\r\nTermen \"medisinsk utstyr\" varierer med ulike kontekster. Innen standardisering refererer termen ofte til mekanisk eller elektronisk utstyr som støtter helsetjenesten og krever streng dokumentasjon rundt lokalisering, vedlikehold, kalibrering, programvareversjoner etc. I en terminologikontekst er bruken av \"medisinsk utstyr\" veldig bred, og inkluderer et hvilket som helst medisinsk utstyr som benyttes direkte eller indirekte i utførelsen av helsetjenester. Unntak er utstyr som har en direkte farmakologisk, metabolsk og immunologisk effekt. \r\n\r\nEksempler på medisinsk utstyr strekker seg fra enkelt utstyr som urinkatetre, spatler, kontaktlinser, leddproteser, brystimplantater, bandasjer, hofteproteser, sprøytepumper og spirometre, til avansert utstyr som kunstige hjerter, mobiltelefonapplikasjoner og pasientnære datastyrte enheter for å fange opp medisinske målinger.\r\n\r\nI en kompleks setting hvor en kirurgisk implantert enhet skal brukes for å tilføre et legemiddel, for eksempel cellegift direkte i kroppen, vil denne arketypen kun registrere detaljer om det medisinske utstyret. Ordinasjonen og detaljer rundt den faktiske administrasjonen av legemidlet vil bli lagret i spesifikke medikasjonsrelaterte INSTRUCTION og ACTION-arketyper \r\n\r\nDenne arketypen er designet for å gi et rammeverk for strukturert representasjon av et hvilket som helst medisinsk utstyr, og dataelementene i arketypen er ikke spesifikke for en enkelt type utstyr. Engangsutstyr vil vanligvis kreve registrering av lot-nummer og utløpsdato, i motsetning til flergangsutstyr som vil kreve en rekke identifikatorer som UID, serienummer, modell etc.\r\n\r\nUlikt utstyr vil kunne kreve spesifikk informasjon som er relevant for deres bruksområde. Data om dette kan lagres i spesifikke CLUSTER-arketyper lagt til i SLOTet \"Spesifikke detaljer\". For eksempel: Ved bruk av et urinkateter vil man kunne ønske å registrere tilleggsinformasjon som diameter og lengde på kateteret, hvilke materialer kateteret består av, antall lumen osv.\r\n\r\nHar det medisinske utstyret flere komponenter som krever registrering av detaljer må hver komponent registreres i egen CLUSTER.device arketype lagt til i SLOTet \"Komponent\".\r\n\r\nDatafeltet \"Programvareversjon\" tillater at kun en versjon registreres. Feltet benyttes i hovedsak for medisinsk utstyr som er en programvareapplikasjon. Har det medisinske utstyret flere programvare- eller maskinvarekomponenter som må spesifiseres, gjøres dette ved å legge til en ny CLUSTER.device i \"Komponent\"-SLOTet.\r\n\r\nFor å registrere tilleggsinformasjon for varig eller permanent utstyr som omhandler eierskap, fysisk lokalisering, vedlikeholdsplaner etc, bruk CLUSTER.device_details-arketypen lagt til i SLOTet \"Forvaltning av det medisinske utstyret\" i denne arketypen.\r\n\r\nArketypen er designet for generisk bruk i andre arketyper der man trenger å beskrive medisinsk utstyr. Eksempler: OBSERVATION.blood_pressure for sfygmomanometer, OBSERVATION.ecg for EKG-appararatet, OBSERVATION.urinalysis for urinstix og utstyr som brukes for testing, ACTION.procedure og CLUSTER.exam_tympanic_membrane for detaljer om otoskopet som er benyttet.",
-          "misuse" : "Brukes ikke for å registrere data om medisinske produkter som utøver en direkte farmakologisk, metabolsk eller immunologisk effekt. For eksempel: En bandasje som inneholder et medikament som krever resept registreres i arketypen INSTRUCTION.medication_order, med fokus på aktive ingredienser, dose etc.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Registrar los detalles de un objeto físico, producto o dispositivo utilizado en el sentido mas amplio de la provisión de cuidados de la salud, pero no como medio terapéutico o metabólico.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto" ],
-          "use" : "Utilizado para registrar los detalles de cualquier dispositivo genérico que puede ser utilizado directamente de un modo terapéutico o diagnóstico, o indirectamente como apoyo a la provisión de cuidados de la salud. El uso del término dispositivo varía dependiendo del contexto. En el mundo de los estándares, el término dispositivo tiende a referirse a dispositivos mecánicos o electrónicos que actuan como apoyo del cuidado de la salud y que requiren documentación rigurosa en cuanto a especificaciones, mantenimiento, etc. En el contexto de las terminologías, el uso de dispositivo es muy amplio, incluyendo a cualquier objeto físico que pueda ser utilizado directa o indirectamente en la provisión de cuidados clínicos. Los ejemplos incluyen ventiladores, medidores de flujo expiratorio máximo, espirómetros, lentes oculares y de contacto, catéteres endovasculares, implantes mamarios, prótesis, tubos de drenaje y anillos para callos. \r\nEste arquetipo esta diseñado para proveer la base de una representación estructurada de cualquier dispositivo, desde el simple ejemplo de una marca de tira reactiva urinaria con una fecha de vencimiento hasta un oído biónico implantable que puede requerir documentación compleja, software, hardware, mantenimiento, calibración, etc.\r\nPara los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).",
-          "misuse" : "No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar os detalhes de um dispositivo médico usado na prestação de cuidados de saúde.",
-          "keywords" : [ "dispositivo", "máquina", "implante", "catéter", "prótese", "cuidado", "biomedical", "instrumento", "equipamento", "monitor", "software", "utensílio" ],
-          "use" : "Use para gravar os detalhes de um dispositivo médico utilizado na prestação de cuidados de saúde .\r\n\r\nO uso do termo \"dispositivo médico\" varia dependendo do contexto. No mundo dos padrões, o termo dispositivo tende a referir-se a dispositivos mecânicos ou eletrônicos que apoiam cuidados de saúde e exigem documentação rigorosa sobre rastreamento de localização, manutenção, calibração, versões de software etc. Dentro do contexto da terminologia o uso de dispositivo é muito amplo , incluindo qualquer dispositivo médico que pode ser utilizado direta ou indiretamente em cuidados clínicos , desde que não atue de forma que exerça uma ação farmacológica direta , metabólica ou como efeito imunológico .\r\n\r\nOs dispositivos médicos variam de dispositivos simples, como catéteres urinários, abaixadores de língua, lentes de contato, próteses articulares, os implantes mamários e curativos simples, até dispositivos avançados, como corações artificiais, espirômetros, além de aplicativos para celulares e dispositivos computadorizados que capturam medidas médicas.\r\n\r\nEm situações complexas, onde um dispositivo implantado cirurgicamente é usado para administrar agentes terapêuticos, tais como a quimioterapia, este arquétipo irá ser utilizado para gravar apenas os detalhes sobre o próprio dispositivo médico e a prescrição da medicação e detalhes sobre o administração real do agente terapêutico serão registrados utilizando-se a arquétipos INSTRUCTION e ACTION sobre a medicação específica.\r\n\r\nEste arquétipo é projetado para fornecer a estrutura para representação estruturada de qualquer dispositivo médico e os elementos de dados que estão contidos aqui não são específicos para algum tipo de dispositivo. Dispositivos de uso único comumente vão exigir elementos de dados, tais como número de lote e data de validade. Em contrapartida estes geralmente não são relevantes para dispositivos duráveis que, muitas vezes, têm um conjunto de identificadores, incluindo uma UID, número de série, modelo, etc..\r\n\r\nAlém disso, diferentes tipos de dispositivos exigirão informações específicas relevantes para a sua finalidade. Estes dados podem ser gravados utilizando-se arquétipos CLUSTER específico inseridos no SLOT das propriedades específicas. Por exemplo: utilização de um catéter urinário pode exigir detalhes adicionais sobre o diâmetro e o comprimento do catéter, composição do material, número de lúmens etc.\r\n\r\nSe o dispositivo médico tem um número de componentes que necessitem de gravação de dados, todos os componentes individuais deverão ser registrados explicitamente utilizando-se um arquétipo CLUSTER.device adicional introduzido nos campos dos componentes.\r\n\r\nO campo de dados versão do software permite apenas uma única versão a ser gravado. Isto é especialmente aplicável para um dispositivo que é uma aplicação de software. Se o dispositivo possui vários componentes de software ou hardware que precisam ser especificados, este deve ser feito por meio de um CLUSTER.device além de inserido no slot do 'Componentes'.\r\n\r\nPara gravar detalhes adicionais para dispositivos duráveis ou permanentes que se relacionam com a posse, rastreamento de localização física, programações de manutenção etc, o uso do arquétipo CLUSTER.device_details no slot \"A gestão de ativos\" desse arquétipo.\r\n\r\nEste arquétipo foi projetado para uso genérico com outros arquétipos que precisam descrever um dispositivo. Exemplos incluem: OBSERVATION.blood_pressure para o esfigmomanômetro; OBSERVATION.ecg para o equipamento de ECG; OBSERVATION.urinalysis para as tiras de reagente e o dispositivo usado para os testes; ACTION.procedure; e CLUSTER.exam_tympanic_membrane para detalhar o otoscópio usado.",
-          "misuse" : "Não deve ser utilizado para gravar dados sobre os medicamentos que exercem uma ação farmacológica direta , metabólica ou efeito imunológico. Por exemplo: um curativo impregnado que exige uma prescrição deve ser gravado utilizando-se o o arquétipo INSTRUCTION.medication_order, com foco em ingredientes ativos, dosagem, etc.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "ar-sy" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "ar-sy"
-          },
-          "purpose" : "لتسجيل التفاصيل حول شيئ محسوس, مُنتَج أو جهيزة يتم استخدامها في أوسع وصف لتقديم الخدمة الصحية, و لكن دون طريقة أيضية أو علاجية مباشِرة.",
-          "keywords" : [ "الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ" ],
-          "use" : "يستخدم لتسجيل التفاصيل حول أي جهيزة جنيسة (غير محدودة الملكية) و التي يمكن أن تستخدم إما مباشرةً بطريقة علاجية أو تشخيصية أو تستخدم بشكل غير مباشر لدعم تقديم الخدمة الصحية.\r\nو يختلف استخدام اللفظ (جهيزة) على حسب السياق. \r\nو في داخل عالم المعايير, فإن اللفظ (جهيزة) يميل إلى الإشارة إلى الجهائز الإلكترونية أو الميكانيكية/الحركية و التي تدعم الرعاية الصحية, و تتطلب توثيق مكثف فيما يتعلق بالمواصفات و الصيانة... إلى آخره.\r\nو في سياق عالم المصطلحات فإن استخدام (جهيزة) واسع جدا, بما في ذلك أي شيئ محسوس يمكن استخدامه في تقديم الرعاية الصحية إما بشكل مباشر أو غير مباشر. \r\nو تتضمن الأمثلة: دوائر أجهزة التنفس الصناعي, مقاييس الجريان القِمِّي, مقاييس التنفس, نظارات العين, العدسات اللاصقة, القثطار داخل الوريد, طُعوم الثدي, البِدْلات, أنابيب المَنْزَح, و الحلقات المسمارية.\r\n\r\nو تم تصميم هذا النموذج ليمثل الأساس لعرض مركب لأي جهيزة, من مثال بسيط لنوع من غميسة البول مع تاريخ الاستخدام, إلى طعم أذن من كائن حيّ و الذي يتطلب توثيق مركب مثل البرنامج الإلكتروني, و الأجزاء الصلبة, و الصيانة و التعيير, إلى آخره.\r\n\r\nو بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.",
-          "misuse" : "لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the details of a medical device used in the provision of healthcare.",
-          "keywords" : [ "device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software" ],
-          "use" : "Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, artificial joint implants, breast implants and plain dressings through to advanced devices such as artificial hearts, syringe drivers, spirometers, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific properties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.\r\n\r\nThis archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.",
-          "misuse" : "Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-device-004.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0003.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0002.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0021.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0004.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0020.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0022.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0023.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0025.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0024.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0008.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "ar-sy" : { },
-        "en" : { },
-        "es-ar" : { },
-        "pt-br" : { },
-        "nb" : { },
-        "de" : { },
-        "sv" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "6f11730d-4a02-4ceb-9c00-54b899bf4a2a",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Anneka Sargeant",
-        "organisation" : "Institut für Medizinische Informatik - Universitätsmedizin Göttingen",
-        "email" : "anneka.sargeant@med.uni-goettingen.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Elham Gholami",
-        "organisation" : "SLL",
-        "email" : "elham.gholami@sll.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
-        "email" : "amarch@cas.austral.edu.ar"
-      },
-      "accreditation" : "MD",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand",
-        "organisation" : "Helse Bergen HF"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Osmeire Chamelette Sanzovo",
-        "organisation" : "Hospital Sírio Libanês - SP",
-        "email" : "osmeire.acsanzovo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ar-sy"
-      },
-      "author" : {
-        "name" : "Mona Saleh"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "86f1320e-cc76-4871-bccb-88bba8e2e16c",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8C75665CB2BB8D77131D4F1DAC8F9E2D",
-        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
-      },
-      "details" : {
-        "fi" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fi"
-          },
-          "purpose" : "*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)",
-          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)" ],
-          "use" : "*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Method' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Breathing equipment' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Breathing equipment' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using the OBSERVATION.body_temperature archetype alongside the spirometry archetype. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)",
-          "misuse" : "*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere resultatet av en lungefunksjonstest utført med et spirometer eller en PEF-måler.",
-          "keywords" : [ "pulmonar,", "lunge", "spirometri", "PEF", "PEFR", "bronkie", "bronkial", "luftvei", "kols", "astma", "pusteprøve", "blåsetest", "belastningsspiro", "løpetest", "astmaundersøkelse", "metakolintest" ],
-          "use" : "Brukes for å registrere resultatene av en spirometriundersøkelse eller en PEF-måling.\r\n\r\nDenne arketypen er ment for bruk til å registrere resultater fra: \r\n- elektroniske og mekaniske måleinstrumenter. Bruk elementet \"Målingstype\" under Protokoll for å registrere hvilken målemetode som ble brukt.\r\n- både oral og nasal ekspiratorisk og inspiratorisk testing. Bruk elementet \"Metode\" under Protokoll for å registrere hvordan målingen ble utført. For eksempel munnstykke eller maske. Målinger med ulikt \"Metode\" må registreres med separate instanser av arketypen.\r\n- inspiratoriske og ekspiratoriske målinger. Testens navn vil angi om den gir et ekspiratorisk eller inspiratorisk resultat. \r\n\r\nHvis spirometriundersøkelsen utføres i forbindelse med administrering av bronkodilatorer eller irritanter/allergener, så bør detaljene om hva som er administrert registreres ved bruk av arketypen ACTION.medication (Legemiddelhåndtering) i samme COMPOSITION. \r\n\r\nHvis man må registrere ytterligere informasjon om kroppstemperatur, lufttrykk eller luftfuktighet i omgivelsene, kan detaljene om dette registeres ved hjelp av andre arketyper. Kroppstemperatur kan registreres ved bruk av arketypen OBSERVATION.body_temperature (Kroppstemperatur) i samme COMPOSITION. Lufttrykk eller luftfuktighet kan registreres ved bruk av arketypen CLUSTER.environmental_conditions i SLOTet \"Omgivelsesforhold\".\r\n\r\n\"Uspesifisert hendelse\" kan repeteres og begrenses for å støtte representasjon av\r\n- Flere målinger og gjennomsnitt av disse – \"Uspesifisert hendelse\" repeteres så mange ganger som nødvendig, samt i tillegg en intervallhendelse med den matematiske funksjonen \"gjennomsnitt\"\r\n- Resultatet av provokasjons- eller reversilibilitetstest – repeter \"Uspesifisert hendelse\" og endre navn til \"Baseline\" og Etter provokasjon/bronkodilator. Der det er passende, kan det spesifiseres en tidsforskyvning.",
-          "misuse" : "Skal ikke brukes for å registrere resultatene av andre typer lungefunksjonstester, som for eksempel plethysmografi eller lungediffusjonstester. Bruk spesifikke arketyper for disse formålene.\r\n\r\nSkal ikke brukes for å registrere blodgassverdier. Til dette brukes arketypen OBSERVATION.laboratory_test_result (Laboratorieresultat).\r\n\r\nSkal ikke brukes for å registrere pulsoksymetrimålinger. Til dette brukes arketypen OBSERVATION.pulse_oximetry (Pulsoksymetri).",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record the results of a pulmonary function test performed using a spirometer or peak flow meter.",
-          "keywords" : [ "respiratory", "pulmonary", "spirometry", "peak flow", "lung", "bronchial", "airway", "pef", "pefr" ],
-          "use" : "Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Type of measurement' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Method' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Method' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using an instance of the OBSERVATION.body_temperature archetype committed within the same COMPOSITION. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required.",
-          "misuse" : "Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sl" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sl"
-          },
-          "purpose" : "*To record the results of a pulmonary function test performed using a spirometer or peak flow meter. (en)",
-          "keywords" : [ "*respiratory (en)", "*pulmonary (en)", "*spirometry (en)", "*peak flow (en)", "*lung (en)", "*bronchial (en)", "*airway (en)", "*pef (en)", "*pefr (en)" ],
-          "use" : "*Use to record the results of a pulmonary function test performed using a spirometer or peak flow meter.\r\n\r\nThis archetype is intended to be used to record the results from:\r\n- electronic or mechanical measurement devices. Use the 'Method' element in Protocol to record how the result was measured; \r\n- oral, nasal or tracheostomy tests. Use the 'Breathing equipment' element in Protocol to record the type of breathing equipment used to perform the test. For example: mouth piece or face mask. Measurements with different 'Breathing equipment' will have to be recorded using separate instances of the archetype.\r\n- inspiratory and expiratory tests. The name of each test will indicate whether the test records an inspiratory or expiratory result. \r\n\r\nIf the spirometry test is performed in association with the administration of bronchodilators or challenge substances, this can be recorded using the 'Challenge/reversibility' element. Details of what was administered should be recorded using an instance of the ACTION.medication archetype committed within the same COMPOSITION.\r\n\r\nIf additional information about body temperature, ambient pressure or humidity is required, this can be recorded using additional archetypes. Body temperature can be recorded using the OBSERVATION.body_temperature archetype alongside the spirometry archetype. Ambient pressure or humidity can be recorded using the CLUSTER.environmental_conditions in the 'Enviromental conditions' slot.\r\n\r\nThe 'Any event' can be cloned and constrained to support the representation of:\r\n- Multiple measurements and their average - clone the 'Any event' as many times as needed, plus an additional event set to 'Interval' and selecting the 'Mean' attribute;\r\n- Pre- and post bronchial challenge or bronchodilator results - clone the 'Any event' and rename as 'Baseline' and 'Post challenge/bronchodilator', associated with a time offset if required. (en)",
-          "misuse" : "*Not to be used to record the results of other types of lung function tests, for example body plethysmography or lung diffusion tests. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record details about incentive spirometry. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the results of blood gas tests. Use the OBSERVATION.laboratory_test_result for this purpose.\r\n\r\nNot to be used to record measurements about pulse oximetry. Use the OBSERVATION.pulse_oximetry for this purpose. (en)",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.spirometry_result.v2",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-spirometry_result-002.v2"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "HISTORY",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "events",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0052",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0053.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "property",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "openehr"
-                                  },
-                                  "constraint" : [ "129" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ {
-                                "@type" : "C_ATTRIBUTE_TUPLE",
-                                "members" : [ {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "units",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "magnitude",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "precision",
-                                  "children" : [ ]
-                                } ],
-                                "tuples" : [ {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "L" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 3,
-                                      "upper" : 3,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "mL" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                } ]
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0054.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "property",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "terminologyId" : {
-                                    "value" : "openehr"
-                                  },
-                                  "constraint" : [ "129" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ {
-                                "@type" : "C_ATTRIBUTE_TUPLE",
-                                "members" : [ {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "magnitude",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "units",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "precision",
-                                  "children" : [ ]
-                                } ],
-                                "tuples" : [ {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "L" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 3,
-                                      "upper" : 3,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "mL" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                } ]
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0044.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_PROPORTION",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "numerator",
-                                "children" : [ {
-                                  "@type" : "C_REAL",
-                                  "rmTypeName" : "Real",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 0.0,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : false,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : true
-                                  } ]
-                                } ]
-                              }, {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "type",
-                                "children" : [ {
-                                  "@type" : "C_INTEGER",
-                                  "rmTypeName" : "Integer",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 2,
-                                    "upper" : 2,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : true,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : false
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "at0065", "at0064", "at0172", "at0174", "at0076", "at0145", "at0070", "at0067", "at0146", "at0068", "at0069", "at0171", "at0082", "at0077", "at0078", "at0176" ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0057",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0058.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "property",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "terminologyId" : {
-                                    "value" : "openehr"
-                                  },
-                                  "constraint" : [ "126" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ {
-                                "@type" : "C_ATTRIBUTE_TUPLE",
-                                "members" : [ {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "units",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "magnitude",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "precision",
-                                  "children" : [ ]
-                                } ],
-                                "tuples" : [ {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "L/s" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 3,
-                                      "upper" : 3,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "mL/s" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "L/min" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                } ]
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0008.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "property",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "terminologyId" : {
-                                    "value" : "openehr"
-                                  },
-                                  "constraint" : [ "126" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ {
-                                "@type" : "C_ATTRIBUTE_TUPLE",
-                                "members" : [ {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "magnitude",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "units",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "precision",
-                                  "children" : [ ]
-                                } ],
-                                "tuples" : [ {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "L/s" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 3,
-                                      "upper" : 3,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "mL/s" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "L/min" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                } ]
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0122.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_PROPORTION",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "numerator",
-                                "children" : [ {
-                                  "@type" : "C_REAL",
-                                  "rmTypeName" : "Real",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 0.0,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : false,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : true
-                                  } ]
-                                } ]
-                              }, {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "type",
-                                "children" : [ {
-                                  "@type" : "C_INTEGER",
-                                  "rmTypeName" : "Integer",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 2,
-                                    "upper" : 2,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : true,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : false
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "at0152", "at0205", "at0072", "at0073", "at0074", "at0075", "at0177", "at0178", "at0179", "at0186", "at0187", "at0188" ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0156",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0165.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "property",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "openehr"
-                                  },
-                                  "constraint" : [ "125" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ {
-                                "@type" : "C_ATTRIBUTE_TUPLE",
-                                "members" : [ {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "units",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "magnitude",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "precision",
-                                  "children" : [ ]
-                                } ],
-                                "tuples" : [ {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "cm[H2O]" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_STRING",
-                                    "rmTypeName" : "STRING",
-                                    "constraint" : [ "mm[Hg]" ]
-                                  }, {
-                                    "@type" : "C_REAL",
-                                    "rmTypeName" : "REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "rmTypeName" : "INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 0,
-                                      "upper" : 0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                } ]
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0166.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_QUANTITY",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "property",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "terminologyId" : {
-                                    "value" : "openehr"
-                                  },
-                                  "constraint" : [ "125" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ {
-                                "@type" : "C_ATTRIBUTE_TUPLE",
-                                "members" : [ {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "magnitude",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "units",
-                                  "children" : [ ]
-                                }, {
-                                  "@type" : "C_ATTRIBUTE",
-                                  "rmAttributeName" : "precision",
-                                  "children" : [ ]
-                                } ],
-                                "tuples" : [ {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "cm[H2O]" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 1,
-                                      "upper" : 1,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                }, {
-                                  "@type" : "C_PRIMITIVE_TUPLE",
-                                  "members" : [ {
-                                    "@type" : "C_REAL",
-                                    "constraint" : [ {
-                                      "lower" : 0.0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : false,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : true
-                                    } ]
-                                  }, {
-                                    "@type" : "C_STRING",
-                                    "constraint" : [ "mm[Hg]" ]
-                                  }, {
-                                    "@type" : "C_INTEGER",
-                                    "constraint" : [ {
-                                      "lower" : 0,
-                                      "upper" : 0,
-                                      "lowerIncluded" : true,
-                                      "upperIncluded" : true,
-                                      "lowerUnbounded" : false,
-                                      "upperUnbounded" : false
-                                    } ]
-                                  } ]
-                                } ]
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0167.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_PROPORTION",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "numerator",
-                                "children" : [ {
-                                  "@type" : "C_REAL",
-                                  "rmTypeName" : "Real",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 0.0,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : false,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : true
-                                  } ]
-                                } ]
-                              }, {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "type",
-                                "children" : [ {
-                                  "@type" : "C_INTEGER",
-                                  "rmTypeName" : "Integer",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 2,
-                                    "upper" : 2,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : true,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : false
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "at0170", "at0181", "at0182" ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0055",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0056.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_PROPORTION",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "numerator",
-                                "children" : [ {
-                                  "@type" : "C_REAL",
-                                  "rmTypeName" : "REAL",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 0.0,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : false,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : true
-                                  } ]
-                                } ]
-                              }, {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "type",
-                                "children" : [ {
-                                  "@type" : "C_INTEGER",
-                                  "rmTypeName" : "INTEGER",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 2,
-                                    "upper" : 2,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : true,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : false
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0018.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_PROPORTION",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "numerator",
-                                "children" : [ {
-                                  "@type" : "C_REAL",
-                                  "rmTypeName" : "Real",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 0.0,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : false,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : true
-                                  } ]
-                                } ]
-                              }, {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "type",
-                                "children" : [ {
-                                  "@type" : "C_INTEGER",
-                                  "rmTypeName" : "Integer",
-                                  "occurrences" : "1..1",
-                                  "constraint" : [ {
-                                    "lower" : 2,
-                                    "upper" : 2,
-                                    "lowerIncluded" : true,
-                                    "upperIncluded" : true,
-                                    "lowerUnbounded" : false,
-                                    "upperUnbounded" : false
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "at0081", "at0080", "at0189", "at0190" ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0013.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DURATION",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_DURATION",
-                              "rmTypeName" : "DURATION",
-                              "occurrences" : "1..1",
-                              "patternedConstraint" : "PTS",
-                              "constraint" : [ {
-                                "lower" : "PT0S",
-                                "lowerIncluded" : true,
-                                "upperIncluded" : false,
-                                "lowerUnbounded" : false,
-                                "upperUnbounded" : true
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0130.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0101.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "state",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0031",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0115.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.1" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0098.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0029",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0196.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.2" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0199.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0192.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.3" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0030.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-device-004.v1",
-              "referenceType" : "archetypeOverlay"
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.3",
-            "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Spirometry result (2)",
-            "description" : "Pulmonary function test results using a spirometer or peak flow meter."
-          }
-        },
-        "sl" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.3",
-            "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Spirometry (en) (2)",
-            "description" : "*Pulmonary function test results using a spirometer or peak flow meter. (en)"
-          }
-        },
-        "nb" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.3",
-            "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Spirometriresultat (2)",
-            "description" : "Lungefunksjonstest ved bruk av et spirometer eller en PEF-måler."
-          }
-        },
-        "fi" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          },
-          "ac0.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.3",
-            "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Spirometry (en) (2)",
-            "description" : "*Pulmonary function test results using a spirometer or peak flow meter. (en)"
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0116", "at0117", "at0118", "at0119" ]
-        },
-        "ac0.2" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.2",
-          "members" : [ "at0197", "at0198" ]
-        },
-        "ac0.3" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.3",
-          "members" : [ "at0193", "at0194", "at0195" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "74bae2f5-2f72-4b3d-8096-dfb0a34ce1af",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fi"
-      },
-      "author" : {
-        "name" : "Vesa Peltola",
-        "organisation" : "Tieto Finland Oy",
-        "email" : "vesa.peltola@tieto.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Mikkel Johan Gaup Grønmo, Silje Ljosland Bakke, Marit Alice Venheim, Hanne Marte Bårholm",
-        "organisation" : "Helse-Nord, Forvaltningssenter EPJ, Helse Vest IKT AS",
-        "email" : "mikkel.johan.gaup.gronmo@helse-nord.no, silje.ljosland.bakke@helse-vest-ikt.no, marit.alice.venheim@helse-vest-ikt.no, hanne.marte.sandal.barholm@helse-vest-ikt.no"
-      },
-      "accreditation" : "Nasjonal IKT HF",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : {
-        "name" : "?"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "87f13ed1-bd10-4035-b316-6827049bff48",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -21539,7 +19316,38 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "f58be333f840432191387b484ebbc74a"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Register the statement/s about the request of a report of assessment about specific diagnostic tests.",
+          "keywords" : [ "review", "diagnostic test", "report" ],
+          "use" : "Use to record statement/s about asking reports to review the diagnostic tests carried out. The statement is considered only at the time it is registered. That is to say, other reports can be planned along the time, if second opinion is required.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registrar la solicitud de informes de evaluación acerca de pruebas diagnósticas específicas.",
+          "keywords" : [ ],
+          "use" : "Se utiliza para registrar la solicitud de informes para revisar las pruebas diagnósticas realizadas. La declaración se considera únicamente para el momento en que ha sido registrada. Es decir, se pueden planificar varios informes a lo largo del tiempo para evaluar las mismas pruebas diagnósticas, en caso de requerirse una segunda opinión.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.next_step_planning.v0",
     "differential" : true,
@@ -21623,7 +19431,108 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6175B5DE04E6302E3DEB0C8EB876BE34"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Allgemeines Konzept für eine gesundheitsbezogene Dienstleistung oder Aktivität, die von einem Kliniker, einer Abteilung oder einer Einrichtung erbracht werden soll.",
+          "keywords" : [ "Anfrage", "Bestellung", "Dienst", "Bereitstellung", "Empfehlung", "Überweisung" ],
+          "use" : "Zur Darstellung einer Anforderung für eine gesundheitsbezogene Dienstleistung oder Aktivität, die von einem Kliniker, einer Abteilung oder einer Einrichtung erbracht werden soll.\r\n\r\nDieser Archetyp wurde als ein Konzept entworfen, das als Grundlage für die Entwicklung eines solchen Modells dienen kann:\r\n- eine Anforderung einer gesundheitsbezogenen Dienstleistung von einem Kliniker, einer Abteilung oder einer Einrichtung an einen anderen Kliniker, eine andere Abteilung oder eine andere Einrichtung . Zum Beispiel: eine Überweisung an einen spezialisierten Kliniker für eine Behandlung oder eine zweite klinische Meinung; die Verlegung der Versorgung in eine Notaufnahme; die stündliche Überwachung von vier Vitalparametern; und die Bereitstellung von Dienstleistungen zu Hause durch einen Gemeinderat; oder\r\n- einen Antrag auf eine Nachsorgeleistung, die für denselben Kliniker, dieselbe Abteilung oder Einrichtung geplant werden soll. Zum Beispiel: ein Nachsorgetermin bei ambulanten Patienten in 6 Wochen. \r\n\r\nKlinische Anwendungsfälle:\r\n- Betrachten Sie eine Anweisung eines Klinikers für eine Nachsorgetermin in 6 Wochen. \"Nachsorgetermin\" wird der \"Name der Dienstleistung\" sein. Wenn sie '6 Wochen' als vorgeschlagenen Zeitpunkt für den Termin in die Benutzerschnittstelle eingeben, wird das klinische System das Datum in sechs Wochen ab heute im Datenelement \"Dienstleistung erforderlich\" aufzeichnen.\r\n- Betrachten Sie eine Anweisung eines Klinikers der eine Diabetesaufklärung als \"Name der Dienstleistung\" anfordert. Die Werte für \"Grund für die Anforderung\" können \"Neue Diagnose\" und \"Verhinderung von Ketoazidose\" sein. Die 'Klinische Indikation' wird 'Diabetes Typ 1' sein, die mit der Diagnose und/oder dem Laborergebnis verknüpft sein kann. Wenn ein 4-wöchiger Kurs erforderlich ist, bei dem die Sitzungen in wöchentlichen Abständen zu 4 verschiedenen Anlässen organisiert werden, dann erfordert die komplexe Zeitplanung die Verwendung des Archetyps CLUSTER.service_direction und des zugehörigen CLUSTER.timing_nondaily.\r\n- Betrachten Sie eine Anweisung eines Klinikers, der einen wiederkehrenden Bluttest, z.B. einen INR-Test, anfordert. die komplexe Zeitplanung hierfür erfordert die Verwendung der CLUSTER.service_direction und des zugehörigen Archetyp CLUSTER.timing_nondaily, um jedes Timing in einer Abfolge von Tests zu definieren, z.B. \"täglich für eine Woche, wöchentlich für 4 Wochen, monatlich für 6 Monate\".\r\n\r\nDie Standardvorgabe für diesen Archetyp ist, dass es sich um eine Anforderung für einen einzelnen Dienst handelt. Wenn eine Reihe von Diensten erforderlich ist, verwenden Sie den Archetyp CLUSTER.service_direction innerhalb des \"Komplexe Zeitplanung\" SLOT.\r\n\r\nIn vielen Situationen wird es möglich sein, die Schritte darzustellen, die als Teil dieser Anforderung auftreten, die unter Verwendung des entsprechenden generischen ACTION.service ausgeführt wird. Es wird jedoch viele Gelegenheiten geben, bei denen der erforderliche ACTION-Archetyp für den Zweck sehr spezifisch sein wird, da die Anforderungen an die Daten für die Aufzeichnung der Bereitstellung vieler gesundheitsbezogener Dienste ziemlich einzigartige Datenelemente, Aufzeichnung von Mustern oder Pathway-Schritten erfordern. Zum Beispiel: ACTION.screening oder ACTION.health_education.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Generiskt ramverk för begäran om en hälsorelaterad tjänst eller aktivitet som ska levereras av en kliniker eller organisation.",
+          "keywords" : [ "remiss", "förfrågan", "beställning", "tjänst", "tillhandahålla", "patientremittering" ],
+          "use" : "Generiskt ramverk för begäran om en hälsorelaterad tjänst eller aktivitet som ska levereras av en kliniker, organisation eller myndighet. \r\n\r\nDenna arketyp har utformats som ett ramverk och kan användas som grund för:\r\n- en begäran från en kliniker eller organisation eller myndighet till en annan kliniker, organisation eller myndighet om en hälsorelaterad tjänst. Till exempel: en hänvisning till en specialistkliniker för behandling eller ett andra kliniskt yttrande; överföring av vård till en akutavdelning; fyra timmars övervakning av vitala tecken; och tillhandahållande av hemtjänster från kommunen; eller\r\n- en begäran om att en uppföljningstjänst ska planeras för samma läkare, organisation eller myndighet. Till exempel: ett uppföljande besök i öppenvården om 6 veckor.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Generisk forespørsel om utførelse av en helsetjeneste, til annet helsepersonell eller andre organisasjoner.",
+          "keywords" : [ "rekvisisjon", "bestilling", "foreskriving", "tjeneste", "tjenesteyter", "rekvirere", "bestille", "anmodning", "forespørre", "forespørsel", "anmode", "tilsyn" ],
+          "use" : "Brukes til å registrere en forespørsel om en helserelatert tjeneste eller aktivitet som skal utføres av en kliniker, organisasjon eller virksomhet.\r\n\r\nArketypen er designer som et rammeverk som kan brukes som grunnlag for:\r\n- En forespørsel om en helserelatert tjeneste, fra en kliniker eller organisasjon til en annen kliniker eller organisasjon. For eksempel: En henvisning til en spesialist for behandling eller second opinion, ansvarsoverføring til akuttmottaket, monitorering av vitale tegn hver 4. time, eller hjemmesykepleie fra kommunen.\r\n- En forespørsel om oppfølging fra samme kliniker eller organisasjon, for eksempel kontroll på poliklinikk om 6 uker.\r\n\r\nKliniske brukseksempler:\r\n- Dersom en kliniker setter opp en kontrolltime om 6 uker: \"Tjenestenavn\" settes til \"Kontroll\". Dersom klinikeren skriver inn \"6 uker\" som tid for kontrolltime i brukergrensesnittet, vil det kliniske systemet registrere datoen 6 uker etter registreringsdatoen i elementet \"Dato/tid forfall\".\r\n- Dersom en kliniker setter opp en pasient til \"undervisning om diabetes\" i \"Tjenestenavn\". Verdiene for \"Årsak for forespørsel\" kan være \"Ny diagnose\" og \"Forebygging av ketoacidose\". \"Klinisk indikasjon\" kan være \"Diabetes type 1\", som kan lenkes til en Problem/diagnose og/eller et Laboratorieprøveresultat. Dersom det er nødvendig med et kurs på 4 uker, med 4 ukentlige undervisningsøkter, må en bruke arketypene CLUSTER.service_direction og CLUSTER.timing_nondaily for å registrere kompleks timinginformasjon.\r\n- Dersom en kliniker ordinerer en gjentagende blodprøve, som for eksempel INR: Den komplekse timingen for dette krever bruk av arketypene CLUSTER.service_direction og CLUSTER.timing_nondaily for å definere hver timing i en sekvens, for eksempel \"daglig i en uke, ukentlig i 4 uker, månedlig i 6 måneder\".\r\n\r\nEn grunnleggende antagelse for denne arketypen er at den er en forespørsel for én enkelt helsetjeneste. Dersom man trenger en gjentagende tjeneste, kan dette spesifiseres ved å bruke arketypen CLUSTER.service_direction i SLOTet \"Kompleks timing\".\r\n\r\nI mange situasjoner vil det være mulig å registrere stegene som gjennomgås i utførelsen av forespørselen ved hjelp av den generiske arketypen ACTION.service. Imidlertid vil det være mange tilfeller der det vil være behov for en spesifikk ACTION-arketype, for å kunne oppfylle behov om spesifikke dataelementer, registreringsmønstre eller prosesstrinn. Eksempler på dette er ACTION.screening og ACTION.health_education.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Estrutura de solicitação genérica para um serviço ou atividade relacionada à saúde a ser prestado por um médico, organização ou agência.",
+          "keywords" : [ "solicitação", "requisição", "ordem", "pedido", "serviço", "referência", "encaminhamento" ],
+          "use" : "Use para registrar uma solicitação de um serviço ou atividade relacionada à saúde a ser prestado por um médico, organização ou agência.\r\n\r\nEste arquétipo foi projetado como uma estrutura que pode ser usada como base para:\r\n- uma solicitação de um clínico, organização ou agência a outro clínico, organização ou agência para um serviço relacionado à saúde. Por exemplo: uma referência a um clínico especialista para tratamento ou uma segunda opinião clínica; transferência do atendimento para um pronto-socorro; monitoramento de sinais vitais de quatro horas; e prestação de serviços domiciliares de um conselho municipal; ou\r\n- uma solicitação de um serviço de acompanhamento a ser agendado para o mesmo médico, organização ou agência. Por exemplo: uma consulta de revisão de pacientes ambulatoriais em 6 semanas.\r\n\r\nCasos-de-uso clínicos:\r\n- Considere um médico solicitando uma consulta de acompanhamento em 6 semanas. 'Consulta de acompanhamento' será o 'Nome do serviço'. Se eles inserirem '6 semanas' como o tempo proposto para a consulta na interface do usuário, o sistema clínico registrará a data seis semanas a partir de hoje no elemento de dados 'Serviço devido'.\r\n- considere um médico solicitando Educação sobre Diabetes como o 'Nome do serviço'. Os valores para 'Motivo da solicitação' podem ser 'Novo diagnóstico' e 'Prevenção de cetoacidose'. A 'indicação clínica' será 'Diabetes tipo 1', que pode estar associada ao diagnóstico de problemas e / ou resultados de exames laboratoriais. Se um curso de 4 semanas for necessário, com sessões organizadas em intervalos semanais em 4 ocasiões diferentes, o tempo complexo requer o uso de CLUSTER.service_direction e o arquétipo CLUSTER.timing_nondaily associado.\r\n- Considere um médico solicitando um exame de sangue recorrente, como um INR. O tempo complexo para isso requer o uso de CLUSTER.service_direction e o arquétipo CLUSTER.timing_nondaily associado para definir cada tempo de uma sequência de testes, como 'diariamente por uma semana, semanalmente por 4 semanas, mensalmente por 6 meses'.\r\n\r\nA suposição padrão para esse arquétipo é que ele é uma solicitação de um único serviço. Se uma série de serviços for necessária, use o arquétipo CLUSTER.service_direction dentro do SLOT 'Complex timing'.\r\n\r\nEm muitas situações, será possível registrar as etapas que ocorrem como parte dessa solicitação que está sendo realizada usando o ACTION.service genérico correspondente. No entanto, haverá muitas ocasiões em que o arquétipo de AÇÃO exigido será muito específico para o propósito, uma vez que os requisitos de dados para registrar o fornecimento de muitos serviços relacionados à saúde precisarão de elementos de dados bastante exclusivos, padrões de registro ou etapas do caminho. Por exemplo: ACTION.screening ou ACTION.health_education.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Generic request framework for a health-related service or activity to be delivered by a clinician, organisation or agency.",
+          "keywords" : [ "request", "order", "service", "provide", "referral" ],
+          "use" : "Use to record a request for a health-related service or activity to be delivered by a clinician, organisation or agency.\r\n\r\nThis archetype has been designed as a framework that can be used as the basis for:\r\n- a request from one clinician, organisation or agency to another clinician, organisation or agency for a health-related service. For example: a referral to a specialist clinician for treatment or a second clinical opinion; transfer of care to an emergency department; four hourly vital signs monitoring; and provision of home services from a municipal council; or\r\n- a request for a follow up service to be scheduled for the same clinician, organisation or agency. For example: a review appointment in outpatients in 6 weeks. \r\n\r\nClinical use cases:\r\n- consider a clinician ordering a follow-up appointment in 6 weeks. 'Follow-up appointment' will be the 'Service name'. If they enter '6 weeks' as the proposed timing for the appointment in the User Interface, the clinical system will record the date six weeks from today in the 'Service due' data element.\r\n- consider a clinician ordering Diabetes Education as the 'Service name'. The values for 'Reason for request' may be 'New diagnosis' and 'Prevention of ketoacidosis'. The 'Clinical indication' will be 'Diabetes Type 1', which may be linked to the Problem Diagnosis and/or Laboratory test results. If a 4 week course is required, with sessions organised at weekly intervals on 4 separate occasions, then the complex timing requires use of the CLUSTER.service_direction and associated CLUSTER.timing_nondaily archetype.\r\n- consider a clinician ordering a recurring blood test, such as an INR. The complex timing for this requires use of the CLUSTER.service_direction and associated CLUSTER.timing_nondaily archetype to define each timing in a sequence of tests, such as 'daily for one week, weekly for 4 weeks, monthly for 6 months'.\r\n\r\nThe default assumption for this archetype is that it's a request for a single service. If a series of services are required, use the CLUSTER.service_direction archetype within the 'Complex timing' SLOT.\r\n\r\nIn many situations it will be possible to record the steps that occur as part of this request being carried out using the corresponding generic ACTION.service. However, there will be many occasions where the required ACTION archetype will be very specific for purpose, as the data requirements for recording provision of many health-related services will need quite unique data elements, recording patterns or pathway steps. For example: ACTION.screening or ACTION.health_education.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Quadro generico di richiesta per un servizio o un'attività sanitaria che deve essere fornita da un medico, da un'organizzazione o da un'agenzia.",
+          "keywords" : [ "richiesta, ordine, servizio, fornire, indirizzamento" ],
+          "use" : "Usato per registrare la richiesta di un servizio o di un'attività sanitaria da parte di un clinico, di un'organizzazione o di un'agenzia.\r\n\r\nQuesto archetipo è stato progettato come una cornice che possa essere utilizzata come base per:\r\n- una richiesta da un clinico, organizzazione o agenzia ad un altro clinico, organizzazione o agenzia per un servizio sanitario. Per esempio: la richiesta di un medico specialista per un trattamento o un secondo parere clinico; il trasferimento delle cure a un reparto di emergenza; il monitoraggio dei segni vitali ogni quattro ore; e la fornitura di servizi a domicilio da parte di un consiglio comunale; oppure\r\n- una richiesta di un servizio di follow-up da programmare per lo stesso clinico, organizzazione o agenzia. Ad esempio: un appuntamento di controllo in ambulatorio in 6 settimane. \r\n\r\nCasi d'uso clinico:\r\n- si prenda in considerazione l'idea di un clinico che ordini un appuntamento di follow-up tra 6 settimane. L'\"Appuntamento di follow-up\" sarà il \"Nome del servizio\". Se si inseriscono '6 settimane' come tempistica proposta per l'appuntamento nell'interfaccia utente, il sistema clinico registrerà la data a sei settimane da oggi nell'elemento \"Tempistica per la fornitura del servizio\".\r\n- si consideri un clinico che ordina l'educazione al diabete come 'Nome del servizio'. I valori per 'Motivo della richiesta' possono essere 'Nuova diagnosi' e 'Prevenzione della chetoacidosi'. L'\"Indicazione clinica\" sarà \"Diabete di tipo 1\", che può essere collegato all'archetipo Problem Diagnosis e/o a Laboratory test results. Se è richiesto un corso di 4 settimane, con sessioni organizzate a intervalli settimanali in 4 occasioni separate, allora la complessa tempistica richiede l'uso dell'archetipo CLUSTER.service_direction e dell'associato CLUSTER.timing_nondaily.\r\n- si prenda in considerazione un medico che ordina un esame del sangue ricorrente, come ad esempio un INR. La complessa tempistica per questo richiede l'uso del CLUSTER.service_direction e dell'archetipo CLUSTER.timing_nondaily associato per definire ogni tempistica in una sequenza di test, come ad esempio \"giornalmente per una settimana, settimanalmente per 4 settimane, mensilmente per 6 mesi\".\r\n\r\nIl presupposto di default per questo archetipo è che si tratti di una richiesta per un singolo servizio. Se è richiesta una serie di servizi, utilizzare l'archetipo CLUSTER.service_direction all'interno dello SLOT 'Tempistica Complessa'.\r\n\r\nIn molte situazioni sarà possibile registrare i passaggi che si verificano nell'ambito di questa richiesta che viene effettuata utilizzando il corrispondente generico ACTION.service. Tuttavia, ci saranno molte occasioni in cui l'archetipo di ACTION richiesto sarà molto specifico per lo scopo, in quanto i requisiti di dati per la registrazione della fornitura di molti servizi sanitari avranno bisogno di elementi, pattern di registrazione o fasi di percorso piuttosto unici. Ad esempio: ACTION.screening o ACTION. health_education.\r\n\r\n\r\n\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Generiek verzoekkader voor een gezondheidsgerelateerde dienst of activiteit die moet worden geleverd door een zorgverlener, organisatie of instantie.",
+          "keywords" : [ "verzoek", "opdracht", "dienst", "voorschrift", "verwijzing" ],
+          "use" : "Gebruik dit om een verzoek vast te leggen voor een gezondheidsgerelateerde dienst of activiteit die moet worden geleverd door een arts, organisatie of instantie.\r\n\r\nDit archetype is ontworpen als een raamwerk dat als basis kan dienen voor:\r\n- een verzoek van de ene arts, organisatie of instantie aan een andere arts, organisatie of instantie voor een gezondheidsgerelateerde dienst. Bijvoorbeeld: een verwijzing naar een specialistisch arts voor behandeling of een second clinical opinion; overdracht van zorg naar een afdeling spoedeisende hulp; vier uur durende monitoring van vitale functies; en dienstverlening aan huis door een gemeente; of\r\n- een verzoek om een vervolgservice in te plannen voor dezelfde arts, organisatie of instantie. Bijvoorbeeld: een controleafspraak bij poliklinische patiënten over 6 weken.\r\n\r\nKlinische gebruiksgevallen:\r\n- neem bijvoorbeeld een arts die opdracht geeft tot een vervolgafspraak voor over 6 weken. De 'Servicenaam' wordt 'Vervolgafspraak'. Als ze '6 weken' invoeren als de voorgestelde timing voor de afspraak in de gebruikersinterface, zal het klinische systeem de datum zes weken vanaf vandaag vastleggen in het gegevenselement 'Servicetijd'.\r\n- In het geval van een clinicus die Diabetes Education gebruikt als de 'Servicenaam'. De waarden bij 'Reden verzoek' kunnen 'Nieuwe diagnose' en 'Preventie van ketoacidose' zijn. De 'Klinische indicatie' wordt 'Diabetes Type 1', mogelijk gekoppeld aan de Probleemdiagnose en/of Laboratoriumuitslagen. Als een cursus van 4 weken vereist is, met sessies die wekelijks op 4 verschillende gelegenheden worden georganiseerd, dan vereist de complexe timing het gebruik van het CLUSTER.service_direction en het bijbehorende CLUSTER.timing_nondaily archetype.\r\n- beeld je in dat een arts om een ​​terugkerend bloedonderzoek vraagt, zoals een INR. De complexe timing hiervoor vereist het gebruik van het CLUSTER.service_direction en het bijbehorende archetype CLUSTER.timing_nondaily om elke timing in een reeks tests te definiëren, zoals 'dagelijks gedurende een week, wekelijks gedurende 4 weken, maandelijks gedurende 6 maanden'.\r\n\r\nDe standaardaanname voor dit archetype is dat het om een enkele service gaat. Als een reeks services vereist is, gebruikt u het archetype CLUSTER.service_direction binnen het SLOT 'Complex timing'.\r\n\r\nIn veel situaties zal het mogelijk zijn om de stappen die plaatsvinden als onderdeel van dit verzoek dat wordt uitgevoerd, vast te leggen met behulp van de bijbehorende generieke ACTION.service. Er zullen zich echter veel gelegenheden voordoen waarin het vereiste ACTIE-archetype zeer specifiek zal zijn voor het doel, aangezien de gegevensvereisten voor het vastleggen van de levering van veel gezondheidsgerelateerde diensten vrij unieke gegevenselementen, registratiepatronen of trajectstappen vereisen. Bijvoorbeeld: ACTION.screening of ACTION.health_education.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.service_request.v1",
     "differential" : true,
@@ -21921,6 +19830,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Additional service requests",
+            "description" : "Request for a health-related service or activity to be delivered by a clinician, organisation or agency."
           }
         },
         "nb" : {
@@ -22092,7 +20007,66 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "7229DFAFA43B2D9ABD13B0228E2F0181"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Statusdarstellung einer Anforderung oder Aufzeichnung der Einwilligungserklärung vor der Durchführung einer Prozedur, einer klinischen Studie/Prüfung oder einer Aktivität im Zusammenhang mit dem Gesundheitswesen.",
+          "keywords" : [ "Einwilligung", "Einverständnis", "Einverständniserklärung", "Aufklärung", "Zustimmung", "informiert", "Vorbehalt" ],
+          "use" : "Zur Statusdarstellung einer Anforderung, um eine Einverständniserklärung zu erhalten, einschließlich was geplant, angefordert, bereitgestellt oder zurückgezogen wurde.\r\n\r\nDieser Archetyp wurde als Framework entwickelt, das zum Anfordern und Aufzeichnen einer einfachen Einwilligung geeignet ist, es jedoch zulässt, dass zusätzliche Details optional im SLOT \"Details\" hinzugefügt werden, um die spezifischen Anforderungen eines komplexeren klinischen Szenarios zu erfüllen. Beispielsweise können zusätzliche Zustimmungsdetails unter Verwendung des Archetyps CLUSTER.consent_details eingefügt werden. Andere Archetypen können entwickelt und optional im selben SLOT enthalten sein, um spezifische Details über das Verfahren, den Versuch oder die Aktivität aufzuzeichnen.\r\n\r\nDer Status der Einwilligungserklärung spiegelt sich in den einzelnen Schritten wider - angefordert, abgelehnt, bereitgestellt, zurückgezogen usw.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Записать необходимость или наличие информированного согласия на выполнение процедуры, клинического теста или другой связанной со сдоровьем активности",
+          "keywords" : [ "согласие", "информированное", "отказ" ],
+          "use" : "Используется для записи статуса информированного согласия, включая планируемое, назначенное, запрошенное, предложенное, полученное. \r\nЭтот архетип разработан как рабочая зона, достаточная для того, чтобы  запросить и записать простое согласие, но, в то же время, позволяющая добавить специфические детали в слоте \"Детали\" при  необходимости более сложного клинического сценария. Например, такие детали могут содержать архетип КЛАСТЕР.детали_согласия. В этот же слот могут быть добавлены другие архетипы для описания процедуры, исследования или активности.\r\nСтатус информированного согласия отражает этапы его получения: необходимость, запрос, отказ, подписание и т.д.       ",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere informert samtykke eller status på en forespørsel om informert samtykke før en prosedyre, klinisk utprøving eller helserelatert aktivitet utføres.",
+          "keywords" : [ "samtykke", "informert", "cave" ],
+          "use" : "Brukes for å registrere status på forespørsel om informert samtykke, inkludert hva som er planlagt, forespurt, avgitt eller tilbaketrukket.\r\n\r\nDenne arketypen er utformet for å være et rammeverk som vil være tilstrekkelig for å be om og registrere et enkelt samtykke, men tillater også registrering av ytterligere detaljer i \"Detaljer\"-SLOTet for å møte de spesifikke kravene til et mer komplekst klinisk scenario. For eksempel kan ytterligere detaljer inkluderes ved å bruke arketypen CLUSTER.consent_details. Andre arketyper kan utvikles og eventuelt inkluderes i det samme SLOTet med formålet om å registrere spesifikke detaljer om prosedyren, utprøvingen eller aktiviteten.\r\n\r\nStatus til det informerte samtykket reflekteres av prosesstrinnene - forespurt, avslått, avgitt, tilbaketrukket.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the status of a request for, or record of, informed consent prior to performing a procedure, clinical trial or healthcare-related activity.",
+          "keywords" : [ "consent", "informed", "caveat" ],
+          "use" : "Use to record the status of an order to obtain informed consent, including what is planned, scheduled, requested, provided, or withdrawn.\r\n\r\nThis archetype has been designed to be a framework that will be adequate for requesting and recording a simple consent, but allow for additional details to be optionally added within the 'Details' SLOT to meet the specific requirements of a more complex clinical scenario.  For example, additional consent details can be included using the CLUSTER.consent_details archetype. Other archetypes can be developed and optionally included in the same SLOT for the purpose of recording specific details about the procedure, trial or activity. \r\n\r\nThe status of the informed consent is reflected by the pathway steps - requested, refused, provided, withdrawn etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-ACTION.informed_consent.v0",
     "differential" : true,
